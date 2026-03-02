@@ -215,9 +215,9 @@ Code	Description	Usage Rules & Definitions
 1.7	Plasma Environment Effects	Experimental or theoretical Papers studying effects of dense plasmas on electronic energy structure and/or transition rates in atoms or ions.
 1.8	Atomic Codes	Papers that describe new computer codes for atomic physics calculations.
 1.9	Atomic Databases	Papers that describe online databases or repositories of data (experimental or theoretical) on atomic parameters.
-1.10	Exotic Atoms	Mandatory: Use for Muonium, Positronium, or any atom/ion where an electron or a proton is replaced by a muon/positron/pion.
+1.10	Exotic Atoms	Mandatory: Use for Muonium, Positronium, or any atom/ion where an electron or a proton is replaced by a muon/positron/pion/kaon/antiparticle (exotic particle).
 
-Rule: If the paper contains data on Muonium or Positronium, you must also add keywords for H I (Hydrogen).
+Rule: If the paper contains data on Muonium or Positronium, you must also add keywords for H I (Hydrogen). If a paper contains data on an exotic atom or ion, add a keyword for a corresponding normal atom or ion in addition to `GENINT: 1.10`.
 1.11	X-ray characteristic lines	Papers containing data on X-ray spectral lines caused by transitions of electrons to holes in inner electronic shells.
 1.15	Fundamental constants	Papers related to measurement of fundamental constants, such as the Rydberg constant or fine-structure constant. This is usually assigned to experimental papers, but theoretical ones may be assigned this keyword if they contribute to improving experimental values.
 1.12	Parity Nonconservation	Experimental or theoretical papers of non-conservation of parity in atomic processes.
@@ -232,6 +232,7 @@ Rule: If the paper contains data on Muonium or Positronium, you must also add ke
 1.22	Variation of fundamental constants	Experimental or theoretical papers on any kind of variation of fundamental constants (e.g., the fine-structure constant), either temporal or spatial. This is used not only for papers reporting measurements based on atomic spectroscopy, but also for papers reporting new or improved theoretical estimates of sensitivity of electronic transitions in atoms or ions to possible variations of fundamental constants.
 1.23	Nuclear clocks	Experimental or theoretical papers related to the development of a clock based on the nuclear transition from isotope 229Th to its isomer 229mTh.
 1.24	Search for new physics	Papers discussing the search for extensions of the Standard Model, such as new types of physical interactions and new types of elementary particles.
+
 2. Specific Subject Keywords (Element-Specific)
 These keywords describe specific data provided for specific spectra.
 Format: [Spectra_String]: [Subject Code]: [Method Type]
@@ -284,7 +285,7 @@ Code	Description	Usage Rules & Definitions
 1.7	Environmental influences on A- or f-values	Experimental or theoretical papers studying effects of external medium on transition rates/oscillator strengths in atoms or ions.
 1.8	Atomic Codes	Papers that describe new computer codes for atomic physics calculations, specifically for transition probabilities/oscillators strengths.
 1.9	Atomic Databases	Papers that describe online databases or repositories of data (experimental or theoretical) on atomic transition probabilities/oscillators strengths.
-1.10	Exotic Atoms	Mandatory: Use for Muonium, Positronium, or any atom/ion where an electron or a proton is replaced by a muon/positron. Rule: If the paper contains data on Muonium or Positronium, you must also add keywords for H I (Hydrogen).
+1.10	Exotic Atoms	Mandatory: Use for Muonium, Positronium, or any atom/ion where an electron or a proton is replaced by an exotic particle. Rule: If the paper contains data on Muonium or Positronium, you must also add keywords for H I (Hydrogen).
 1.11	X-ray characteristic lines	Papers containing transition probability/oscillator strength data on X-ray spectral lines caused by transitions of electrons to fill holes in inner electronic shells.
 1.12	Parity Nonconservation	Experimental or theoretical papers of non-conservation of parity in atomic processes involving transition probability/oscillator strength.
 1.13	Atomic Clocks	Papers describing new or improved implementations of atomic clocks or contributing to their development involving transition probability/oscillator strength.
@@ -293,6 +294,7 @@ Code	Description	Usage Rules & Definitions
 1.20	Kilonova Opacities	Restricted use: use this keyword if the only reported atomic property is opacity. If opacity is reported for a specific atom or ion, include an element-specific keyword [Spectrum_string]:Q:T (for theory) or [Spectrum_string]:A:E (for experiment).
 1.22	Variation of fundamental constants	Experimental or theoretical papers on any kind of variation of fundamental constants (e.g., the fine-structure constant), either temporal or spatial, involving transition probability/oscillator strength. This is used not only for papers reporting measurements based on atomic spectroscopy, but also for papers reporting new or improved theoretical estimates of sensitivity of electronic transitions in atoms or ions to possible variations of fundamental constants.
 1.24	Search for new physics	Papers discussing the search for extensions of the Standard Model, such as new types of physical interactions and new types of elementary particles, involving transition probability/oscillator strength. 
+1.25	Measurement techniques	Papers describing new or significantly improved methods or equipment for measurement of atomic properties related to transition probability (oscillator strength, line strength, branching fraction, radiative lifetime). 
 
 2. Specific Subject Keywords (Element-Specific)
 These keywords describe specific transition probability/oscillator strength data provided for specific spectra.
