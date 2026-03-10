@@ -15,10 +15,29 @@ warnings.filterwarnings("ignore", message="Core Pydantic V1 functionality")
 
 import os
 import sys
-import base64
 import argparse
 from pathlib import Path
 from dotenv import load_dotenv
+import base64
+import zipfile
+import tarfile
+import io
+import mimetypes
+
+try:
+    from pypdf import PdfReader
+except ImportError:
+    PdfReader = None
+
+try:
+    import docx
+except ImportError:
+    docx = None
+
+try:
+    import openpyxl
+except ImportError:
+    openpyxl = None
 
 # Load environment variables
 load_dotenv()
@@ -26,7 +45,6 @@ load_dotenv()
 # LangChain imports
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, SystemMessage
-# from pypdf import PdfReader
 
 
 # Configuration
@@ -34,7 +52,7 @@ BASE_DIR = Path(__file__).parent
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # System prompt for atomic physics keyword extraction
-SYSTEM_PROMPT = """**Role:** You are an expert atomic physicist and bibliographer. Your sole task is to extract and format `keywords_el` for the attached PDF.
+SYSTEM_PROMPT = """**Role:** You are an expert atomic physicist and bibliographer. Your sole task is to extract and format `keywords_el`, `keywords_tp`, and `keywords_lb` from the attached PDF and its supplementary files (if any).
 
 **Input:** A scientific paper (PDF).
 **Output:** Output ONLY the keywords fields (keywords_el, keywords_tp, keywords_lb) in exact BibTeX format. The format must be:
@@ -121,6 +139,8 @@ For example, if a paper reports new measurements of spectral line wavelengths, y
 7. Data Extraction Guidelines
 1.	Supplementary Data:
 ○	If a paper mentions results are in "Supplementary Material" or "Tables" (common in astrophysics), the parsing agent must access/analyze those tables to extract valid spectrum-specific keywords, unless their detailed description is provided in the main text.
+
+8. Do not trust the authors' statements about the content of their results. Sometimes, when writing an article, the authors plan to include some data but later on decide to discard some of them, forgetting to remove this part of data description from the Abstract or Conclusions. Check the actual tables and text when assigning the search keywords.
 
 **REAL EXAMPLES:**
 
@@ -241,12 +261,12 @@ Subject Codes and Definitions
 Code	Name	Allowed Method Types	Definitions & Identification Rules
 EL	Energy Levels	E, O	Experimental or precisely determined semi-empirical levels. Look for table titles containing "Energy Levels", "Ionization Energies", or "Binding Energies".
 ND	New Designations	E, T, O	New/changed designations or $$J$$ values.
-CL	Classified Lines	E, O	Assignment of lines to transitions between specified energy levels.
+CL	Classified Lines	E, O	Assignment of lines to transitions between specified energy levels. Only for radiative transitions. Do not use for autoionizing states or for non-radiative transitions (e.g., Auger decay). Look for table titles containing "Classified Lines", "Line Identifications", "Line Assignments", etc.
 
 Inference Rule: If CL is used, usually add W (Wavelengths) as well, as wavelengths can be inferred from the level data.
 CL is retained alone (without W) only if no new wavelength data are provided for the involved spectrum.
 TA	Transition Array	E, T, O	Lines assigned to arrays but not specific levels.
-W	Wavelengths	E, O	New measurements of $$\\lambda$$, $$\\nu$$, or $$\\sigma$$. Includes intensities or opacities without wavelengths. 
+W	Wavelengths	E, O	New measurements of wavelength, transition frequency, or wavenumber. Includes intensities or opacities without wavelengths. Only for radiative transitions. Do not use for autoionizing states or for non-radiative transitions (e.g., Auger decay). Look for table titles containing "Wavelengths", "Transition Frequencies", "Spectral Line", etc.
 
 Inference: Often implied if CL is present with level values.
 
@@ -270,6 +290,11 @@ PT	Parametric Theory	T	Slater/Condon parameter fitting.
 AT	Ab Initio Theory	T	Hartree-Fock/Dirac-Fock calculations.
 
 Specs for the TP topic keywords, KEYWORDS_TP
+
+Do not assign any TP keywords to papers that do not report any new transition probabilities or oscillator strengths for specific fine-structure radiative transitions, even if they report other atomic properties (e.g., energy levels) for the same spectra. For example, if a paper reports new energy levels and uses them to calculate transition probabilities, but the calculated transition probabilities are not claimed to be more accurate than previously available data, do not assign any TP keywords to this paper. If the paper reports new transition probabilities that are claimed to be more accurate than previously available data, assign appropriate TP keywords based on the method used to determine these transition probabilities.
+One exception is for papers reporting opacities, either experimental or theoretical, for which the TP keywords can be assigned even if no transition probabilities or oscillator strengths are reported, as long as the opacity data are given for specific spectra and can be related to transition probabilities or oscillator strengths of these spectra. In such cases, assign TP keywords with the method code `M` (Miscellaneous) and the method type `E` (Experiment) or `T` (Theory), depending on the nature of the reported opacity data.
+Dielectronic recombination rates do not qualify for TP keywords, as they are not related to radiative transitions. Do not assign TP keywords to papers reporting only dielectronic recombination rates, even if they report other atomic properties (e.g., energy levels) for the same spectra. If a paper reports both radiative transition probabilities and dielectronic recombination rates, assign TP keywords only for the radiative transition probabilities, but not for the dielectronic recombination rates.
+Autoionization rates do not qualify for TP keywords, as they are not related to radiative transitions. Do not assign TP keywords to papers reporting only autoionization rates, even if they report other atomic properties (e.g., energy levels) for the same spectra. If a paper reports both radiative transition probabilities and autoionization rates, assign TP keywords only for the radiative transition probabilities, but not for the autoionization rates.
 
 1. General Interest Keywords (GENINT)
 These keywords describe the paper at a high level, regardless of the specific methods used for specific spectral data, in the context of transition probabilities/oscillator strengths.
@@ -322,6 +347,7 @@ keywords_tp={Pr III: L: E
 Pr III: Q: T
 Pr III: M: O} (for a paper where radiative lifetimes were measured in the Pr III spectrum, absolute transition probabilities were calculated by a quantum-mechanical method, and they were normalized to the measured lifetimes to obtain improved absolute transition probabilities)
 ●	Tip: If a theoretical ratio of intensities of two spectral lines is determined in a paper, consider assigning the [Spectra_String]: QR: T keyword in the TP section. Although in general line intensities depend on many factors, in an optically thin plasma, if both lines have a common upper energy level, their intensity ratio is equal to the ratio of transition probabilities.
+Rule: If a paper reports data for calculated or measured transition probabilities/oscillator strengths of "forbidden" transitions (type M1, E2, M2, E3, M3, or any other type as opposed to E1, which corresponds to "allowed" transitions), include a special qualifier `F` after the method code. If data are given for both allowed and forbidden transitions, include both keywords with and without the `F` qualifier on separate lines.
 
 Specs for the LB topic keywords, KEYWORDS_LB
 1. General Interest Keywords (GENINT)
@@ -487,13 +513,152 @@ def load_pdf_as_base64(pdf_path: Path) -> str:
         return ""
 
 
-def process_paper(pdf_base64: str, llm: ChatGoogleGenerativeAI) -> str:
-    """Process a paper's native PDF through Gemini to extract keywords."""
+def extract_text_from_pdf_bytes(pdf_bytes: bytes) -> str:
+    """Extract text from raw PDF bytes using pypdf."""
+    if not PdfReader:
+        return "[PDF extraction failed: pypdf not installed]"
+    try:
+        reader = PdfReader(io.BytesIO(pdf_bytes))
+        text = "\n".join(page.extract_text() for page in reader.pages if page.extract_text())
+        return text
+    except Exception as e:
+        return f"[Error extracting PDF text: {e}]"
+
+
+def extract_text_from_docx_bytes(docx_bytes: bytes) -> str:
+    """Extract text from raw DOCX bytes using python-docx."""
+    if not docx:
+        return "[DOCX extraction failed: python-docx not installed]"
+    try:
+        doc = docx.Document(io.BytesIO(docx_bytes))
+        return "\n".join(para.text for para in doc.paragraphs if para.text)
+    except Exception as e:
+        return f"[Error extracting DOCX text: {e}]"
+
+
+def extract_text_from_xlsx_bytes(xlsx_bytes: bytes) -> str:
+    """Extract text from raw XLSX bytes using openpyxl."""
+    if not openpyxl:
+        return "[XLSX extraction failed: openpyxl not installed]"
+    try:
+        wb = openpyxl.load_workbook(io.BytesIO(xlsx_bytes), data_only=True)
+        text_parts = []
+        for sheet in wb.worksheets:
+            text_parts.append(f"--- Sheet: {sheet.title} ---")
+            for row in sheet.iter_rows(values_only=True):
+                # Join non-empty cells in the row
+                row_text = "\t".join(str(cell) for cell in row if cell is not None)
+                if row_text.strip():
+                    text_parts.append(row_text)
+        return "\n".join(text_parts)
+    except Exception as e:
+        return f"[Error extracting XLSX text: {e}]"
+
+
+def process_file_bytes(filename: str, file_bytes: bytes) -> str:
+    """Determine file type by extension and extract text accordingly."""
+    text_content = f"--- SUPPLEMENTARY FILE: {filename} ---\n"
+    ext = Path(filename).suffix.lower()
+    
+    # PDF
+    if ext == ".pdf":
+        text_content += extract_text_from_pdf_bytes(file_bytes)
+    # Word
+    elif ext in [".docx"]:
+        text_content += extract_text_from_docx_bytes(file_bytes)
+    # Excel
+    elif ext in [".xlsx", ".xlsm"]:  # Old .xls needs xlrd, ignoring for now as usually .xlsx
+        text_content += extract_text_from_xlsx_bytes(file_bytes)
+    # Archives - ZIP
+    elif ext == ".zip":
+        text_content += "[Unzipping Archive...]\n"
+        try:
+            with zipfile.ZipFile(io.BytesIO(file_bytes)) as z:
+                for zinfo in z.infolist():
+                    if not zinfo.is_dir() and not zinfo.filename.startswith("__MACOSX"):
+                        zfile_bytes = z.read(zinfo.filename)
+                        text_content += process_file_bytes(f"{filename}/{zinfo.filename}", zfile_bytes) + "\n"
+        except Exception as e:
+            text_content += f"[Error reading Zip {filename}: {e}]"
+    # Archives - TAR.GZ
+    elif ext in [".tar.gz", ".tgz"]:
+        text_content += "[Extracting Tar.gz Archive...]\n"
+        try:
+            with tarfile.open(fileobj=io.BytesIO(file_bytes), mode="r:gz") as tar:
+                for member in tar.getmembers():
+                    if member.isfile() and not member.name.startswith("__MACOSX"):
+                        fobj = tar.extractfile(member)
+                        if fobj:
+                            tfile_bytes = fobj.read()
+                            text_content += process_file_bytes(f"{filename}/{member.name}", tfile_bytes) + "\n"
+        except Exception as e:
+            text_content += f"[Error reading Tar.gz {filename}: {e}]"
+    # Standard Text or Code Files
+    else:
+        # Check if it's likely a text file (including code formats like .py, .csv, .f, .tex, .pl)
+        # Try to decode as utf-8
+        try:
+            text_str = file_bytes.decode('utf-8')
+            # Very basic check: if it has null bytes it's probably binary
+            if '\x00' not in text_str:
+                text_content += text_str
+            else:
+                text_content += f"[Skipped binary file: {filename}]"
+        except UnicodeDecodeError:
+            # Fallback to latin-1
+            try:
+                text_str = file_bytes.decode('latin-1')
+                if '\x00' not in text_str:
+                    text_content += text_str
+                else:
+                    text_content += f"[Skipped binary file: {filename}]"
+            except Exception:
+                 text_content += f"[Skipped unreadable/binary file: {filename}]"
+                 
+    return text_content + "\n"
+
+
+def extract_supplementary_text(suppl_dir: Path) -> str:
+    """Traverse the suppl directory and extract text from all understandable files."""
+    if not suppl_dir.exists() or not suppl_dir.is_dir():
+        return ""
+        
+    combined_text = "\n\n=== SUPPLEMENTARY MATERIALS ===\n\n"
+    found_files = False
+    
+    for path in suppl_dir.rglob('*'):
+        if path.is_file() and not path.name.startswith('.'):
+            found_files = True
+            try:
+                with open(path, "rb") as f:
+                    file_bytes = f.read()
+                combined_text += process_file_bytes(path.name, file_bytes)
+            except Exception as e:
+                combined_text += f"\n[Error reading file {path.name}: {e}]\n"
+                
+    if not found_files:
+        return ""
+        
+    # Optional: Truncate if the supplementary text is absurdly large (e.g. > 2 million chars)
+    # Gemini 1.5/2.5 flash can handle ~1M tokens (roughly 4M chars)
+    if len(combined_text) > 3000000:
+        combined_text = combined_text[:3000000] + "\n...[SUPPLEMENTARY DATA TRUNCATED DUE TO SIZE]..."
+        
+    return combined_text
+
+
+def process_paper(pdf_base64: str, suppl_text: str, llm: ChatGoogleGenerativeAI) -> str:
+    """Process a paper's native PDF and supplementary text through Gemini to extract keywords_el."""
     pdf_data_uri = f"data:application/pdf;base64,{pdf_base64}"
+    
+    prompt_text = "Please analyze this scientific paper (and any provided supplementary materials) and extract the keywords_el."
+    if suppl_text:
+        prompt_text += f"\n\nHere is the text extracted from the supplementary files:\n{suppl_text}"
+        
     messages = [
         SystemMessage(content=SYSTEM_PROMPT),
         HumanMessage(content=[
-            {"type": "text", "text": "Please analyze this scientific paper and extract the keywords."},
+            {"type": "text", "text": prompt_text},
             {"type": "image_url", "image_url": pdf_data_uri},
         ])
     ]
@@ -543,6 +708,7 @@ def main():
     # Initialize Gemini
     print("🚀 Initializing Google Gemini...")
     llm = ChatGoogleGenerativeAI(
+        # model="gemini-flash-lite-latest",
         model="gemini-3-flash-preview",
         google_api_key=GOOGLE_API_KEY,
         temperature=0.1  # Low temperature for consistent outputs
@@ -588,9 +754,18 @@ def main():
         pdf_size_mb = len(pdf_base64) * 3 / 4 / (1024 * 1024)  # Approximate original file size
         print(f"  📝 Loaded PDF (~{pdf_size_mb:.1f} MB)")
         
+        # Extract Supplementary Materials
+        suppl_dir = folder / "suppl"
+        suppl_text = ""
+        if suppl_dir.exists():
+            print("  📂 Extracting supplementary materials...")
+            suppl_text = extract_supplementary_text(suppl_dir)
+            if suppl_text:
+                print(f"  📝 Added {len(suppl_text):,} characters of supplementary data")
+        
         # Process with Gemini
-        print("  🤖 Sending native PDF to Gemini...")
-        result = process_paper(pdf_base64, llm)
+        print("  🤖 Sending native PDF + supplementary data to Gemini...")
+        result = process_paper(pdf_base64, suppl_text, llm)
         
         if result.startswith("ERROR:"):
             print(f"  ❌ {result}")

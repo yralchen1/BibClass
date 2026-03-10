@@ -203,11 +203,11 @@ The main script is **`process_pdfs_langchain.py`**. It reads each paper's PDF, s
 ### Process All Papers
 
 ```bash
-python process_pdfs_langchain_with_suppl.py
+python process_pdfs_langchain.py
 ```
 
 This will:
-1. Scan all subfolders for `main_article.pdf` files (the initial distribution includes only one such subfolder named `tmp`). If such folder contains a subfolder `suppl`, its contents are treated as supplementary files for `main_article.pdf` and will be processed together with it.
+1. Scan all subfolders for `main_article.pdf` files (the initial distribution includes only one such subfolder named `sample_paper`). If such folder contains a subfolder `suppl`, its contents are treated as supplementary files for `main_article.pdf` and will be processed together with it.
 2. Extract text from each PDF using `pypdf`.
 3. Send the text (up to ~50,000 characters) to Gemini with the keyword-extraction prompt.
 4. Save the response as `bibtex_AI_Generated.txt` inside each paper's folder.
@@ -218,7 +218,7 @@ This will:
 🚀 Initializing Google Gemini...
 📁 Found 1 paper(s) to process
 
-[1/1] Processing: tmp
+[1/1] Processing: sample_paper
   📄 Extracting PDF text...
   📝 Extracted 42,317 characters
   🤖 Sending to Gemini...
@@ -238,7 +238,7 @@ Summary:
 To process only one specific paper folder:
 
 ```bash
-python process_pdfs_langchain_with_suppl.py --single tmp
+python process_pdfs_langchain.py --single sample_paper
 ```
 
 The `--single` flag accepts the **folder name** (not the full path). The folder must exist inside the `Benchmarking PDFs/` directory and contain a `main_article.pdf`.
@@ -256,7 +256,7 @@ python process_pdfs_langchain.py --dry-run
 📁 Found 1 paper(s) to process
 
 DRY RUN - Would process:
-  • tmp
+  • sample_paper
   ...
 ```
 
@@ -265,7 +265,7 @@ DRY RUN - Would process:
 You can combine `--single` and `--dry-run`:
 
 ```bash
-python process_pdfs_langchain.py --single tmp --dry-run
+python process_pdfs_langchain.py --single sample_paper --dry-run
 ```
 
 ---
@@ -274,7 +274,7 @@ python process_pdfs_langchain.py --single tmp --dry-run
 
 Each processed paper gets a `bibtex_AI_Generated.txt` file saved in its folder. The file contains the extracted keywords in BibTeX format:
 
-**Example output** (`tmp/bibtex_AI_Generated.txt`):
+**Example output** (`sample_paper/bibtex_AI_Generated.txt`):
 ```
 keywords_el={Ca I; 43Ca I: Hfs: E
 Ca I: IS: E
@@ -357,9 +357,9 @@ The extraction prompt is defined as the `SYSTEM_PROMPT` variable at the top of `
 
 If you need to add a new keyword category, add it to the **Subject Codes** list in the prompt (around line 53):
 
-```python
+```
 # Add after the existing codes:
-   - `NEW` = New Code Description
+# - NEW = New Code Description
 ```
 
 And add it to the SPECS table section as well.
@@ -370,10 +370,10 @@ If you want JSON output instead of BibTeX format, modify the **Output** section 
 
 ```python
 # Change from:
-**Output:** Output ONLY the keywords_el field in exact BibTeX format.
+# **Output:** Output ONLY the keywords_el field in exact BibTeX format.
 
 # To something like:
-**Output:** Output a JSON object with a single key "keywords_el" containing an array of keyword strings.
+# **Output:** Output a JSON object with a single key "keywords_el" containing an array of keyword strings.
 ```
 
 > **⚠️ Warning:** If you change the output format, you may also need to update the `process_paper()` function (line 306) to handle the new format correctly.
@@ -384,10 +384,10 @@ The prompt currently says "Be CONSERVATIVE". To make it more or less strict:
 
 ```python
 # More aggressive (may produce false positives):
-1. **Be THOROUGH** - Assign keywords for data that is explicitly or implicitly present in the paper.
+# 1. **Be THOROUGH** - Assign keywords for data that is explicitly or implicitly present in the paper.
 
 # More conservative (may miss valid keywords):
-1. **Be EXTREMELY CONSERVATIVE** - Only assign keywords when you are 100% certain the data is explicitly reported in numerical tables.
+# 1. **Be EXTREMELY CONSERVATIVE** - Only assign keywords when you are 100% certain the data is explicitly reported in numerical tables.
 ```
 
 #### Add More Examples
@@ -395,9 +395,9 @@ The prompt currently says "Be CONSERVATIVE". To make it more or less strict:
 Adding more examples improves Gemini's accuracy. Add them in the **REAL EXAMPLES** section (after line 78):
 
 ```python
-Paper about isotope shift measurements:
-keywords_el={Ca I; Ca II: IS: E
-41Ca I; 43Ca I; 45Ca I: Hfs: E}
+# Paper about isotope shift measurements:
+# keywords_el={Ca I; Ca II: IS: E
+# 41Ca I; 43Ca I; 45Ca I: Hfs: E}
 ```
 
 ### Where the Prompt Is Used
@@ -423,7 +423,7 @@ Saved to bibtex_AI_Generated.txt
 
 The Gemini model is configured on **line 358** of `process_pdfs_langchain.py`:
 
-```python
+```
 llm = ChatGoogleGenerativeAI(
     model="gemini-flash-lite-latest",    # The model to use
     google_api_key=GOOGLE_API_KEY,
@@ -442,7 +442,7 @@ llm = ChatGoogleGenerativeAI(
 
 To switch models, change the `model=` parameter:
 
-```python
+```
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",      # Switch to a more capable model
     google_api_key=GOOGLE_API_KEY,
@@ -462,7 +462,7 @@ llm = ChatGoogleGenerativeAI(
 
 ### `organize_pdfs.py` — Organize Raw PDFs into Folders
 
-Takes flat PDF files named `Author_el_ID_YEAR.pdf` and organizes them into structured folders.
+Takes flat PDF files named `Author_el_23861_2025.pdf` and organizes them into structured folders.
 
 ```bash
 # Preview what would happen (dry run):
@@ -542,7 +542,7 @@ If processing many papers at once, you may hit Gemini's rate limits. Try:
 
 The script limits input to ~50,000 characters per paper (line 310). Very long papers may have their later sections cut off. To increase this limit:
 
-```python
+```
 # In process_paper(), line 310, change:
 HumanMessage(content=f"...{pdf_text[:50000]}")
 
