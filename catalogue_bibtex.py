@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to extract bibtex entries from bibtex_Sr1_1976-2025.txt and place them 
+Script to extract BibTeX entries from bibtex_Sr1_1976-2025.txt and place them
 in their corresponding paper folders as bibtex_catalogued.txt
 """
 
@@ -12,7 +12,7 @@ BASE_DIR = "/Users/themanaspandey/Documents/Alexander Marianna Yuri Automations/
 BIBTEX_FILE = os.path.join(BASE_DIR, "bibtex_Sr1_1976-2025.txt")
 
 def parse_bibtex_entries(filepath):
-    """Parse bibtex file and return a dictionary of {id: full_entry}"""
+    """Parse BibTeX file and return a dictionary of {id: full_entry}"""
     entries = {}
     
     with open(filepath, 'r', encoding='utf-8') as f:

@@ -22,7 +22,7 @@ import base64
 import zipfile
 import tarfile
 import io
-import mimetypes
+# import mimetypes
 
 try:
     from pypdf import PdfReader
@@ -280,7 +280,7 @@ IS	Isotopic Shifts	E, T, O	Mass-shift, field-shift factors, nuclear shifts of en
 QF	Quantum Field Effects	E, T, O	Lamb shifts, QED effects.
 
 Constraint: Use QF only if the data are of importance to developing new methods of QED treatment or evaluation of accuracy of existing QED methods, or if direct measurements of QED effects are given. Do not assign QF to theoretical papers that use popular atomic codes to account for contribution of QED effects to computed quantities.
-IP	Ionization Potential	E, T, O	Use only for the ionization energy of the ground state. For excited states, use EL (Experiment) or TE (Theory).
+IP	Ionization Potential	E, T, O	Use only for the ionization energy of the ground state. For excited states, use EL (Experiment) or TE (Theory). Include only if new or improved values of ionization energy of the ground state are reported. Ignore when ionization threshold or ionization energy or ionization potential are mentioned in the text without giving specific values.
 SF	Series Formulae	E, T, O	Series constants converging to limits.
 TE	Theoretical Energies	T	Calculated energy levels or transition energies/frequencies/wavelengths.
 
@@ -698,23 +698,44 @@ def main():
     parser = argparse.ArgumentParser(description="Process PDFs to extract atomic physics keywords")
     parser.add_argument("--single", metavar="FOLDER", help="Process only a single folder")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be processed without running")
+    parser.add_argument("--use-vertex", action="store_true", help="Use Vertex AI (requires gcloud auth)")
     args = parser.parse_args()
 
-    # Check API key
-    if not GOOGLE_API_KEY:
-        print("❌ Error: GOOGLE_API_KEY not found!")
-        print("   Please create a .env file with your API key:")
-        print("   GOOGLE_API_KEY=your_key_here")
-        sys.exit(1)
+    # llm = None
+    VERTEXAI_PROJECT = "" # Init for error message
 
-    # Initialize Gemini
-    print("🚀 Initializing Google Gemini...")
-    llm = ChatGoogleGenerativeAI(
-        # model="gemini-flash-lite-latest",
-        model="gemini-3-flash-preview",
-        google_api_key=GOOGLE_API_KEY,
-        temperature=0.0  # Low temperature for consistent outputs
-    )
+    if args.use_vertex:
+        print("🚀 Initializing Google Gemini via Vertex AI...")
+        VERTEXAI_PROJECT = os.getenv("VERTEXAI_PROJECT")
+        VERTEXAI_LOCATION = os.getenv("VERTEXAI_LOCATION")
+        VERTEXAI_MODEL = os.getenv("VERTEXAI_MODEL")
+
+        if not all([VERTEXAI_PROJECT, VERTEXAI_LOCATION, VERTEXAI_MODEL]):
+            print("❌ Error: Missing Vertex AI configuration in .env file.")
+            print("   Please ensure VERTEXAI_PROJECT, VERTEXAI_LOCATION, and VERTEXAI_MODEL are set.")
+            sys.exit(1)
+
+        llm = ChatGoogleGenerativeAI(
+            model=VERTEXAI_MODEL,
+            project=VERTEXAI_PROJECT,
+            location=VERTEXAI_LOCATION,
+            temperature=0.0
+        )
+    else:
+        # Check API key (only for non-vertex)
+        if not GOOGLE_API_KEY:
+            print("❌ Error: GOOGLE_API_KEY not found!")
+            print("   Please create a .env file with your API key:")
+            print("   GOOGLE_API_KEY=your_key_here")
+            sys.exit(1)
+
+        print("🚀 Initializing Google Gemini via AI Studio...")
+        DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gemini-3-flash-preview")
+        llm = ChatGoogleGenerativeAI(
+            model=DEFAULT_MODEL,
+            google_api_key=GOOGLE_API_KEY,
+            temperature=0.0
+        )
 
     # Get folders to process
     if args.single:
@@ -767,10 +788,27 @@ def main():
         
         # Process with Gemini
         print("  🤖 Sending native PDF + supplementary data to Gemini...")
-        result = process_paper(pdf_base64, suppl_text, llm)
-        
-        if result.startswith("ERROR:"):
-            print(f"  ❌ {result}")
+        try:
+            result = process_paper(pdf_base64, suppl_text, llm)
+            if result.startswith("ERROR:"):
+                # Re-raise to be caught by the except block
+                raise Exception(result.replace("ERROR: ", ""))
+        except Exception as e:
+            error_str = str(e)
+            if args.use_vertex and (
+                "permissiondenied" in error_str.lower().replace(" ", "") or
+                "could not automatically determine credentials" in error_str.lower()
+            ):
+                 print("\n  ❌ Vertex AI Error: Authentication or Permission issue.")
+                 print("     This is likely due to missing or incorrect Google Cloud configuration.")
+                 print("\n     TROUBLESHOOTING:")
+                 print("     1. Install the gcloud CLI: https://cloud.google.com/sdk/docs/install")
+                 print("     2. Authenticate by running: `gcloud auth application-default login`")
+                 print(f"     3. If needed, set your quota project: `gcloud auth application-default set-quota-project {VERTEXAI_PROJECT or '<your-gcloud-project>'}`")
+                 print(f"\n     Original Error: {error_str}\n")
+            else:
+                print(f"  ❌ An unexpected error occurred: {error_str}\n")
+
             error_count += 1
             continue
         

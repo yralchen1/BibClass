@@ -161,6 +161,8 @@ yarn-error.log*
 # Local development
 .local/
 .private/
+.aider*
+.continue/
 
 # Testing
 .coverage
