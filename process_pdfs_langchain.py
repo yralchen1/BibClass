@@ -124,6 +124,7 @@ For example, if a paper reports new measurements of spectral line wavelengths, y
    - `O` = Other/semi-empirical
 
 5. **Element Ranges:** Use `H-Xe I` format for ranges, NOT `H I-Xe I`.
+   Similarly, `Tb-Tm II-III` (correct) vs `Tb II-III-Tm II-III` (incorrect).
 
 6. **GENINT codes** - Only use when applicable (some examples):
    For the EL topic:
@@ -438,6 +439,7 @@ S	Stark	Stark broadening by collisions with charged particles in plasma
 V	van der Waals	van der Waals broadening
 Z	Zeeman	Zeeman broadening
 N	Natural	Natural broadening
+Reports of broadening and/or shift caused by autoionization are not to be assigned LB keywords (unless they also report broadening or shift by another mechanism listed above). This broiadening mechanism is ouside the scope of the present database. 
 If the reported broadening or shift is caused by a combination of two or more of the listed mechanisms, use separate keywords with mechanism codes for the spectrum involved.
 Format for all broadening mechanisms except V (van der Waals): 
 [Spectrum String]: [Mechanism Code (D, P, R, S, Z)]: [Method Type (E, T, O)]
