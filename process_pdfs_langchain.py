@@ -22,6 +22,7 @@ import base64
 import zipfile
 import tarfile
 import io
+import time
 # import mimetypes
 
 try:
@@ -697,6 +698,7 @@ def get_paper_folders(base_dir: Path) -> list[Path]:
 
 
 def main():
+    time0 = time.time()
     parser = argparse.ArgumentParser(description="Process PDFs to extract atomic physics keywords")
     parser.add_argument("--single", metavar="FOLDER", help="Process only a single folder")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be processed without running")
@@ -828,6 +830,9 @@ def main():
     print(f"  ✅ Successful: {success_count}")
     print(f"  ❌ Errors: {error_count}")
     print(f"  📁 Total: {len(folders)}")
+
+    time1 = time.time()
+    print(f"Execution time: {round(time1-time0):d} seconds")
 
 
 if __name__ == "__main__":
