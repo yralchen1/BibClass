@@ -11,8 +11,8 @@ root_directory/
 │       ├── raw_data_table.csv
 │       └── image_S1.png
 
-Expected input filename format: Author_el_XXXXX_YEAR.pdf
-Output folder format: YEAR_Author_el_XXXXX
+Expected input filename format: Author_PP_XXXXX_YEAR.pdf
+Output folder format: YEAR_Author_PP_XXXXX
 """
 
 import os
@@ -23,20 +23,21 @@ import argparse
 
 def parse_filename(filename):
     """
-    Parse PDF filename to extract author, identifier, and year.
-    Expected format: Author_el_XXXXX_YEAR.pdf
+    Parse PDF filename to extract author, parameter, identifier, and year.
+    Expected format: Author_PP_XXXXX_YEAR.pdf
     
     Returns:
-        tuple: (author, identifier, year) or None if pattern doesn't match
+        quadruple: (author, parameter, identifier, year) or None if pattern doesn't match
     """
-    pattern = r'^(.+?)_el_(\d+)_(\d{4})\.pdf$'
+    pattern = r'^(.+?)_(el|tp|lb)_(\d+)_(\d{4})\.pdf$'
     match = re.match(pattern, filename)
     
     if match:
         author = match.group(1)
-        identifier = match.group(2)
-        year = match.group(3)
-        return author, identifier, year
+        parameter = match.group(2)
+        identifier = match.group(3)
+        year = match.group(4)
+        return author, parameter, identifier, year
     return None
 
 
@@ -73,10 +74,10 @@ def organize_pdfs(source_dir, dry_run=False, verbose=True):
         parsed = parse_filename(pdf)
         
         if parsed:
-            author, identifier, year = parsed
+            author, parameter, identifier, year = parsed
             
             # Create folder name: YEAR_Author_el_ID
-            folder_name = f"{year}_{author}_el_{identifier}"
+            folder_name = f"{year}_{author}_{parameter}_{identifier}"
             folder_path = os.path.join(source_dir, folder_name)
             suppl_path = os.path.join(folder_path, "suppl")
             
@@ -142,9 +143,9 @@ def main():
         description="Organize PDFs into structured folders",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-Expected input filename format: Author_el_XXXXX_YEAR.pdf
+Expected input filename format: Author_PP_XXXXX_YEAR.pdf
 Output folder structure:
-  YEAR_Author_el_XXXXX/
+  YEAR_Author_PP_XXXXX/
     ├── main_article.pdf
     └── suppl/
         """)
