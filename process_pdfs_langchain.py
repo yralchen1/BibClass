@@ -833,7 +833,7 @@ def main():
 
     time1 = time.time()
     print(f"Execution time: {round(time1-time0):d} seconds")
-
+    print("-" * 50)
 
 if __name__ == "__main__":
     main()
