@@ -4,7 +4,7 @@ LangChain PDF Processing Script for Atomic Energy Levels Keywords
 Uses Google Gemini to extract keywords_el from scientific papers.
 
 Usage:
-    python process_pdfs_langchain.py                    # Process all papers
+    python process_pdfs_langchain.py                    # Process all papers from the current directory
     python process_pdfs_langchain.py --single FOLDER    # Process single paper folder
     python process_pdfs_langchain.py --dry-run          # Show what would be processed
 """
@@ -49,7 +49,8 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 
 # Configuration
-BASE_DIR = Path(__file__).parent
+#BASE_DIR = Path(__file__).parent
+BASE_DIR = Path.cwd()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # System prompt for atomic physics keyword extraction
@@ -688,12 +689,21 @@ def process_paper(pdf_base64: str, suppl_text: str, llm: ChatGoogleGenerativeAI)
         return f"ERROR: {e}"
 
 
+#def get_paper_folders(base_dir: Path) -> list[Path]:
+#    """Get all paper folders containing main_article.pdf."""
+#    folders = []
+#    for item in sorted(base_dir.iterdir()):
+##        print(f"{item}")
+#        if item.is_dir() and (item / "main_article.pdf").exists():
+#            folders.append(item)
+#    return folders
+
+# Claude's suggestion
 def get_paper_folders(base_dir: Path) -> list[Path]:
     """Get all paper folders containing main_article.pdf."""
-    folders = []
-    for item in sorted(base_dir.iterdir()):
-        if item.is_dir() and (item / "main_article.pdf").exists():
-            folders.append(item)
+    folders = sorted(
+        p.parent for p in base_dir.rglob("main_article.pdf")
+    )
     return folders
 
 
