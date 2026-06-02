@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- Nb II: EL: E, O: Table 1: Comparison of energies and A-values published in ref [1] and new results
+- Nb II: Hfs: E, O: Table 1: Comparison of energies and A-values published in ref [1] and new results
+- Nb II: PT: T: Section 2. Comments on semi-empirical calculations
+- W: [DROPPED - no table of measured wavelengths]
+- CL: [DROPPED - no table of classified lines]
+- TE: [DROPPED - energy levels in Table 1 are revised experimental/semi-empirical, not purely theoretical]
+- AT: [DROPPED - no ab initio calculations performed]
+
+FINAL_KEYWORDS:
+keywords_el={Nb II: EL: E, O
+Nb II: Hfs: E, O
+Nb II: PT: T},
+keywords_tp={},
+keywords_lb={}

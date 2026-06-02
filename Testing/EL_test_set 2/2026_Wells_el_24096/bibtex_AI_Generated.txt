@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- Ca I; 43Ca I: W: E: Section "2 Methods"
+- Ca I; 43Ca I: CL: E: Section "2 Methods"
+- Ca: IS: E: Section "3 Results and discussion"
+- 43Ca I: Hfs: E: Fig. 5 Spectroscopic scan of the 4s29p 1P1 Rydberg state
+- Ca I: EL: E: [DROPPED - no tabulated energy level values provided]
+- Ca I: IP: E: [DROPPED - literature value used, no new value reported]
+- Ca I: TE: T: [DROPPED - no theoretical energy levels tabulated]
+
+FINAL_KEYWORDS:
+keywords_el={Ca I; 43Ca I: W: E
+Ca I; 43Ca I: CL: E
+Ca: IS: E
+43Ca I: Hfs: E},
+keywords_tp={},
+keywords_lb={}

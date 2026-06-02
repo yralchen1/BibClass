@@ -1,0 +1,11 @@
+EVIDENCE_AUDIT:
+- EL: T: [DROPPED - no tabulated energy levels]
+- TE: T: [DROPPED - no tabulated theoretical energies]
+- AT: T: [DROPPED - no ab initio results for specific elements]
+- ND: T: [DROPPED - no new labels for specific levels provided]
+- GENINT: 1.8: T: Section 5. Implementation of the Methodology in Programs
+
+FINAL_KEYWORDS:
+keywords_el={GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

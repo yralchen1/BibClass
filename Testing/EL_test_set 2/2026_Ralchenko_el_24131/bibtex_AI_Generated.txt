@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- [DROPPED - describes database content, not new data in this paper]: H-Ds I-CX: EL: O
+- [DROPPED - describes database content, not new data in this paper]: H-Ds I-CX: W: O
+- [DROPPED - describes database content, not new data in this paper]: H-Ds I-CX: IP: O
+- [DROPPED - Fig 3 shows ion distributions, not energy levels or transition energies]: Au: TE: T
+- GENINT: 1.8: T: Section 2.4 (Atomic and plasma databases and tools) and Section 2.5 (Theoretical atomic and plasma spectroscopy)
+- GENINT: 1.11: E, T: Section 2.2 (Spectroscopy of highly charged ions) and Section 3 (Future Plans)
+- GENINT: 1.15: E, T, O: Section 2.3 (Critical evaluation of atomic data)
+- GENINT: 1.18: E, T: Section 2.2 (Spectroscopy of highly charged ions) and Section 2.5 (Theoretical atomic and plasma spectroscopy)
+
+FINAL_KEYWORDS:
+keywords_el={GENINT: 1.8: T
+GENINT: 1.11: E, T
+GENINT: 1.15: E, T, O
+GENINT: 1.18: E, T},
+keywords_tp={},
+keywords_lb={}

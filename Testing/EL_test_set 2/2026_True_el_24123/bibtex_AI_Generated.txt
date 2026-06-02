@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- EL: E: Table I: Measured absolute energies of n 2S and n 2D for 85Rb
+- EL: E: Table II: Measured absolute energies of n 2F and n 2G in 85Rb
+- SF: E: Table III: Comparison of quantum defect theory fit parameters
+- SE: E: Section III.B: Corrections to F and G due to Stark shifts
+- GENINT: 1.18: E: Section I: Introduction (plasma diagnostics)
+- [DROPPED - 87Rb I]: No new energy levels or fit parameters reported for this isotope in the tables; literature values used for fitting.
+- [DROPPED - W: E]: No table of measured wavelengths.
+- [DROPPED - CL: E]: No table of classified lines.
+- [DROPPED - IP: E]: Paper explicitly states precision is insufficient to update IE.
+
+FINAL_KEYWORDS:
+keywords_el={Rb I; 85Rb I: EL: E
+Rb I; 85Rb I: SF: E
+Rb I; 85Rb I: SE: E
+GENINT: 1.18: E},
+keywords_tp={},
+keywords_lb={}

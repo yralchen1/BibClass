@@ -1,0 +1,8 @@
+keywords_el={Sr I: TE: T
+Sr I: AT: T
+Sr I: SE: T
+Sr I; 87Sr I: Hfs: T
+Sr I: IS: T
+Sr I: QF: T},
+keywords_tp={Sr I; 87Sr I; 88Sr I: Q: T},
+keywords_lb={}

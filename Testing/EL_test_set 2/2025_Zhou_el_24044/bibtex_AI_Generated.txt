@@ -1,0 +1,30 @@
+EVIDENCE_AUDIT:
+- S XII; Cl XIV: W: E: Table V and Table VI
+- S XII; Cl XIV: CL: E: Table V and Table VI
+- S XII; Cl XIV: EL: E: Table V and Table VI
+- S XII; Cl XIV: TE: T: Table II
+- S XII; Cl XIV: QF: T: Table II
+- S XII; Cl XIV: ZE: T: Section IV, "Other uncertainties" paragraph
+- Cl: IS: T: Section IV, "Other uncertainties" paragraph
+- 35,37Cl XIV: Hfs: T: Section IV, "Other uncertainties" paragraph
+- Ar VII,XV: W: E: Section IV, "Other uncertainties" paragraph
+- [DROPPED - literature values used for calibration]: N, O ions: W: E
+- [DROPPED - method "perturbative QED" not in allowed list]: AT: T
+- [DROPPED - no specific code name mentioned]: GENINT: 1.8: T
+- GENINT: 1.18: E: Section I
+
+FINAL_KEYWORDS:
+keywords_el={S XII; Cl XIV: W: E
+S XII; Cl XIV: CL: E
+S XII; Cl XIV: EL: E
+S XII; Cl XIV: TE: T
+S XII; Cl XIV: QF: T
+S XII; Cl XIV: ZE: T
+Cl: IS: T
+35,37Cl XIV: Hfs: T
+Ar VII,XV: W: E},
+keywords_tp={GENINT: 1.18: E},
+keywords_lb={S XII
+Cl XIV
+Ar VII
+Ar XV}

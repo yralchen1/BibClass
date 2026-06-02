@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- SE: Section 2.3.2 "Stark shifts"
+- SF: Section 2.2.1 "Rydberg atom energy levels"
+- TP: Section 2.2.5 "Excited state lifetimes"
+- GENINT: 1.8: Section 1 "Introduction"
+- [DROPPED - AT]: [DROPPED - Numerov method with model potential not in allowed list (HF, DHF, etc.)]
+- [DROPPED - TE]: [DROPPED - no tabulated energy level values]
+- [DROPPED - W]: [DROPPED - no measured wavelengths]
+- [DROPPED - CL]: [DROPPED - no classified lines]
+- [DROPPED - IP]: [DROPPED - no new numerical value for ground-state IE]
+- [DROPPED - ND]: [DROPPED - no new or revised quantum labels]
+
+FINAL_KEYWORDS:
+keywords_el={H I; 6,7Li I; Na I; 39-41K I; 85,87Rb I; Cs I: SE: T
+H I; 6,7Li I; Na I; 39-41K I; 85,87Rb I; Cs I: SF: T
+GENINT: 1.8: T},
+keywords_tp={H I; 6,7Li I; Na I; 39-41K I; 85,87Rb I; Cs I: TP: T},
+keywords_lb={}

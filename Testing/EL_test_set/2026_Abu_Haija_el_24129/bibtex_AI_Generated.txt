@@ -1,0 +1,6 @@
+keywords_el={GENINT: 1.11: T
+Ca-Cr Ne-like: AT: T
+Ca-Cr Ne-like: SF: T
+Ca-Cr Ne-like: TE: T},
+keywords_tp={Ca-Cr Ne-like: Q: T},
+keywords_lb={}

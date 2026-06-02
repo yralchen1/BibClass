@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- [Hfs]: Table I: Nuclear spin, magnetic dipole and electric quadrupole moments, hyperfine dipole coupling constant A, quadrupole coupling constant B, and ground-state HFS of Li-like 45Sc18+, 119Sn47+, and 187Re72+
+- [TE]: Table II: Fine-structure DR resonances near the threshold and continuum partial waves of the incident electron in the capture process by Sc18+ ions
+- [TE]: Table III: Fine-structure DR resonances near the threshold and continuum partial waves of the incident electron in the capture process by 119Sn47+ and 187Re72+
+- [AT]: Section II.C: Numerical computations (mentions MCDF method in the JAC program)
+- [DROPPED - IS]: Mentioned in background only (Schuch et al. 2005)
+- [DROPPED - W]: Resonance energies are reported as Eres (eV), not wavelengths
+- [DROPPED - CL]: No line assignments to level pairs
+- [DROPPED - EL]: Resonance energies are transition energies (TE), not level values. Ground state HFS is Hfs.
+
+FINAL_KEYWORDS:
+keywords_el={45Sc XVIII,XIX; 119Sn XLVII,XLVIII; 187Re LXXII,LXXIII: AT: T
+45Sc XIX; 119Sn XLVIII; 187Re LXXIII: Hfs: T
+45Sc XVIII; 119Sn XLVII; 187Re LXXII: TE: T
+GENINT: 1.8: T},
+keywords_tp={45Sc XVIII; 119Sn XLVII; 187Re LXXII: AT: T},
+keywords_lb={}

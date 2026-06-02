@@ -1,0 +1,23 @@
+EVIDENCE_AUDIT:
+- EL: [DROPPED - no tabulated experimental level values]
+- W: [DROPPED - no measured wavelengths]
+- CL: [DROPPED - no classified lines]
+- TA: [DROPPED - no transition arrays]
+- SE: [DROPPED - no Stark effect data]
+- ZE: [DROPPED - no Zeeman effect data]
+- Hfs: [DROPPED - no hyperfine data]
+- IS: [DROPPED - no isotope shifts]
+- QF: [DROPPED - no QED shifts reported]
+- TE: [DROPPED - no tabulated computed level values or transition energies]
+- AT: Section III.A "Description of the calculation method" (DFS method used for wavefunctions)
+- PT: [DROPPED - not Slater/Condon parameter fitting]
+- SF: [DROPPED - no series formulae]
+- IP: [DROPPED - no ionization potential values reported]
+- ND: [DROPPED - no new designations]
+- GENINT: 1.19: T: Title "Electrostatic potentials and electron densities of atoms of transuranic elements (Z = 93–120)"
+
+FINAL_KEYWORDS:
+keywords_el={Ar I; Cu I; Sn I; Hg I; U I; Np-Ubn I: AT: T
+GENINT: 1.19: T},
+keywords_tp={},
+keywords_lb={}

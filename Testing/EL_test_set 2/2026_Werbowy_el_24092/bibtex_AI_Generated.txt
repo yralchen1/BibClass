@@ -1,0 +1,21 @@
+EVIDENCE_AUDIT:
+- N I: SE: E: Table I: Experimental and calculated differences of the scalar polarizabilities Δα0 obtained for the electric dipole E1 lines between levels of the 2s22p23s and 2s22p23p configurations of the nitrogen atom.
+- N I: SE: T: Table III: Values of the calculated scalar α0 and tensor α2 polarizabilities for levels of the 2s22p23s and 2s22p23p configurations.
+- N I: SE: O: Table III: Values of the calculated scalar α0 and tensor α2 polarizabilities for levels of the 2s22p23s and 2s22p23p configurations.
+- N I: AT: T: Section III: Theoretical Calculations of the Polarizabilities
+- N I: PT: T: Section III: Theoretical Calculations of the Polarizabilities
+- GENINT: 1.8: T: Section III: Theoretical Calculations of the Polarizabilities
+- N I: EL: E: [DROPPED - Energy levels are from NIST literature (Ref 15)]
+- N I: W: E: [DROPPED - Wavelengths are from NIST literature (Ref 15)]
+- N I: CL: E: [DROPPED - No new line classifications reported]
+- N I: TE: T: [DROPPED - No table of calculated energy levels provided]
+
+FINAL_KEYWORDS:
+keywords_el={N I: SE: E
+N I: SE: T
+N I: SE: O
+N I: AT: T
+N I: PT: T
+GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

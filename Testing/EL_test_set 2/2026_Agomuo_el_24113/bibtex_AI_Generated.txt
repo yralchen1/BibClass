@@ -1,0 +1,13 @@
+EVIDENCE_AUDIT:
+- 39K I: EL: E: Table A.2, Table A.3, and Table A.4 (Measured energy levels of Rydberg states)
+- 39K I: SF: O: Table 1 (New parameters for the Rydberg-Ritz formula)
+- 39K I: PT: T: Table 1 (Fitting parameters for Rydberg-Ritz formula)
+- [W: E]: [DROPPED - Data is presented as energy levels relative to ground, better categorized as EL]
+- [IP: E]: [DROPPED - Ionization potential used from literature (Ref 42), not a new measurement]
+
+FINAL_KEYWORDS:
+keywords_el={39K I: EL: E
+39K I: SF: O
+39K I: PT: T},
+keywords_tp={},
+keywords_lb={}

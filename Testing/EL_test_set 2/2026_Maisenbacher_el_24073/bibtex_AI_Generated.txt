@@ -1,0 +1,28 @@
+EVIDENCE_AUDIT:
+- H I: W: E: Page 6, Equations (4) and (5) report measured transition frequencies for 2S-6P1/2 and 2S-6P3/2.
+- H I: CL: E: Page 2, "Principle of the measurement" section describes the classification of the observed lines to the 2S-6P transitions.
+- H I: EL: O: Page 6, "R_inf and r_p from atomic hydrogen" section reports the derived 1S Lamb shift value.
+- H I: SE: E, T, O: Page 12, "dc-Stark shift" section and Equation (21) discuss measured and calculated Stark coefficients and shifts.
+- H I: ZE: T: Table 1 lists the Zeeman shift as a calculated correction.
+- H I: Hfs: T, O: Page 10, "2S-6P fine-structure centroid, 6P fine-structure splitting and HFS corrections" section describes the calculation and application of hyperfine structure corrections.
+- H I: QF: E, T, O: Page 6, "Test of the SM prediction" section discusses the test of bound-state QED and the 1S Lamb shift.
+- H I: TE: T: Page 6, Equation (10) provides the Standard Model theoretical prediction for the transition frequency.
+- H I: AT: T: Page 11, "SM predictions of transition frequencies and bound-state QED test" section describes the ab initio QED calculations used.
+- [DROPPED - IP]: The paper uses literature values for ionization potential/Rydberg constant to extract other parameters but does not report a new numerical value for the ground-state IE.
+- [DROPPED - IS]: The paper mentions deuterium as future work but does not report isotope shift data.
+- GENINT: 1.15: E, T, O: Page 6, Equation (9) and following text report new values for the proton charge radius and Rydberg constant.
+- GENINT: 1.24: E, T, O: Page 7, "Our measurement can also be used to improve new physics constraints..." discusses searches for new physics.
+
+FINAL_KEYWORDS:
+keywords_el={H I: W: E
+H I: CL: E
+H I: EL: O
+H I: SE: E, T, O
+H I: ZE: T
+H I: Hfs: T, O
+H I: QF: E, T, O
+H I: TE: T
+H I: AT: T},
+keywords_tp={GENINT: 1.15: E, T, O
+GENINT: 1.24: E, T, O},
+keywords_lb={}

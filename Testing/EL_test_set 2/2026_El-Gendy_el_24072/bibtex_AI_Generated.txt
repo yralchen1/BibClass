@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- H-B He-like: TE: T: Table 2: Ground state energies of helium and helium-like ions (H-, Li+, Be2+, B3+)
+- GENINT: 1.18: T: Title: THE GROUND STATE AND LOW-LYING EXCITED STATES OF THE HELIUM ATOM IN DENSE PLASMA
+- [DROPPED - H-B He-like: AT: T]: [VMC is not HF, DHF, MCDF, MCDHF, CI, or CI+MBPT]
+- [DROPPED - H-B He-like: SE: T]: [paper calculates energies in screened potential, not polarizabilities or Stark shifts in an external field]
+- [DROPPED - H-B He-like: EL: T]: [EL is for experimental/semi-empirical, TE is for theoretical]
+- [DROPPED - H-B He-like: W: T]: [W and CL forbid method type T]
+- [DROPPED - H-B He-like: IP: T]: [paper does not report new ionization potential values]
+- [DROPPED - H-B He-like: ND: T]: [no new or revised quantum labels]
+
+FINAL_KEYWORDS:
+keywords_el={H-B He-like: TE: T
+GENINT: 1.18: T},
+keywords_tp={},
+keywords_lb={}

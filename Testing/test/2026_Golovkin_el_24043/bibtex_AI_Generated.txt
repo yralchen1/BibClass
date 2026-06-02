@@ -1,0 +1,20 @@
+keywords_el={GENINT: 1.8: T
+GENINT: 1.7: T
+GENINT: 1.11: T
+Ar XVII: IP: T
+Ar XVII: SE: T
+Kr XXXV,XXXVI: SE: T
+Cu I-XXIX: W: T
+O I-VIII: W: T},
+keywords_tp={GENINT: 1.8: T
+GENINT: 1.11: T
+GENINT: 1.18: T
+Ar XVII; Kr XXXV,XXXVI; Cu I-XXIX; O I-VIII: Q: T},
+keywords_lb={GENINT: 1.1.1: T
+GENINT: 1.1.1.4h: T
+GENINT: 1.4.3: T
+Ar XVII: S: T
+Ar XVII: P: T
+Kr XXXV,XXXVI: P: T
+Cu I-XXIX: S: T
+O I-VIII: S: T}

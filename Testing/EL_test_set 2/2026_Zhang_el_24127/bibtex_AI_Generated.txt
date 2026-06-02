@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- W XIV: TE: T: Table 1: Energy levels and energy level lifetimes for the ground configuration 4d105s24f13 and the excited configuration 4d105s24f125p of W13+ ions.
+- W XIV: AT: T: Section 2: 理论方法 (Theory Method)
+- W XIV: IP: T: Section 3.1: W13+离子的能级 (Energy levels of W13+ ion)
+- GENINT: 1.18: T: Section 1: 引言 (Introduction)
+- W XIV: EL: T: [DROPPED - method type T not allowed for EL]
+- W XIV: CL: T: [DROPPED - method type T not allowed for CL]
+- W XIV: W: T: [DROPPED - method type T not allowed for W]
+- W XV, XVI: TE: T: [DROPPED - data only in figure, not tabulated]
+
+FINAL_KEYWORDS:
+keywords_el={W XIV: TE: T; AT: T; IP: T
+GENINT: 1.18: T},
+keywords_tp={},
+keywords_lb={}

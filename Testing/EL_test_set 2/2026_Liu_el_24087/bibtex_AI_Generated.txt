@@ -1,0 +1,22 @@
+EVIDENCE_AUDIT:
+- [EL]: [DROPPED - method is T, EL requires E or O]
+- [IP]: [Table I: The IP and EEs (in cm−1) of Hg calculated using the EOM-RCCSD and CI+MBPT methods; Table II: The IP and EEs (in cm−1) of Cn calculated using the EOM-RCCSD and CI+MBPT methods; Table VI: The IP (in cm−1) and α (in a.u.) of the ground states of Hg and Cn calculated using the RCCSD and RCCSD(T) methods]
+- [SE]: [Table V: αS and αT (in a.u.) of the ground and excited states in Hg and Cn, calculated using the EOM-RCCSD method; Table VI: The IP (in cm−1) and α (in a.u.) of the ground states of Hg and Cn calculated using the RCCSD and RCCSD(T) methods]
+- [IS]: [Table III: The F factors (in GHz/fm2) for transitions between the ground state and the 10 low-lying excited states in Hg and Cn, calculated using the EOM-RCCSD and CI+MBPT methods]
+- [TE]: [Table I: The IP and EEs (in cm−1) of Hg calculated using the EOM-RCCSD and CI+MBPT methods; Table II: The IP and EEs (in cm−1) of Cn calculated using the EOM-RCCSD and CI+MBPT methods; Table VII: The EEs (in cm−1) of Hg using EOM-RCCSD; Table VIII: The CI+MBPT results (in cm−1) for the ground-state IP and low-lying EEs of Hg; Table IX: The CI+MBPT results (in cm−1) for the ground-state IP and the low-lying EEs of Cn]
+- [AT]: [Section II.A: The EOM-RCC method; Section II.B: The CI + MBPT method]
+- [QF]: [DROPPED - QED is a correction term, not the primary quantity]
+- [W]: [DROPPED - no experimental wavelengths]
+- [CL]: [DROPPED - no experimental line classifications]
+- [GENINT: 1.13: T]: [Section I: "Hg is also considered a promising candidate for optical lattice quantum frequency standards."; Section III: "We used α of Hg to update the evaluation of the BBR shifts in the Hg optical frequency standards [10]."]
+- [GENINT: 1.19: T]: [Section I: "In the superheavy region, the element Cn, first synthesized in 1996 at GSI Darmstadt [13], is of particular interest."]
+
+FINAL_KEYWORDS:
+keywords_el={Hg I; Cn I: IP: T
+Hg I; Cn I: SE: T
+Hg I; Cn I: IS: T
+Hg I; Cn I: TE: T
+Hg I; Cn I: AT: T},
+keywords_tp={GENINT: 1.13: T
+GENINT: 1.19: T},
+keywords_lb={}

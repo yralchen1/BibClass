@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- Sr I: AT: T: Section II.A: RCI + MBPT method
+- Sr I: SE: T: Table III: Comparison of the static dipole polarizabilities (a.u.) of the low-lying states of Sr
+- Sr I: TE: T: Table I: Comparison of the energy levels (in cm−1) for some low-lying states
+- GENINT: 1.13: T: Section I. INTRODUCTION
+- Sr I: ZE: T: [DROPPED - no tabulated Zeeman shifts or g-factors]
+- Sr I: W: T: [DROPPED - theoretical wavelengths must be coded as TE: T or SE: T per rule AP-17]
+- Sr I: CL: T: [DROPPED - theoretical classifications must be coded as TE: T per rule AP-17]
+- Sr I: QF: T: [DROPPED - QED is not the primary computed quantity]
+- Sr I: TP: T: [DROPPED - matrix elements provided but no transition rates or lifetimes tabulated]
+
+FINAL_KEYWORDS:
+keywords_el={Sr I: AT: T
+Sr I: SE: T
+Sr I: TE: T
+GENINT: 1.13: T},
+keywords_tp={},
+keywords_lb={Sr I}

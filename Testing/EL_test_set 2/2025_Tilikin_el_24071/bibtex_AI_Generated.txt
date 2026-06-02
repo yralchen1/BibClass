@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- Al XII-XIII: W: E: Fig. 3: Densitograms of the aluminum spectra measured in (red curve) and (blue curve) three laser shots.
+- Al XII-XIII: CL: E: Fig. 3: Densitograms of the aluminum spectra measured in (red curve) and (blue curve) three laser shots.
+- GENINT: 1.8: T: Section 4. EXPERIMENTAL RESULTS
+- GENINT: 1.18: E, T: Section 4. EXPERIMENTAL RESULTS
+- Al: Section 2. DESCRIPTION OF THE EXPERIMENTS
+- [DROPPED - TE: T]: No tabulated transition energies or level values provided (only graphical spectra in Fig. 5 and 6).
+- [DROPPED - AT: T]: No ab initio calculation results (HF, CI, etc.) reported; PrismSPECT used for plasma simulation.
+- [DROPPED - EL: E]: No tabulated experimental energy level values provided.
+
+FINAL_KEYWORDS:
+keywords_el={Al XII-XIII: W: E
+Al XII-XIII: CL: E},
+keywords_tp={GENINT: 1.8: T
+GENINT: 1.18: E, T},
+keywords_lb={Al}

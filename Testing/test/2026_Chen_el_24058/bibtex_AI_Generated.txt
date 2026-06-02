@@ -1,0 +1,10 @@
+keywords_el={GENINT: 1.13: E
+GENINT: 1.14: E
+Rb I; 87Rb I: EL: E
+Rb I; 87Rb I: CL: E
+Rb I; 87Rb I: W: E
+Rb I; 87Rb I: Hfs: E
+Rb I; 87Rb I: SE: E
+Rb I; 87Rb I: ZE: E},
+keywords_tp={},
+keywords_lb={Rb I; 87Rb I: P: E}

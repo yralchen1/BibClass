@@ -1,0 +1,12 @@
+EVIDENCE_AUDIT:
+- [Xe XXVII-XXXII: TA: E]: Figure 2 and Section 4 (Observations)
+- [GENINT: 1.18: E]: Abstract and Section 5 (Discussion)
+- [Xe XXVII-XXXII: W: E]: [DROPPED - no tabulated wavelengths or frequencies provided]
+- [Xe XXVII-XXXII: CL: E]: [DROPPED - no specific level-to-level assignments provided in a table]
+- [Xe XXVII-XXXII: EL: E]: [DROPPED - no energy level table provided]
+- [Xe XXXVI: TA: E]: [DROPPED - text states it is outside the observed spectral range]
+
+FINAL_KEYWORDS:
+keywords_el={Xe XXVII-XXXII: TA: E},
+keywords_tp={GENINT: 1.18: E},
+keywords_lb={}

@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- [W XLIV-XLVII, LXII-LXV: AT: T]: Section 3.1 Atomic data calculations
+- [W XLIV-XLVII, LXII-LXV: TE: T]: Table 2: Main spectral lines from W44+–W47+ ions; Table 3: Main spectral lines from W62+ to W65+ ions
+- [W XLIV-XLVII, LXII-LXV: W: E]: [DROPPED - NIST values are from literature, not measured in this work]
+- [W XLIV-XLVII, LXII-LXV: CL: E]: [DROPPED - NIST assignments are from literature]
+- [GENINT: 1.8: T]: Section 3.1 Atomic data calculations
+- [GENINT: 1.18: T]: Abstract
+- [W XLIV-XLVII, LXII-LXV: T]: Table 2: Main spectral lines from W44+–W47+ ions; Table 3: Main spectral lines from W62+ to W65+ ions
+
+FINAL_KEYWORDS:
+keywords_el={W XLIV-XLVII, LXII-LXV: AT: T
+W XLIV-XLVII, LXII-LXV: TE: T
+GENINT: 1.8: T
+GENINT: 1.18: T},
+keywords_tp={W XLIV-XLVII, LXII-LXV: T},
+keywords_lb={}

@@ -1,0 +1,13 @@
+```bibtex
+keywords_el={GENINT: 1.8: T
+C V: IS: E
+C V: IS: T
+C V: TE: T
+C V; 13C V: Hfs: E
+C V; 13C V: Hfs: T
+13C V: CL: E
+13C V: W: E
+Sr II; 87Sr II: Hfs: E},
+keywords_tp={},
+keywords_lb={}
+```

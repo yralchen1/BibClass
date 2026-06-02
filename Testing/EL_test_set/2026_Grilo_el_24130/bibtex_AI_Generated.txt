@@ -1,0 +1,9 @@
+keywords_el={GENINT: 1.11: E
+GENINT: 1.11: T
+Ne IX; Ar XVII; Ca XVIII-XIX: W: E
+Ne IX; Ar XVII; Ca XVIII-XIX: CL: E
+Ne IX; Ar XVII; Ca XVIII-XIX: TE: T
+Ne IX; Ar XVII; Ca XVIII-XIX: AT: T},
+keywords_tp={Ca XVIII-XIX: E: E
+Ca XVIII-XIX: Q: T},
+keywords_lb={}

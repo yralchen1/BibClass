@@ -1,0 +1,25 @@
+EVIDENCE_AUDIT:
+- TE: Table I: Calculated energies and αSd values of the clock states of Ca+, Sr+, and Ba+
+- SE: Table I: Calculated energies and αSd values of the clock states of Ca+, Sr+, and Ba+
+- SE: Table II: αTd and Θ values of the metastable states of Ca+, Sr+, and Ba+
+- Hfs: Table VI: Calculated Ahf and Bhf/Qn values of the ground and metastable states of 43Ca+, 87Sr+, and 137Ba+
+- AT: Table I: Calculated energies and αSd values of the clock states of Ca+, Sr+, and Ba+ with the DHF and RCC methods
+- [DROPPED - IP]: No new numerical value for ground-state IE reported.
+- [DROPPED - IS]: Mentioned in intro but no data reported.
+- [DROPPED - ZE]: Mentioned in intro but no data reported.
+- [DROPPED - QF]: QED terms (VP) are included as corrections but not the primary quantity.
+- [DROPPED - ND]: No new or revised quantum labels.
+- [DROPPED - CL]: No line assignments to level pairs reported.
+- [DROPPED - W]: No measured wavelengths reported.
+- [DROPPED - TA]: No transition arrays reported.
+- GENINT: 1.13: Abstract: "determination of clock properties"
+- GENINT: 1.24: Intro: "probing atomic parity violation (APV)"
+- Transition Probabilities: Table V: Estimated lifetimes of clock states of the considered ions... Transition rates from the M1 and E2 modes are also given.
+
+FINAL_KEYWORDS:
+keywords_el={Ca II; Sr II; Ba II: TE: T; SE: T; AT: T
+43Ca II; 87Sr II; 137Ba II: Hfs: T
+GENINT: 1.13: T
+GENINT: 1.24: T},
+keywords_tp={Ca II; Sr II; Ba II: T},
+keywords_lb={}

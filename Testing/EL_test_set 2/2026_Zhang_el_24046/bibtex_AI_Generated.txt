@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- EL: Table 3: Experimentally identified even-parity autoionization states.
+- W: Table 2: Assigned single-color photoionization lines and corresponding transitions of atomic nickel.
+- CL: Table 2: Assigned single-color photoionization lines and corresponding transitions of atomic nickel.
+- ND: Table 3: Experimentally identified even-parity autoionization states.
+- IP: [DROPPED - literature value from Ref 43 used as reference, not a new result]
+- IS: [DROPPED - mentioned as application in introduction but not measured]
+- Hfs: [DROPPED - mentioned as application in introduction but not measured]
+- TE: [DROPPED - no tabulated theoretical energies]
+- AT: [DROPPED - no ab initio calculations performed]
+
+FINAL_KEYWORDS:
+keywords_el={Ni I; 58Ni I: EL: E; W: E; CL: E; ND: E},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- Ar III: Table 3: Errors in DIP Energies (in eV) of Ar, Kr, Xe, and Rn Atoms with Respect to Experiment
+- Kr III: Table 3: Errors in DIP Energies (in eV) of Ar, Kr, Xe, and Rn Atoms with Respect to Experiment
+- Xe III: Table 3: Errors in DIP Energies (in eV) of Ar, Kr, Xe, and Rn Atoms with Respect to Experiment
+- Rn III: Table 3: Errors in DIP Energies (in eV) of Ar, Kr, Xe, and Rn Atoms with Respect to Experiment
+- Zn III: Section 4.4: Benchmarking: Atoms and Molecules (mentions Group 12 atoms Zn, Cd, and Hg and Table S4)
+- Cd III: Section 4.4: Benchmarking: Atoms and Molecules (mentions Group 12 atoms Zn, Cd, and Hg and Table S4)
+- Hg III: Section 4.4: Benchmarking: Atoms and Molecules (mentions Group 12 atoms Zn, Cd, and Hg and Table S4)
+- AT: Section 2.1: Treatment of Relativistic Effects (discusses 4c Dirac-Coulomb Hamiltonian and Dirac-Hartree-Fock equations)
+- TE: Table 6: Comparison of DIP Energies (in eV) of Ar, Kr, Xe, and Rn Atoms Using DIP-EOMCCSD(T)(ã)(4h-2p) at CBS Level...
+- GENINT: 1.8: Section 3: Computational Details (mentions BAGH in-house quantum chemistry software)
+- [DROPPED - Cl2, Br2, HBr, HI]: These are molecules, not atomic spectra.
+- [DROPPED - Ne]: Not included in the "argon to radon" series studied in the tables.
+
+FINAL_KEYWORDS:
+keywords_el={Ar III; Kr III; Xe III; Rn III; Zn III; Cd III; Hg III: AT: T; TE: T
+GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

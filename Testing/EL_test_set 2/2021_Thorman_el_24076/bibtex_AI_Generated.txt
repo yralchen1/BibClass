@@ -1,0 +1,28 @@
+EVIDENCE_AUDIT:
+- W VI: Table 3: Rest wavelengths of the passive tungsten emission observed on JET
+- W XVIII-XIX: Table 1: Visible tungsten CX transitions observed on JET
+- W XXIV-XXIX: Table 1: Visible tungsten CX transitions observed on JET; Table 2: Tungsten charge exchange lines observed on LHD; Table 3: Rest wavelengths of the passive tungsten emission observed on JET
+- W XXXI: Table 1: Visible tungsten CX transitions observed on JET; Table 3: Rest wavelengths of the passive tungsten emission observed on JET
+- W XXXIII-XXXIV: Table 1: Visible tungsten CX transitions observed on JET; Table 3: Rest wavelengths of the passive tungsten emission observed on JET
+- W XXXVI: Table 1: Visible tungsten CX transitions observed on JET
+- W XXXVIII: Table 1: Visible tungsten CX transitions observed on JET
+- W XL: Table 1: Visible tungsten CX transitions observed on JET
+- W XLIII: Table 1: Visible tungsten CX transitions observed on JET
+- W XLV: Table 1: Visible tungsten CX transitions observed on JET
+- W XLVII: Table 1: Visible tungsten CX transitions observed on JET
+- W L: Table 1: Visible tungsten CX transitions observed on JET
+- W LII: Table 1: Visible tungsten CX transitions observed on JET
+- W LV: Table 1: Visible tungsten CX transitions observed on JET
+- W LVII: Table 1: Visible tungsten CX transitions observed on JET
+- W: E: Table 1: JET (nm) column; Table 2: Reported (nm) column; Table 3: JET (nm) and LHD (nm) columns
+- CL: E: Table 1: n1 -> n2 column; Table 2: n1 -> n2 column; Table 3: Suspected Transition column
+- TE: T: Table 1: Relativisitc Rydberg (nm) column; Table 2: Relativistic Rydberg (nm) column; Table 3: Theory (nm) column
+- [DROPPED - ZE: E, T]: g-factor measurement for W XXV cited from literature (ref 23), not a new result of this paper.
+- [DROPPED - ND: E]: Standard quantum labels (n, terms) used; no new labeling scheme introduced.
+- [DROPPED - EL: E]: No energy level table provided; only wavelengths and transitions.
+- [DROPPED - AT: T]: No ab initio calculations performed; theoretical values are from literature or simple Rydberg formula.
+
+FINAL_KEYWORDS:
+keywords_el={W VI; W XVIII-XIX; W XXIV-XXIX; W XXXI; W XXXIII-XXXIV; W XXXVI; W XXXVIII; W XL; W XLIII; W XLV; W XLVII; W L; W LII; W LV; W LVII: W: E; CL: E; TE: T},
+keywords_tp={GENINT: 1.18: E, T; GENINT: 1.8: T},
+keywords_lb={JET; LHD; ITER}

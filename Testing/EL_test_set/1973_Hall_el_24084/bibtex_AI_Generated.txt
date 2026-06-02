@@ -1,0 +1,5 @@
+keywords_el={H I; C I; Na I; Mg I; Al I; Si I; S I; K I; Ca I,II; Sc I; Ti I; Cr I; Mn I; Fe I; Ni I; Zn I; Zr I; Cs I: W: E
+H I; C I; Na I; Mg I; Al I; Si I; S I; K I; Ca I,II; Sc I; Ti I; Cr I; Mn I; Fe I; Ni I; Zn I; Zr I; Cs I: CL: E
+Ti I: ZE: E},
+keywords_tp={},
+keywords_lb={}

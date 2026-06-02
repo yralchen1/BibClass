@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- V II: AT: T: ABSTRACT
+- V II: TE: T: Table I: Excitation energies of the lower states of vanadium ion.
+- V II: EL: E: [DROPPED - NIST values used for comparison only, not a new compilation or measurement]
+- V II: W: E: [DROPPED - no wavelengths reported]
+- V II: CL: E: [DROPPED - no line classifications reported]
+- V II: IP: T: [DROPPED - NIST ionization energy used as reference, not a new result]
+- V II: ND: T: [DROPPED - no new designations reported]
+- V II: PT: T: [DROPPED - method is ab initio, not parametric]
+
+FINAL_KEYWORDS:
+keywords_el={V II: AT: T
+V II: TE: T},
+keywords_tp={},
+keywords_lb={}

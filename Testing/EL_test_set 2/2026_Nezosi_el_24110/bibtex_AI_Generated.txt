@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- 135Ba II: Table 3: Magnetic dipole A and electric quadrupole B hyperfine structure constants (in MHz) of 135Ba II
+- 137Ba II: Table 2: Magnetic dipole A and electric quadrupole B hyperfine structure constants (in MHz) of 137Ba II
+- 87Sr II: Table 5: Magnetic dipole A and electric quadrupole B hyperfine structure constants (in MHz) of 87Sr II
+- 137Ba I: Table 8: Magnetic dipole A and electric quadrupole B hyperfine structure constants (in MHz) of 137Ba I
+- Hfs: T: Tables 2, 3, 5, 8 (calculated A and B constants)
+- AT: T: Section 2.1: Multiconfiguration Dirac–Hartree–Fock Method
+- GENINT: 1.8: T: Section 2.3: Computational Details (GRASP package)
+- [DROPPED - EL]: No table of energy level values (cm-1 or eV) provided.
+- [DROPPED - W]: No table of measured wavelengths provided.
+- [DROPPED - IS]: Isotope shifts discussed but no new values reported.
+- [DROPPED - Hfs: E]: Experimental values in tables are cited from literature, not measured in this work.
+
+FINAL_KEYWORDS:
+keywords_el={137Ba I; 135,137Ba II; 87Sr II: Hfs: T; AT: T
+GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,5 @@
+keywords_el={Sc XIX; 45Sc XIX; Sn XLVIII; 119Sn XLVIII; Re LXXIII; 187Re LXXIII: Hfs: T
+Sc XIX; Sn XLVIII; Re LXXIII: TE: T
+Sc XIX; Sn XLVIII; Re LXXIII: AT: T},
+keywords_tp={Sc XIX; Sn XLVIII; Re LXXIII: Q: T},
+keywords_lb={}

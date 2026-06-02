@@ -1,0 +1,24 @@
+EVIDENCE_AUDIT:
+- [C V: IS: E]: Table IV: Theoretical values of the SIS... and experimental values for... carbon (this work)
+- [He-Ne He-like: IS: T]: Table IV: Theoretical values of the SIS... and Table V: SIS coefficients for the J=1->0 and J=2->0 fine-structure transitions... Z=2 to 10
+- [13C V: Hfs: E, T]: Table VI: J-dependent contributions to the 1s2p 3PJ isotope shifts... In 13C4+ hyperfine-induced fine-structure mixing affects the transition frequencies
+- [He-Ne He-like: AT: T]: Section IV: CALCULATIONS (variational method) and Table V (coefficients for Z=2-10)
+- [He-Ne He-like: TE: T]: Table I: Contributions to the 1s2p 3PJ 13C4+ - 12C4+ isotope shift in the (negative) binding energy (MHz) and Table IV (theoretical SIS values)
+- [GENINT: 1.13: E]: Section II: EXPERIMENT (mentions frequency comb referenced to an atomic clock)
+- [GENINT: 1.24: E, T]: Section I: INTRODUCTION (mentions test of QED and hyperfine-induced fine-structure mixing)
+- [W: E]: [DROPPED - absolute frequencies mentioned as determined in Section II but not tabulated in the paper]
+- [EL: E]: [DROPPED - splittings and shifts reported, but no absolute energy level values tabulated]
+- [CL: E]: [DROPPED - no wavelengths or line assignments tabulated]
+- [QF: T]: [DROPPED - QED is a routine ingredient in the NRQED calculation, not the primary novel result]
+- [IP: T]: [DROPPED - binding energy shifts reported, but no new ground state ionization potential value]
+
+FINAL_KEYWORDS:
+keywords_el={C V: IS: E
+He-Ne He-like: IS: T
+13C V: Hfs: E, T
+He-Ne He-like: AT: T
+He-Ne He-like: TE: T
+GENINT: 1.13: E
+GENINT: 1.24: E, T},
+keywords_tp={},
+keywords_lb={}

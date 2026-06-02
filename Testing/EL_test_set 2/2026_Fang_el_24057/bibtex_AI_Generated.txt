@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- AT: Section II: THEORETICAL METHOD (describes the ab initio C-BSBF method)
+- TE: Table I: Nonrelativistic energies (in a.u.) of the n 3P states...
+- TE: Table II: Breakdown of the fine-structure intervals ν12 and ν02 (in MHz)...
+- TE: Table IV: Fitted fine-structure splittings for the n 3PJ (n = 45–51) states...
+- TE: Table V: Comparison of fine-structure intervals between the n 3PJ levels...
+- SF: Table III: 1/n asymptotic expansion coefficients in Eq. (12)...
+- [DROPPED - QF]: QED corrections are routine ingredients for the fine structure, not the primary novel result.
+- [DROPPED - EL]: No experimental level values reported.
+- [DROPPED - W]: No experimental wavelengths reported.
+- [DROPPED - CL]: No experimental line classifications reported.
+
+FINAL_KEYWORDS:
+keywords_el={4He I: AT: T
+4He I: TE: T
+4He I: SF: T},
+keywords_tp={4He I},
+keywords_lb={4He}

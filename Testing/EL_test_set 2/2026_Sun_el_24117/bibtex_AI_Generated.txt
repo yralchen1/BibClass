@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- [TE]: Table 1: Convergence study of the nonrelativistic energies for the 1s2 nD (3 <= n <= 10) states of lithium
+- [TE]: Table 6: Ionization energies of the 3D to 10D states of the lithium atom
+- [TE]: Table 7: Fine structure splittings of the 1s2 nD 2Dj states (3 <= n <= 10) of lithium
+- [TE]: Table 8: Transition frequencies from the nD states (3 <= n <= 10) to the 2P state of the lithium atom
+- [IS]: Table 6: Ionization energies of the 3D to 10D states of the lithium atom (tabulates values for 7Li and 6Li)
+- [IS]: Table 8: Transition frequencies from the nD states (3 <= n <= 10) to the 2P state of the lithium atom (tabulates values for 7Li and 6Li)
+- [TR]: Table 9: Oscillator strengths for transitions n'P -> nD with 2 <= n' <= 10 and 3 <= n <= 10 in lithium atom
+- [QF]: [DROPPED - QED is a component of the calculation, not the primary computed quantity]
+- [EL]: [DROPPED - paper reports theoretical values, use TE instead]
+- [AT]: [DROPPED - method (Hylleraas) not in allowed list]
+- [W]: [DROPPED - theoretical values, use TE instead]
+- [CL]: [DROPPED - theoretical values, use TE instead]
+
+FINAL_KEYWORDS:
+keywords_el={Li I; 6Li I; 7Li I: TE: T
+Li I: IS: T},
+keywords_tp={Li I; 6Li I; 7Li I: TR: T},
+keywords_lb={}

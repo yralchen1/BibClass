@@ -1,0 +1,22 @@
+EVIDENCE_AUDIT:
+- [EL]: [DROPPED - Method is T, use TE]
+- [W]: [DROPPED - Method is T, use TE]
+- [CL]: [DROPPED - Method is T, use TE]
+- [229Th IV: TE: T]: Table I: Partial electronic states in our calculation
+- [229Th IV: AT: T]: Section "More efficient pathway for isomeric excitation"
+- [229Th IV: Hfs: T]: Section "Opening of E1 nuclear excitation channels"
+- [229Th IV: E2: T]: [DROPPED - No new numerical value reported for E2]
+- [GENINT: 1.23: T]: Introduction
+- [GENINT: 1.8: T]: Section "More efficient pathway for isomeric excitation"
+- [229Th IV: E1: T]: Table II: E1 decay channels opened by the NHM effect and the corresponding decay rates
+- [229Th IV: M1: T]: Section "More efficient pathway for isomeric excitation"
+
+FINAL_KEYWORDS:
+keywords_el={229Th IV: TE: T
+229Th IV: AT: T
+229Th IV: Hfs: T
+GENINT: 1.23: T
+GENINT: 1.8: T},
+keywords_tp={229Th IV: E1: T
+229Th IV: M1: T},
+keywords_lb={}

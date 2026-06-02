@@ -1,0 +1,13 @@
+EVIDENCE_AUDIT:
+- Gd I: CL: E: Abstract
+- Gd I: W: E: [DROPPED - reported frequency is relative to an arbitrary local axis, not an absolute transition frequency]
+- Gd I: Hfs: E: [DROPPED - explicitly stated as not a new measurement]
+- Gd I: IS: E: [DROPPED - explicitly stated as not a new measurement]
+- GENINT: 1.8: T: Abstract
+- GENINT: 1.18: E: Abstract
+
+FINAL_KEYWORDS:
+keywords_el={Gd I: CL: E},
+keywords_tp={E},
+keywords_lb={GENINT: 1.8: T
+GENINT: 1.18: E}

@@ -1,0 +1,14 @@
+keywords_el={GENINT: 1.15: E
+GENINT: 1.15: T
+S XIII; Cl XIV: EL: E
+S XIII; Cl XIV: W: E
+S XIII; Cl XIV: CL: E
+S XIII; Cl XIV: TE: T
+S XIII; Cl XIV: QF: E
+S XIII; Cl XIV: QF: T
+S XIII; Cl XIV: AT: T
+Cl XIV; 35Cl XIV; 37Cl XIV: Hfs: T
+Cl XIV: IS: T
+Ar VII,XV: W: E},
+keywords_tp={},
+keywords_lb={}

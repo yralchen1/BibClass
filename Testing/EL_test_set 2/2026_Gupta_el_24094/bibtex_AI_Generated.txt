@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- [Kr XXV: W: E]: Table 7: A comparison of observed and theoretical wavelengths (in nm) for Kr24+ emission lines detected during the LHD experiment
+- [Kr XXV: CL: E]: Table 7: A comparison of observed and theoretical wavelengths (in nm) for Kr24+ emission lines detected during the LHD experiment
+- [Kr XXV: TE: T]: Table 1: Fine-structure-resolved excitation energies (in eV) of the Mg-like Kr ion
+- [Kr XXV: AT: T]: Section: Relativistic Atomic Structure Calculations for Kr24+ Ion
+- [GENINT: 1.8: T]: Abstract
+- [GENINT: 1.18: E, T]: Abstract
+- [Kr XXV: T]: Table 2: Wavelengths... weighted oscillator strengths... and transition probabilities...
+- [Kr XXV]: Abstract
+- [EL: E]: [DROPPED - No table of experimental energy levels]
+- [IP: T]: [DROPPED - Ionization energy is an input/adopted value]
+- [QF: T]: [DROPPED - QED is a routine correction]
+
+FINAL_KEYWORDS:
+keywords_el={Kr XXV: W: E; CL: E; TE: T; AT: T
+GENINT: 1.8: T
+GENINT: 1.18: E, T},
+keywords_tp={Kr XXV: T},
+keywords_lb={Kr XXV}

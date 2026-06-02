@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- Kr I-VIII: AT: T: Section III. ATOMIC MODEL ("calculated using the Flexible Atomic Code (fac)") and Fig. 2(b) legend (showing populations up to Kr7+).
+- Kr II: TE: T: Table II: The ionization thresholds (in eV) of different orbitals of Kr (energies of Kr II hole states).
+- Kr II: TE: T: Table III: Comparison of theoretical lifetime widths (meV) of the Kr 3d-1 hole states.
+- Kr I-VIII: TR: T: Section III. ATOMIC MODEL ("spontaneous radiative transition rates... are calculated").
+- Kr I-VIII: AI: T: Section III. ATOMIC MODEL ("Auger decay rates, are calculated").
+- Kr I-VIII: PI: T: Section III. ATOMIC MODEL ("photoionization cross section... are calculated").
+- Kr I-VIII: PE: T: Section II. THEORETICAL METHODS ("Only the processes of photoexcitation... are considered").
+- GENINT: 1.8: T: Section III. ATOMIC MODEL (use of Flexible Atomic Code).
+- GENINT: 1.18: T: Section I. INTRODUCTION (modeling of inner-shell kinetics and charge-state distributions).
+
+FINAL_KEYWORDS:
+keywords_el={Kr I-VIII: AT: T
+Kr II: TE: T
+GENINT: 1.8: T
+GENINT: 1.18: T},
+keywords_tp={Kr I-VIII: TR: T; AI: T; PI: T; PE: T},
+keywords_lb={Kr}

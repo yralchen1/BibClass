@@ -1,0 +1,11 @@
+EVIDENCE_AUDIT:
+- He-Xe I: [DROPPED - No properties from the allowed list (EL, W, CL, TA, SE, ZE, Hfs, IS, QF, IP, ND) are reported for these species]
+- AT: T: [DROPPED - Method type only; no associated property from the allowed list (e.g., TE, EL) is tabulated]
+- TE: T: [DROPPED - Total energy errors are plotted in Fig 2, but absolute energy values/levels are not tabulated]
+- EL: T: [DROPPED - No energy level values are tabulated]
+- GENINT: 1.8: [DROPPED - Mention of Pitzer's program and Mathematica is incidental, not a discussion of the codes themselves]
+
+FINAL_KEYWORDS:
+keywords_el={},
+keywords_tp={},
+keywords_lb={}

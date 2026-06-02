@@ -1,0 +1,11 @@
+keywords_el={GENINT: 1.9: T
+GENINT: 1.2: T
+H I; D I; T I; 3He II; He-Pa I-II: EL: O
+H I; D I; T I; 3He II; He-Pa I-II: CL: O
+H I; D I; T I; 3He II; He-Pa I-II: W: O
+H I; D I; T I; 3He II; He-Pa I-II: ZE: O
+H I; D I; T I; 3He II; He-Pa I-II: IP: O},
+keywords_tp={GENINT: 1.2: T
+H I; D I; T I; 3He II; He-Pa I-II: CP: O
+H I; D I; T I; 3He II; He-Pa I-II: L: O},
+keywords_lb={}

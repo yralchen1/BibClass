@@ -1,0 +1,11 @@
+EVIDENCE_AUDIT:
+- Mo II: AT: T: 3. Results
+- Mo II: TE: T: Table A: Energy levels of the 4d5, 4d45s, and 4d35s2 configurations of the Mo+ ion.
+- [DROPPED - Mo II: IP: T]: Section 2, paragraph 6 (theoretical value mentioned but not a primary result)
+- [DROPPED - Mo II: EL: T]: EL code is for experimental/semi-empirical data (E, O); theoretical levels use TE: T.
+
+FINAL_KEYWORDS:
+keywords_el={Mo II: AT: T
+Mo II: TE: T},
+keywords_tp={},
+keywords_lb={}

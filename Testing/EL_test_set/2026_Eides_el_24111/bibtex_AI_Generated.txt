@@ -1,0 +1,9 @@
+The paper provides a theoretical re-evaluation of the hyperfine splitting (HFS) in muonium, including an updated theoretical value and a detailed discussion of the uncertainty budget arising from quantum electrodynamics (QED) corrections and fundamental constants. Per the mandatory rules for exotic atoms, keywords for hydrogen (H I) are included alongside muonium (Mu I).
+
+keywords_el={GENINT: 1.10: T
+GENINT: 1.15: T
+H I; Mu I: Hfs: T
+H I; Mu I: QF: T
+H I; Mu I: TE: T},
+keywords_tp={},
+keywords_lb={}

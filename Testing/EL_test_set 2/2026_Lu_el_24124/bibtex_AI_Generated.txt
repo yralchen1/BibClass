@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- 4He I: AT: T: Section II. THEORETICAL METHOD
+- 4He I: SE: T: Table VIII: Magic wavelengths (in nm) and the corresponding dynamic dipole polarizabilities (in a.u.) for the 23S1 -> 23P0 transition of 4He
+- 4He I: TE: T: Table II: Comparison of energies (in a.u.) for the n3D1, n3D2, n1D2, and n3D3 (n = 4–9) states of 4He
+- [IS: T]: [DROPPED - discussed in introduction as motivation but no new isotope shift values reported]
+- [QF: T]: [DROPPED - QED is included as a correction term in the Hamiltonian, not the primary result]
+- [W: T]: [DROPPED - rule AP-17 forbids W: T, use TE: T instead]
+- [CL: T]: [DROPPED - rule AP-17 forbids CL: T, use TE: T instead]
+- [GENINT: 1.8: T]: Section II. THEORETICAL METHOD
+- [GENINT: 1.13: T]: Section I. INTRODUCTION
+
+FINAL_KEYWORDS:
+keywords_el={4He I: AT; SE; TE: T},
+keywords_tp={GENINT: 1.8: T
+GENINT: 1.13: T},
+keywords_lb={}

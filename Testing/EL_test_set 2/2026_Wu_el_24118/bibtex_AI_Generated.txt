@@ -1,0 +1,26 @@
+EVIDENCE_AUDIT:
+- EL: [DROPPED - theoretical values only]
+- W: [DROPPED - theoretical values only]
+- CL: [DROPPED - theoretical values only]
+- TA: [DROPPED - specific levels used]
+- SE: [DROPPED - not mentioned]
+- ZE: Table 5: Landé g-factors gJ and LS-coupling values gJ(LS)... among the lowest 99 levels listed in Table 1
+- Hfs: Table 5: Landé g-factors gJ and LS-coupling values gJ(LS), hyperfine interaction constants AJ and BJ (both in MHz)... among the lowest 99 levels listed in Table 1
+- IS: Table 5: Landé g-factors gJ and LS-coupling values gJ(LS), hyperfine interaction constants AJ and BJ (both in MHz), MS parameters KNMS and KSMS (in GHz u), FS parameters F(0)ved (in GHz/fm2) and F(1)ved (in GHz/fm4) among the lowest 99 levels listed in Table 1
+- QF: [DROPPED - routine ingredient, not primary result]
+- TE: Table 1: Excitation energies (in cm−1) and radiative lifetimes (in s) for the 99 lowest levels of the n ≤ 7 configurations in Be I.
+- AT: 2. Theory and Calculations
+- PT: [DROPPED - not used]
+- SF: [DROPPED - not used]
+- IP: [DROPPED - not reported as new value]
+- ND: [DROPPED - standard labels used]
+
+FINAL_KEYWORDS:
+keywords_el={Be I: AT: T
+Be I: TE: T
+Be I: ZE: T
+9Be I: Hfs: T
+Be I: IS: T
+GENINT: 1.18: T},
+keywords_tp={...},
+keywords_lb={...}

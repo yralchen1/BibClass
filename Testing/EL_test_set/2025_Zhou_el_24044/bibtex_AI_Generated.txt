@@ -1,0 +1,9 @@
+keywords_el={Ar VII,XV; S XIII; Cl XIV: W: E
+Ar VII,XV; S XIII; Cl XIV: CL: E
+S XIII; Cl XIV: TE: T
+S XIII; Cl XIV: AT: T
+S XIII; Cl XIV: QF: T
+Cl XIV: IS: T
+Cl XIV; 35Cl XIV; 37Cl XIV: Hfs: T},
+keywords_tp={},
+keywords_lb={}

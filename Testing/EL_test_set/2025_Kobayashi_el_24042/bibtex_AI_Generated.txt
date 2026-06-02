@@ -1,0 +1,6 @@
+keywords_el={GENINT: 1.11: T
+Cr-Cu I: AT: T
+Cr-Cu I: TE: T},
+keywords_tp={Cr-Cu I: Q: T},
+keywords_lb={GENINT: 1.0: T
+Cr-Cu I: N: T}

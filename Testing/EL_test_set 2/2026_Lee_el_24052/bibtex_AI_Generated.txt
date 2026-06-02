@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- 176Lu II: W: E: Abstract ("We find the F = 8 to F = 7 hyperfine transition frequency to be...")
+- 176Lu II: CL: E: Abstract ("We find the F = 8 to F = 7 hyperfine transition frequency to be...")
+- 176Lu II: ZE: E: Section V ("We find the quadratic Zeeman coefficients...")
+- GENINT: 1.13: E: Title ("Precision measurement of the 176Lu+ 3D1 microwave clock transitions")
+- [DROPPED - Hfs]: No A/B constants reported, only transition frequencies (covered by W/CL).
+- [DROPPED - SE]: Quadrupole shift/moment measured, but SE is for polarizabilities/BBR/magic wavelengths.
+- [DROPPED - EL]: No tabulated energy levels.
+
+FINAL_KEYWORDS:
+keywords_el={176Lu II: W, CL, ZE: E
+GENINT: 1.13: E},
+keywords_tp={},
+keywords_lb={}

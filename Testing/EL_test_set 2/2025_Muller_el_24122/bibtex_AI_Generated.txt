@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- B III: Table I: Excitation energy in eV of the 2s22p 2Po resonance relative to the B2+(1s22s 2S) ground level
+- 11B III: Table I: Excitation energy in eV of the 2s22p 2Po resonance relative to the B2+(1s22s 2S) ground level
+- AT: T: Section III. THEORY
+- GENINT: 1.8: T: Section III. THEORY
+- [DROPPED - W]: No wavelengths tabulated.
+- [DROPPED - CL]: No classified lines tabulated.
+- [DROPPED - IP]: Ionization potentials are from literature (Ref 61).
+- [DROPPED - TA]: No transition arrays.
+- [DROPPED - IS]: No isotope shifts reported.
+- [DROPPED - Hfs]: No hyperfine structure reported.
+
+FINAL_KEYWORDS:
+keywords_el={B III; 11B III: EL: E; TE: T; AT: T
+GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

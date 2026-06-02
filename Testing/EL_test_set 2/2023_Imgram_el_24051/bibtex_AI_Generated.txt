@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- 12C V: CL: E: Table I: Comparison between literature values and this Letter of the rest-frame frequencies ν0(3PJ) in the 2 3S1 → 2 3PJ transitions of 12C4+.
+- 12C V: EL: E: Table II: Fine-structure splitting of the 2 3PJ levels in 12C4+ acquired from this Letter and theory [20].
+- 12C V: W: E: Table I: Comparison between literature values and this Letter of the rest-frame frequencies ν0(3PJ) in the 2 3S1 → 2 3PJ transitions of 12C4+.
+- GENINT: 1.15: E: Introduction: "The experimentally determined fine-structure splittings... pave the way to further decrease the theoretical uncertainty of the fine-structure constant..."
+- GENINT: 1.24: E: Introduction: "...questioned the lepton universality proposed by the standard model of fundamental interactions..." and discussion of proton-radius puzzle.
+- [DROPPED - QF]: QED is discussed as a test, but no specific QED/Lamb shift values are tabulated as the primary result.
+- [DROPPED - TE]: Theoretical values in Table I and II are from literature (cited), not new calculations by the authors.
+- [DROPPED - AT]: Authors use existing NR QED calculations.
+
+FINAL_KEYWORDS:
+keywords_el={12C V: CL: E
+12C V: EL: E
+12C V: W: E
+GENINT: 1.15: E
+GENINT: 1.24: E},
+keywords_tp={},
+keywords_lb={}

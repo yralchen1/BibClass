@@ -1,0 +1,9 @@
+keywords_el={GENINT: 1.13: E
+GENINT: 1.14: E
+GENINT: 1.24: E
+Sr II: IS: E
+Sr II: IS: O
+Sr II; 84Sr II; 86Sr II; 88Sr II: CL: E
+Sr II; 84Sr II; 86Sr II; 88Sr II: W: E},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,13 @@
+keywords_el={GENINT: 1.8: T
+GENINT: 1.13: T
+H I; 6Li I; 7Li I; 23Na I; 39K I; 40K I; 41K I; 85Rb I; 87Rb I; 133Cs I; 88Sr I; 40Ca I; 174Yb I: TE: T
+H I; 6Li I; 7Li I; 23Na I; 39K I; 40K I; 41K I; 85Rb I; 87Rb I; 133Cs I; 88Sr I; 40Ca I; 174Yb I: SE: T
+H I; 6Li I; 7Li I; 23Na I; 39K I; 40K I; 41K I; 85Rb I; 87Rb I; 133Cs I; 88Sr I; 40Ca I; 174Yb I: ZE: T
+H I; 6Li I; 7Li I; 23Na I; 39K I; 40K I; 41K I; 85Rb I; 87Rb I; 133Cs I; 88Sr I; 40Ca I; 174Yb I: SF: T
+Li I; 6Li I; 7Li I; K I; 39K I; 40K I; 41K I; Rb I; 85Rb I; 87Rb I; Cs I; 133Cs I: Hfs: T},
+keywords_tp={GENINT: 1.8: T
+GENINT: 1.13: T
+H I; Li I; Na I; K I; Rb I; Cs I; Sr I; Ca I; Yb I: Q: T
+H I; Li I; Na I; K I; Rb I; Cs I; Sr I; Ca I; Yb I: QF: T
+H I; Li I; Na I; K I; Rb I; Cs I; Sr I; Ca I; Yb I: L: T},
+keywords_lb={}

@@ -1,0 +1,12 @@
+keywords_el={GENINT: 1.18: E
+GENINT: 1.18: T
+Kr XXV: AT: T
+Kr XXV: CL: E
+Kr XXV: TE: T
+Kr XXV: W: E},
+keywords_tp={GENINT: 1.18: E
+GENINT: 1.18: T
+Kr XXV: M: E
+Kr XXV: Q: T
+Kr XXV: QF: T},
+keywords_lb={}

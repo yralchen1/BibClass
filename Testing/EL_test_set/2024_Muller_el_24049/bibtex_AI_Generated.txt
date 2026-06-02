@@ -1,0 +1,10 @@
+keywords_el={GENINT: 1.8: T
+13C V: W: E
+13C V: CL: E
+13C V: W: O
+13C V: CL: O
+C V; 13C V: Hfs: E
+C V: IS: E
+C V: IS: T},
+keywords_tp={},
+keywords_lb={}

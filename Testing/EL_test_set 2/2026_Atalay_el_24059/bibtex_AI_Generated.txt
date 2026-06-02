@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- In I: AT: T: 2.1. The MCDHF-RCI multiconfiguration methods
+- In I: TE: T: Table 4: Calculated excitation energies based on natural orbitals.
+- 115In I: Hfs: T: Table 6: Computed hyperfine constants, A_J, (in MHz) based on natural orbitals.
+- In I: W: T: [DROPPED - forbidden method type T for W, use TE: T]
+- In I: CL: T: [DROPPED - forbidden method type T for CL, use TE: T]
+- In I: EL: T: [DROPPED - forbidden method type T for EL, use TE: T]
+- In I: QF: T: [DROPPED - QED is routine ingredient, not primary result]
+- In I: IP: T: [DROPPED - no new numerical value for ground-state IE reported]
+- In I: ND: T: [DROPPED - no new or revised quantum labels]
+- In I: T: Table 9: Energies ΔE in (cm−1), wavelengths in (Å) and rates in (s−1), together with weighted oscillator strengths, relative uncertainties (dT) and NIST Classes (see text) for transitions in In I.
+- In I: Table 4: Calculated excitation energies based on natural orbitals.
+
+FINAL_KEYWORDS:
+keywords_el={In I: AT: T
+In I: TE: T
+115In I: Hfs: T},
+keywords_tp={In I: T},
+keywords_lb={In I}

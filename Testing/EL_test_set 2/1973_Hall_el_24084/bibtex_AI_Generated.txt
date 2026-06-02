@@ -1,0 +1,31 @@
+EVIDENCE_AUDIT:
+- EL: Tabulated excitation energies (lower level values) for identified lines in tables throughout the atlas (e.g., page 6).
+- W: Tabulated experimental vacuum wavenumbers and standard air wavelengths in tables throughout the atlas (e.g., page 6).
+- CL: Tabulated line identifications (species and transitions) in tables throughout the atlas (e.g., page 6).
+- H I: Identification on page 237.
+- C I: Identification on page 136.
+- Na I: Identification on page 100.
+- Mg I: Identification on page 16.
+- Al I: Identification on page 279.
+- Si I: Identification on page 84.
+- S I: Identification on page 142.
+- K I: Identification on page 449.
+- Ca I: Identification on page 140.
+- Ca II: Identification on page 257.
+- Sc I: Identification on page 175.
+- Ti I: Identification on page 94.
+- V I: Identification on page 589.
+- Cr I: Identification on page 671.
+- Mn I: Identification on page 108.
+- Fe I: Identification on page 18.
+- Ni I: Identification on page 447.
+- Zn I: Identification on page 701.
+- Zr I: Identification on page 593.
+- Cs I: Identification on page 679.
+- ZE: [DROPPED - Zeeman effect is mentioned as a note for line profiles in sunspots but no Zeeman data like g-factors are tabulated].
+- IS: [DROPPED - Isotopic identifications are for molecular species (CO), no atomic isotope shifts tabulated].
+
+FINAL_KEYWORDS:
+keywords_el={H I; C I; Na I; Mg I; Al I; Si I; S I; K I; Ca I,II; Sc I; Ti I; V I; Cr I; Mn I; Fe I; Ni I; Zn I; Zr I; Cs I: W, CL, EL: E},
+keywords_tp={},
+keywords_lb={}

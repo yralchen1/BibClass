@@ -1,0 +1,21 @@
+EVIDENCE_AUDIT:
+- Pr-Eu II; Tb-Tm II: AT: T: Section 2. Methods
+- Pr-Eu II; Tb-Tm II: TE: T: Table 1. 4f36s ground-configuration energy levels of Pr II
+- Sm-Eu II; Tb-Tm II: TR: T: Table 16. Transition properties of Sm II from the RMBPT calculation
+- Sm-Eu II; Tb-Tm II: OS: T: Table 16. Transition properties of Sm II from the RMBPT calculation
+- Sm-Eu II; Tb-Tm II: TE: T: Table 16. Transition properties of Sm II from the RMBPT calculation
+- [W: T]: [DROPPED - forbidden method type, use TE: T]
+- [CL: T]: [DROPPED - forbidden method type, use TE: T]
+- [EL: E]: [DROPPED - paper compares with NIST but does not report new experimental levels]
+- GENINT: 1.8: T: Section 2. Methods
+- GENINT: 1.18: T: Section 4. Conclusion
+
+FINAL_KEYWORDS:
+keywords_el={Pr-Eu II; Tb-Tm II: AT: T
+Pr-Eu II; Tb-Tm II: TE: T
+GENINT: 1.8: T
+GENINT: 1.18: T},
+keywords_tp={Sm-Eu II; Tb-Tm II: TR: T
+Sm-Eu II; Tb-Tm II: OS: T
+Sm-Eu II; Tb-Tm II: TE: T},
+keywords_lb={}

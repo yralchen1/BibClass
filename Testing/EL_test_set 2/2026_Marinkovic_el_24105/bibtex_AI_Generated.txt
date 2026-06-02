@@ -1,0 +1,9 @@
+EVIDENCE_AUDIT:
+- Ar I: EL: E: Table 1: Kinetic energy, KE(eV), and excitation energies (eV) of Ar autoionizingstates obtained from excitation of the 3s electron to 3s3p6 (ns, np, nd) states in the ejected energy region from 9 to 14 eV (24.76 to 29.76 eV of excitation energies) at incident electron energies 27–41 eV and three ejection angles 40°, 90° and 130°.
+- He I: EL: E: [DROPPED - The paper uses literature values for He I energies (e.g., 57.8 eV, 58.3 eV) as references/calibration and focuses on PCI shifts and linewidths, not reporting new level values.]
+- Ar I: IP: E: [DROPPED - The value 29.18 eV is for the 3s ionization limit, not the ground-state ionization potential (3p).]
+
+FINAL_KEYWORDS:
+keywords_el={Ar I: EL: E},
+keywords_tp={},
+keywords_lb={}

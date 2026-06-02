@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- Xe-Fm Ni-like: AT: T: Section 2. Theoretical approach (MCDHF + RCI method implemented in the GRASP code)
+- Xe-Fm Ni-like: TE: T: Table 2: Energies (in cm−1) of the fine-structure levels of the 3d94s configuration for Ni-like ions with atomic numbers in the range 54 ⩽ Z ⩽ 100
+- GENINT: 1.8: T: Section 2. Theoretical approach (mention of GRASP code)
+- [DROPPED - W: E]: Table 3 and 4 cite previous experimental wavelengths from literature (marked as "Exp. Previous")
+- [DROPPED - CL: E]: Table 3 and 4 cite previous line classifications from literature
+- [DROPPED - QF: T]: QED corrections are included as routine ingredients in the ab initio calculation (Section 2 and Table 1)
+- [DROPPED - IP: T]: No new numerical value for ground-state ionization potential is reported
+- [DROPPED - ND: E]: No new or revised quantum labels are proposed
+
+FINAL_KEYWORDS:
+keywords_el={Xe-Fm Ni-like: AT: T
+Xe-Fm Ni-like: TE: T},
+keywords_tp={},
+keywords_lb={GENINT: 1.8: T}

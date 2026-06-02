@@ -1,0 +1,7 @@
+keywords_el={Ca II; Sr II; Ba II: AT: T
+Ca II; Sr II; Ba II: SE: T
+Ca II; Sr II; Ba II: TE: T
+Ca II; 43Ca II; Sr II; 87Sr II; Ba II; 137Ba II: Hfs: T},
+keywords_tp={Ca II; Sr II; Ba II: Q: T
+Ca II; Sr II; Ba II: L: T},
+keywords_lb={}

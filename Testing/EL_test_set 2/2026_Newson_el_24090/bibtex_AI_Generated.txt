@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- [Ps I: W: E]: Abstract
+- [Ps I: CL: E]: Abstract
+- [Ps I: ZE: E]: FIG. 3 caption
+- [Ps I: SE: E]: [DROPPED - only an upper bound estimate for systematic error, not a measurement]
+- [Ps I: EL: E]: [DROPPED - no table of energy level values provided]
+- [Ps I: QF: T]: [DROPPED - paper cites theory from Ref [21], does not perform calculation]
+- [Ps I: TE: T]: [DROPPED - paper cites theory from Ref [21], does not perform calculation]
+- [GENINT: 1.24: E]: [DROPPED - paper mentions sensitivity to new physics as motivation but does not perform a search or set new limits]
+
+FINAL_KEYWORDS:
+keywords_el={Ps I: W: E; CL: E; ZE: E},
+keywords_tp={},
+keywords_lb={}

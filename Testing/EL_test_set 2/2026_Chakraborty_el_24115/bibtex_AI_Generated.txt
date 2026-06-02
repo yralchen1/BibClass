@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- [Th IV]: [Table I: Energies and IS constants of the ground and low-lying excited states of Th3+]
+- [229Th IV]: [Table III: Calculated Ahf/muI values... for both the ground and excited states of 229Th3+]
+- [229Th IV]: [Table IV: The calculated Bhf/Qn values... for the ground and excited states of 229Th3+]
+- [Th IV]: [Table V: Our ab initio calculated ground-state Theta, alpha_s, and alpha_t values of Th3+]
+- [GENINT: 1.22]: [Page 1, Paragraph 2: "offers exceptional sensitivity to potential temporal variations of fundamental constants"]
+- [GENINT: 1.23]: [Title: "Comprehensive assessment of Th3+ properties for nuclear clock..."]
+- [GENINT: 1.24]: [Page 1, Paragraph 2: "...as well as to dark matter interactions"]
+- [AT]: [DROPPED - RCCSDT method is not in the allowed list (HF, DHF, MCDF, MCDHF, CI, CI+MBPT)]
+- [QF]: [DROPPED - Vacuum polarization (VP) is calculated as a correction in Table I, not the primary quantity]
+
+FINAL_KEYWORDS:
+keywords_el={Th IV: TE; IS; Hfs; SE: T
+229Th IV: Hfs: T},
+keywords_tp={GENINT: 1.22: T
+GENINT: 1.23: T
+GENINT: 1.24: T},
+keywords_lb={}

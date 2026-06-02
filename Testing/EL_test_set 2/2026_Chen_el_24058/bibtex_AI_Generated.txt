@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- 87Rb I: W: E: Abstract
+- 87Rb I: CL: E: Abstract
+- 87Rb I: SE: E: Table I: Summary of the frequency shifts that were corrected, and their associated uncertainties
+- 87Rb I: ZE: E: Table I: Summary of the frequency shifts that were corrected, and their associated uncertainties
+- GENINT: 1.13: E: Abstract
+- 87Rb I: Hfs: E: [DROPPED - no hyperfine constants or splittings reported, only absolute frequency of one component]
+- 87Rb I: EL: E: [DROPPED - no table of energy levels provided]
+
+FINAL_KEYWORDS:
+keywords_el={87Rb I: W: E
+87Rb I: CL: E
+87Rb I: SE: E
+87Rb I: ZE: E
+GENINT: 1.13: E},
+keywords_tp={},
+keywords_lb={}

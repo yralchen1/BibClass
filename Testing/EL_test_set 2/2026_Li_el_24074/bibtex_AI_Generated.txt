@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- W XXXII-XL: Table 1: Comparison of the calculated transition wavelength... for W31+–W39+ ions
+- CL: E: Table 1 (Upper level, Low level, and λexpt columns)
+- TE: T: Table 1 (λ (Å) column)
+- AT: T: Section 2. Theory ("DFS method within the FAC package")
+- ND: E: Section 3.3. The synthetic spectra of W31+–W39+ ions ("newly identified transition 'f' in W36+", "reassignments of the features near 660 Å")
+- [DROPPED - W: E]: Wavelengths in Table 1 (λexpt) are cited from literature [10, 35], not measured in this work.
+- [DROPPED - EL: T]: Excitation energies are discussed in Section 3.2 but not tabulated as a set of energy levels.
+- W XXXII-XL: M1: T: Table 1 (A (s-1) column)
+- GENINT: 1.8: T: Section 2. Theory ("Flexible Atomic Code (FAC) package")
+- GENINT: 1.18: T: Abstract ("establishing them as robust diagnostics for tungsten impurity monitoring")
+
+FINAL_KEYWORDS:
+keywords_el={W XXXII-XL: CL: E; TE: T; AT: T; ND: E
+GENINT: 1.8: T
+GENINT: 1.18: T},
+keywords_tp={W XXXII-XL: M1: T},
+keywords_lb={}

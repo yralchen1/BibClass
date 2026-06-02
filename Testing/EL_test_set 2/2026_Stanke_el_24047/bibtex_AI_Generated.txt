@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- [TE]: Table I: Nonrelativistic energy Enrel, relativistic (alpha^2) corrections to the energy of the 1D states of the 2p2 and 2snd (n = 3–11) configurations of beryllium. Also shown are the relativistic energy shift Eshift_rel = EMV + ED + EOO + ESSF and the total energy Etotal = Enrel + alpha^2 Eshift_rel.
+- [AT]: Section II.B: The calculations (describes the variational approach with all-electron explicitly correlated Gaussian functions).
+- [IS]: Table III: FNM effect on the E(nd 1D) - E(2p2 1D) transition energies. (FNM effect is the mass shift component of the isotope shift).
+- [EL]: [DROPPED - no experimental level values measured in this work; Table II values are from literature]
+- [W]: [DROPPED - no experimental wavelengths measured in this work]
+- [CL]: [DROPPED - no experimental line classifications reported]
+
+FINAL_KEYWORDS:
+keywords_el={9Be I; Be I: TE: T
+9Be I; Be I: AT: T
+Be I: IS: T},
+keywords_tp={},
+keywords_lb={}

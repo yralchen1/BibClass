@@ -1,0 +1,9 @@
+keywords_el={GENINT: 1.13: T
+GENINT: 1.15: T
+H-U H-like: AT: T
+H-U H-like: QF: T
+H-U H-like: SE: T
+H-U H-like: TE: T
+H I; 1H I; He II; 3He II; Li III; 7Li III; C VI; 13C VI; N VII; 14N VII; Al XIII; 27Al XIII; K XIX; 39K XIX; Sc XXI; 45Sc XXI; Fe XXVI; 57Fe XXVI; Rb XXXVII; 85Rb XXXVII; In XLIX; 113In XLIX; Cs LV; 133Cs LV; Tb LXV; 159Tb LXV; Re LXXV; 185Re LXXV; Pb LXXXI; 207Pb LXXXI; Bi LXXXII; 209Bi LXXXII; U XCII; 235U XCII: Hfs: T},
+keywords_tp={},
+keywords_lb={}

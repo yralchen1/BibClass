@@ -1,0 +1,6 @@
+keywords_el={GENINT: 1.10: T
+GENINT: 1.21: T
+Ar XVIII; Xe LIV; Pb LXXXII; U XCII: AT: T
+Ar XVIII; Xe LIV; Pb LXXXII; U XCII: QF: T},
+keywords_tp={},
+keywords_lb={}

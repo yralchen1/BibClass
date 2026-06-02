@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- [Ar XVI, XVII: SE: T]: [DROPPED - Stark broadening and plasma polarization shifts are discussed and plotted in Fig 4 and 6, but not tabulated, and do not fit the specific SE definition of polarizabilities or BBR shifts]
+- [Kr XXXV, XXXVI: SE: T]: [DROPPED - plasma polarization shifts are plotted in Fig 5, but not tabulated]
+- [O VII, VIII: TE: T]: [DROPPED - transition labels are shown in Fig 10, but no tabulated energies or wavelengths are provided]
+- [Cu: TE: T]: [DROPPED - Ka/Kb spectra are plotted in Fig 7-9, but no tabulated data is provided]
+- [H-Kr: AT: T]: [DROPPED - paper mentions code contains data for Z=1-36 but does not report it]
+- [IP: T]: [DROPPED - discusses IPD models but no new ground-state IE value reported]
+- GENINT: 1.8: T: Section 1, "PrismSPECT is a zero-dimensional (0D) spectral analysis code..."
+- GENINT: 1.18: T: Abstract, "Emission and absorption spectroscopy is widely used to determine key features of laboratory and astrophysical plasmas..."
+
+FINAL_KEYWORDS:
+keywords_el={},
+keywords_tp={},
+keywords_lb={GENINT: 1.8: T
+GENINT: 1.18: T}

@@ -1,0 +1,27 @@
+EVIDENCE_AUDIT:
+- [H-Ac I,II]: [DROPPED - Tables 2-5 only list counts of states and transitions, not numerical values]
+- [1H I, 2H I, 3H I]: [DROPPED - Table 13 and Appendix A only list metadata/JSON structure, no numerical values]
+- [3He II, 4He II]: [DROPPED - Table 3 only lists counts of states and transitions, no numerical values]
+- [Ca I]: [DROPPED - Tables 21 and 22 only list partition functions, which are not a subject code]
+- [Fe I]: [DROPPED - Figure 2 is a spectrum plot, not tabulated values]
+- [Al I, Mg I]: [DROPPED - Figure 1 only lists partition functions]
+- [Li I: EL: E]: Table 15: Extract from the .states file for NIST database for Li I (neutral lithium atom)
+- [Li I: W: E]: Table 18: Extract from the transitions file for NIST database for Li I (neutral lithium atom)
+- [Li I: CL: E]: Table 18: Extract from the transitions file for NIST database for Li I (neutral lithium atom)
+- [Li I: TE: T]: Table 16: Extract from the .states file for Kurucz database for Li I (neutral lithium atom)
+- [Li I: TE: T]: Table 19: Extract from the transitions file for Kurucz database for Li I (neutral lithium atom)
+- [Li I: ZE: T]: Table 16: Extract from the .states file for Kurucz database for Li I (neutral lithium atom)
+- [Li I: TP: E]: Table 18: Extract from the transitions file for NIST database for Li I (neutral lithium atom)
+- [Li I: TP: T]: Table 16: Extract from the .states file for Kurucz database for Li I (neutral lithium atom)
+- [Li I: TP: T]: Table 19: Extract from the transitions file for Kurucz database for Li I (neutral lithium atom)
+- [GENINT: 1.8: E, T, O]: Table 1: Data coverage of the EXOATOM database.
+
+FINAL_KEYWORDS:
+keywords_el={Li I: EL: E
+Li I: W: E
+Li I: CL: E
+Li I: TE: T
+Li I: ZE: T},
+keywords_tp={Li I: TP: E
+Li I: TP: T},
+keywords_lb={GENINT: 1.8: E, T, O}

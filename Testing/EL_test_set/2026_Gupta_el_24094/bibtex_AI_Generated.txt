@@ -1,0 +1,6 @@
+keywords_el={Kr XXV: CL: E
+Kr XXV: W: E
+Kr XXV: AT: T
+Kr XXV: TE: T},
+keywords_tp={Kr XXV: Q: T},
+keywords_lb={}

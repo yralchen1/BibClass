@@ -1,0 +1,13 @@
+keywords_el={GENINT: 1.11: E
+GENINT: 1.11: T
+GENINT: 1.14: E
+O V; 16O V; 18O V: EL: E
+O V; 16O V; 18O V: W: E
+O V; 16O V; 18O V: CL: E
+O V: IS: E
+O V: IS: T
+O V: TE: T
+O V: AT: T
+O V: QF: T},
+keywords_tp={},
+keywords_lb={}

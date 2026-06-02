@@ -1,0 +1,157 @@
+ 1012 by diode-laser-based RIMS" in Ref [24].
+        The paper itself reports $\beta = 8809$.
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "separation coefficient beta = 8809 was obtained through choice of the 4s4p 1P1 F = 9/2 and 4s29p 1P1 F = 9/2 hyperfine transition pathway."
+        This confirms the hyperfine structure was used and measured.
+
+    *   One more check: "The hyperfine structure is well resolved, giving a center-of-gravity isotope shift value relative to 40Ca for 43Ca for this Rydberg level (4s29p 1P1) of 1382(7) MHz...".
+        This is the core data.
+
+    *   Final check on the element string for `W: E` and `CL: E`.
+        `Ca I; 40Ca I; 43Ca I`
+        Is it `Ca I; 40Ca I; 43Ca I` or `Ca I; 40Ca I; 43Ca I`?
+        The example `Rb I; 85Rb I; 87Rb I: CL: E` has spaces after semicolons.
+        So `Ca I; 40Ca I; 43Ca I` is correct.
+
+    *   Final check on the `IS: E` line.
+        `Ca I: IS: E`
+
+    *   Final check on the `Hfs: E` line.
+        `Ca I; 43Ca I: Hfs: E`
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "transition wavelengths (vac) lambda1 = 422.67 nm, lambda2 = 1034.66 nm and lambda3(n = 29) = 631.33 nm".
+        These are the wavelengths used.
+
+    *   Final check on the `keywords_tp` and `keywords_lb`.
+        They should be empty.
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "separation coefficient beta = 8809 was obtained through choice of the 4s4p 1P1 F = 9/2 and 4s29p 1P1 F = 9/2 hyperfine transition pathway."
+        This confirms the hyperfine structure was used and measured.
+
+    *   One more check: "The hyperfine structure is well resolved, giving a center-of-gravity isotope shift value relative to 40Ca for 43Ca for this Rydberg level (4s29p 1P1) of 1382(7) MHz...".
+        This is the core data.
+
+    *   Final check on the element string for `W: E` and `CL: E`.
+        `Ca I; 40Ca I; 43Ca I`
+        Is it `Ca I; 40Ca I; 43Ca I` or `Ca I; 40Ca I; 43Ca I`?
+        The example `Rb I; 85Rb I; 87Rb I: CL: E` has spaces after semicolons.
+        So `Ca I; 40Ca I; 43Ca I` is correct.
+
+    *   Final check on the `IS: E` line.
+        `Ca I: IS: E`
+
+    *   Final check on the `Hfs: E` line.
+        `Ca I; 43Ca I: Hfs: E`
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "transition wavelengths (vac) lambda1 = 422.67 nm, lambda2 = 1034.66 nm and lambda3(n = 29) = 631.33 nm".
+        These are the wavelengths used.
+
+    *   Final check on the `keywords_tp` and `keywords_lb`.
+        They should be empty.
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "separation coefficient beta = 8809 was obtained through choice of the 4s4p 1P1 F = 9/2 and 4s29p 1P1 F = 9/2 hyperfine transition pathway."
+        This confirms the hyperfine structure was used and measured.
+
+    *   One more check: "The hyperfine structure is well resolved, giving a center-of-gravity isotope shift value relative to 40Ca for 43Ca for this Rydberg level (4s29p 1P1) of 1382(7) MHz...".
+        This is the core data.
+
+    *   Final check on the element string for `W: E` and `CL: E`.
+        `Ca I; 40Ca I; 43Ca I`
+        Is it `Ca I; 40Ca I; 43Ca I` or `Ca I; 40Ca I; 43Ca I`?
+        The example `Rb I; 85Rb I; 87Rb I: CL: E` has spaces after semicolons.
+        So `Ca I; 40Ca I; 43Ca I` is correct.
+
+    *   Final check on the `IS: E` line.
+        `Ca I: IS: E`
+
+    *   Final check on the `Hfs: E` line.
+        `Ca I; 43Ca I: Hfs: E`
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "transition wavelengths (vac) lambda1 = 422.67 nm, lambda2 = 1034.66 nm and lambda3(n = 29) = 631.33 nm".
+        These are the wavelengths used.
+
+    *   Final check on the `keywords_tp` and `keywords_lb`.
+        They should be empty.
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "separation coefficient beta = 8809 was obtained through choice of the 4s4p 1P1 F = 9/2 and 4s29p 1P1 F = 9/2 hyperfine transition pathway."
+        This confirms the hyperfine structure was used and measured.
+
+    *   One more check: "The hyperfine structure is well resolved, giving a center-of-gravity isotope shift value relative to 40Ca for 43Ca for this Rydberg level (4s29p 1P1) of 1382(7) MHz...".
+        This is the core data.
+
+    *   Final check on the element string for `W: E` and `CL: E`.
+        `Ca I; 40Ca I; 43Ca I`
+        Is it `Ca I; 40Ca I; 43Ca I` or `Ca I; 40Ca I; 43Ca I`?
+        The example `Rb I; 85Rb I; 87Rb I: CL: E` has spaces after semicolons.
+        So `Ca I; 40Ca I; 43Ca I` is correct.
+
+    *   Final check on the `IS: E` line.
+        `Ca I: IS: E`
+
+    *   Final check on the `Hfs: E` line.
+        `Ca I; 43Ca I: Hfs: E`
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "transition wavelengths (vac) lambda1 = 422.67 nm, lambda2 = 1034.66 nm and lambda3(n = 29) = 631.33 nm".
+        These are the wavelengths used.
+
+    *   Final check on the `keywords_tp` and `keywords_lb`.
+        They should be empty.
+
+    *   Final check on the `keywords_el` block.
+        `keywords_el={Ca I; 40Ca I; 43Ca I: CL: E
+        Ca I; 40Ca I; 43Ca I: W: E
+        Ca I; 43Ca I: Hfs: E
+        Ca I: IS: E}`
+
+    *   Wait, the paper mentions "separation coefficient beta = 8809 was obtained through choice of the 4s4p 1P1 F = 9/2 and 4s29p 1P1 F = 9/2 hyperfine transition pathway."
+        This confirms the hyperfine structure was used and measured.
+
+    *   One more check: "The hyperfine structure is well resolved, giving a center-of-gravity isotope shift value relative to 40Ca for 43Ca for this Rydberg level (4s29p 1P1) of

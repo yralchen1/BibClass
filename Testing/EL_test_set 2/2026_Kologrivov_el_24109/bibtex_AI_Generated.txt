@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- S VII-IX,XI-XIV: CL: E: TABLE III. Interpretation of the sulfur spectra.
+- S VII-IX,XI-XIV: W: E: TABLE III. Interpretation of the sulfur spectra.
+- GENINT: 1.18: O: Abstract
+- S VII-XIV: IP: E: [DROPPED - literature values from Ref 19, 60]
+- S VII-XIV: TE: T: [DROPPED - no tabulated theoretical wavelengths]
+- S VII-XIV: AT: T: [DROPPED - CRM is not ab initio structure calculation]
+- Ni: W: E: [DROPPED - no tabulated wavelengths]
+- B V: W: E: [DROPPED - calibration line from Ref 18]
+- S X: W: E: [DROPPED - not present in Table III]
+
+FINAL_KEYWORDS:
+keywords_el={S VII-IX,XI-XIV: CL: E
+S VII-IX,XI-XIV: W: E
+GENINT: 1.18: O},
+keywords_tp={},
+keywords_lb={}

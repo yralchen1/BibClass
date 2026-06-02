@@ -1,0 +1,1541 @@
+ ▐▛███▜▌   Claude Code v2.1.150
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/stuff
+
+✻ Conversation compacted (ctrl+o for history)
+
+
+❯ /compact                                                                      
+  ⎿  Compacted (ctrl+o to see full summary)
+  ⎿  Referenced file analyze_keywords.py
+  ⎿  Referenced file test_set_bibtex.txt
+  ⎿  Read test/2026_Werbowy_el_24092/bibtex_AI_Generated.txt (7 lines)
+  ⎿  Read test/2026_Maisenbacher_el_24073/bibtex_AI_Generated.txt (14 lines)
+  ⎿  Plan file referenced (~/.claude/plans/i-want-you-to-reactive-sutton.md)
+
+❯ So, in the file @keywords_comparison.md you have comparison between the AI    
+  assigned Keywords and the reference one, in the file @Prompt.md you have the  
+  prompt which was given for the AI to assign these keywords. I want you to     
+  update the prompt, only the EL part so that the AI assigns keywords as er the 
+   reference, these should not be hardcoded cahnges, but general changes which  
+  you feel would increate the quality of AI generated keywords. save the new EL 
+   prompt in a new file, also save the old EL prompt so I can see the changes.  
+  ⎿  Read keywords_comparison.md (105 lines)
+  ⎿  Read Prompt.md (452 lines)
+
+⏺ Reading the match analysis to understand failure patterns before updating the
+  prompt.
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Now I have a complete picture of failure patterns. Let me categorize them
+  before writing:
+
+  Systematic AI failures:
+  1. Isotope expansion — adds Ne I; 20Ne I; 22Ne I when original says Ne I
+  (PARTIAL)
+  2. Base-form drop — keeps only 4He I or 13C V and drops the base form He I / C
+   V
+  3. AT+TE reflexive co-assignment — adds TE: T automatically when AT: T is
+  assigned (and vice versa)
+  4. QF: T over-assignment — adds QF whenever QED corrections appear in any
+  calculation
+  5. IP: T over-assignment — adds IP whenever ionization energies are mentioned
+  6. ND: E/T over-assignment — adds ND when paper simply labels levels
+  7. W: T — uses W with method type T (should be TE: T instead)
+  8. Element range over/under-expansion — Cr-Fe → Cr-Cu, H I; C I; ... → H-Zr I
+  9. TA vs CL confusion — replaces TA with CL+W
+  10. Source code confusion — assigns T instead of O for semi-empirical results
+  11. CL→W inference misapplied — adds CL+W when original has only EL: E
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Good. Now writing both files — old is lines 1-238 verbatim, new has all
+  improvements applied.
+
+⏺ Write(Prompt_EL_old.md)
+  ⎿  Wrote 237 lines to Prompt_EL_old.md
+         Your sole task is to extract and format `keywords_el`, `keywords
+         _tp`, and `keywords_lb` from the attached PDF and its supplement
+       2 ary files (if any).
+       3 **Input:** A scientific paper (PDF).
+       4 **Output:** Output ONLY the keywords fields (keywords_el, keywor
+       5 keywords_el={KEYWORD_EL1xact BibTeX format. The format must be:
+       6 KEYWORD_EL2
+       8 keywords_tp={KEYWORD_TP1
+       9 KEYWORD_TP2
+      10 KEYWORD_TP3},
+     … +461 lines (ctrl+o to expand)
+
+⏺ Now writing the improved version:
+
+⏺ Write(Prompt_EL_new.md)
+  ⎿  Wrote 269 lines to Prompt_EL_new.md
+         Your sole task is to extract and format `keywords_el`, `keywords
+         _tp`, and `keywords_lb` from the attached PDF and its supplement
+       2 ary files (if any).
+       3 **Input:** A scientific paper (PDF).
+       4 **Output:** Output ONLY the keywords fields (keywords_el, keywor
+       5 keywords_el={KEYWORD_EL1xact BibTeX format. The format must be:
+       6 KEYWORD_EL2
+       8 keywords_tp={KEYWORD_TP1
+       9 KEYWORD_TP2
+      10 KEYWORD_TP3},
+     … +583 lines (ctrl+o to expand)
+
+⏺ Both files written. Here's a summary of what changed and why:
+
+  Changes in Prompt_EL_new.md vs Prompt_EL_old.md:
+
+  ┌────────────────────────────────┬────────────────────────────────────────┐
+  │             Change             │       Addresses failure pattern        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ Rule 1 extended: explicit list │ AT+TE reflexive co-assignment,         │
+  │  of "do NOT add X just because │ QF/IP/ND over-assignment               │
+  │  Y is present"                 │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ Rule 7 (new): W is never       │ AI writing W: T (e.g., 24121 Müller)   │
+  │ method type T                  │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ Critical Rule 5 extended:      │ AI writing H-Zr I for H I; C I; Ca I   │
+  │ range over-compression warning │ (24084 Hall), Cr-Cu I for Cr-Fe I      │
+  │  + example                     │ (24042)                                │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │                                │ AI dropping base forms (4He I alone),  │
+  │ Isotope rules extended in      │ adding isotope variants when precision │
+  │ Section 5                      │  insufficient (24095 Manti Ne I; 20Ne  │
+  │                                │ I; 22Ne I), splitting combined strings │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ 3 new real examples            │ Show AT+TE independent use; show       │
+  │                                │ QF-only without TE; show list vs range │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ ND definition: explicit        │ ND: E/T over-assignment (24046, 24055, │
+  │ warning against assigning for  │  24107, 24135 extras)                  │
+  │ routine quantum number labels  │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ CL warning: inference does NOT │ AI adding CL+W when original has only  │
+  │  apply in reverse to EL        │ EL: E (24060 Mosnier, 24067 Ni extras) │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ TA definition: mutual          │ 24109 Kologrivov (TA→CL+W              │
+  │ exclusivity with CL, explicit  │ substitution)                          │
+  │ "never substitute CL/W for TA" │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ W definition: CRITICAL note    │ Reinforces Rule 7                      │
+  │ about W never being T          │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ QF constraint: test question   │ QF: T reflexive assignment on any      │
+  │ "would a QED researcher find   │ highly charged ion paper               │
+  │ this useful?"                  │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ IP constraint: explicit list   │ IP: T reflexive assignment (24069,     │
+  │ of situations where IP must    │ 24107, 24127 extras)                   │
+  │ NOT be assigned                │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ TE constraint: explicit "do    │ TE: T added when paper only does AT    │
+  │ not assign when levels are     │ corrections                            │
+  │ intermediate tool"             │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ AT definition: named methods + │                                        │
+  │  explicit exclusions (DFT,     │ AT added for non-HF methods; reflexive │
+  │ ECP, model potential) +        │  AT+TE                                 │
+  │ independence note              │                                        │
+  ├────────────────────────────────┼────────────────────────────────────────┤
+  │ IS definition: reinforced      │ AI writing 229Th I: IS: T instead of   │
+  │ "base element only, no mass    │ Th I: IS: T                            │
+  │ numbers" + negative example    │                                        │
+  └────────────────────────────────┴────────────────────────────────────────┘
+
+✻ Cogitated for 9m 20s
+
+❯ save this table in a markdown file.                                           
+
+⏺ Write(Prompt_EL_changes.md)
+  ⎿  Wrote 20 lines to Prompt_EL_changes.md
+       2 # EL Prompt Changes Summary
+       4 Changes in `Prompt_EL_new.md` vs `Prompt_EL_old.md`:
+       6 |---|---|| Addresses failure pattern |
+       7 | Rule 1 extended: explicit list of "do NOT add X just because Y
+         gnment |ent" | AT+TE reflexive co-assignment, QF/IP/ND over-assi
+         g., 24121 Müller) |s never method type T | AI writing `W: T` (e.
+       9 | Critical Rule 5 extended: range over-compression warning + exa
+         r-Cu I` for `Cr-Fe I` (24042) |`H I; C I; Ca I` (24084 Hall), `C
+         `4He I` alone), adding isotope variants when precision insuffici
+         ent (24095 Manti `Ne I; 20Ne I; 22Ne I`), splitti
+     … +32 lines (ctrl+o to expand)
+
+⏺ Saved to /Users/themanaspandey/stuff/Prompt_EL_changes.md.
+
+✻ Brewed for 9s
+
+❯ earlier when you said 51/98 perfect matches, did you have Ai extras in        
+  perfect matches? in @keywords_match_analysis.md                               
+
+⏺ No — "51/98 ALL keywords matched" counted only whether all original keywords
+  got MATCH status. AI extras were ignored entirely.
+
+  Quick check from the summary table confirms: e.g., 24044 (6/6 = 100% strict)
+  had 4 AI extras, still counted as perfect. Same for 24046 (1 extra), 24051 (2
+  extras), 24052 (1 extra), etc.
+
+  So 51/98 means "all originals matched" — it says nothing about hallucinated
+  extras. If you want "perfect match AND zero AI extras", that's a stricter
+  count. Want me to compute it?
+
+✻ Sautéed for 12s
+
+❯ yeah compute that also.                                                       
+⏺ Scanning the summary table for Strict % = 100% AND AI Extras = 0:
+
+⏺ Bash(python3 - << 'EOF'
+      import re…)
+  ⎿  Total entries with orig > 0: 91
+
+     Strict 100% AND 0 AI extras: 19/98 (19%)
+     … +7 lines (ctrl+o to expand)
+
+⏺ Results:
+
+  ┌────────────────────────────────┬─────────────┬─────────────┐
+  │             Metric             │   Strict    │   Lenient   │
+  ├────────────────────────────────┼─────────────┼─────────────┤
+  │ ALL keywords matched (100%)    │ 51/98 (52%) │ 57/98 (58%) │
+  ├────────────────────────────────┼─────────────┼─────────────┤
+  │ ALL matched AND zero AI extras │ 19/98 (19%) │ 20/98 (20%) │
+  └────────────────────────────────┴─────────────┴─────────────┘
+
+  So adding "zero extras" requirement drops from 52% → 19%. AI hallucinates
+  extra keywords in the majority of cases — only 19 out of 98 entries were truly
+   clean.
+
+✻ Baked for 1m 14s
+
+❯ add this at the end.                                                          
+
+⏺ Update(keywords_match_analysis.md)
+  ⎿  File must be read first
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Update(keywords_match_analysis.md)
+  ⎿  Added 9 lines
+      1458  | Zero matches | 21/98 (21%) | — |
+      1459  
+      1460  *Strict*: isotope base-drop counts as PARTIAL. *Lenient*: iso
+            tope base-drop counts as MATCH.
+      1461 +                                                             
+      1462 +## Truly Perfect Matches (ALL matched AND zero AI extras)    
+      1463 +                                                             
+      1464 +| Metric | Strict | Lenient |                                
+      1465 +|---|---|---|                                                
+      1466 +| ALL keywords matched (100%) | 51/98 (52%) | 57/98 (58%) |  
+      1467 +| ALL matched AND zero AI extras | 19/98 (19%) | 20/98 (20%) 
+           +|                                                            
+      1468 +                                                             
+      1469 +Strict perfect entries (19): 24041, 24059, 24063, 24066, 2407
+           +0, 24072, 24080, 24086, 24088, 24089, 24093, 24094, 24096, 24
+           +099, 24105, 24114, 24117, 24126, 24140                       
+
+⏺ Done. Appended to keywords_match_analysis.md.
+
+✻ Sautéed for 16s
+
+❯ /model                                                                        
+  ⎿  Set model to Opus 4.7 for this session
+
+❯ can you recheck that if you updated the prompt in the right way?              
+
+⏺ Re-reading new prompt to verify each change actually matches observed
+  failures.
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Found 2 issues. Let me verify with the actual data.
+
+⏺ Bash(python3 -c "
+      elements =
+      ['H','He','Li','Be','B','C','N','O','F','Ne','Na','Mg','Al','Si','P','S','
+      Cl','Ar','K','Ca','Sc','Ti','V','Cr','Mn','Fe','Co','Ni','Cu',…)
+  ⎿  Cr = Z=24
+     Mn = Z=25
+     Fe = Z=26
+     … +3 lines (ctrl+o to expand)
+
+❯ the best case scenario is complete match with no AI extras 
+
+⏺ Audit findings — 4 issues with the new prompt:
+
+  Issue 1: Cr-Fe example is technically wrong. Cr (Z=24), Mn (Z=25), Fe (Z=26) —
+   these ARE consecutive. Cr-Fe I correctly denotes {Cr, Mn, Fe}. My example
+  said "list them individually" but that's unnecessary. The actual 24042 failure
+   was AI writing Cr-Cu I (Cr through Cu = 6 elements) when paper had Cr-Fe I (3
+   elements). Need to fix example.
+
+  Issue 2: Missing rule — don't drop specific isotopes either. 24123 True: orig
+  Rb I; 85Rb I; 87Rb I → AI: Rb I; 85Rb I (dropped 87Rb). My rule covered "don't
+   drop base" but not "don't drop isotopes that have data."
+
+  Issue 3: Missing rule — preserve negative ion notation. 24079 Zhang: orig Se-:
+   IS: E → AI: Se: IS: E (lost the dash). Not addressed.
+
+  Issue 4: Source code (E/T/O) confusion. 24081 Yu: orig Th IV: IS: E → AI: Th 
+  IV: IS: T. 24136 Gakkhar: same flip. Not strongly addressed.
+
+  Fixing now:
+
+⏺ Update(Prompt_EL_new.md)
+  ⎿  Added 8 lines, removed 4 lines
+      127  C V: AT: T}
+      128  Note: TE is NOT assigned because no table of total level value
+           s is given. QF IS assigned because the QED contribution itself
+            is the primary computed quantity.
+      129  
+      130 -Paper measuring wavelengths of Cr I through Fe I (not Cu, Co, 
+          -or Ni), all listed in a single table:                         
+      131 -keywords_el={Cr I; Mn I; Fe I: W: E                           
+      132 -Cr I; Mn I; Fe I: CL: E}                                      
+      133 -Note: Do NOT write `Cr-Fe I` unless all elements between Cr an
+          -d Fe (Mn) are also covered.                                   
+      130 +Paper measuring wavelengths of Cr I, Mn I, and Fe I (three con
+          +secutive elements, all in a single table):                    
+      131 +keywords_el={Cr-Fe I: W: E                                    
+      132 +Cr-Fe I: CL: E}                                               
+      133 +Note: `Cr-Fe I` correctly denotes Cr, Mn, Fe (Z=24, 25, 26 — c
+          +onsecutive). Do NOT extend the range to `Cr-Cu I` (which would
+          + also include Co, Ni, Cu — elements not studied). Do NOT skip 
+          +Mn either: if the paper has Cr and Fe but not Mn, write `Cr I;
+          + Fe I`, not `Cr-Fe I`.                                        
+      134  
+      135 +Paper measuring isotope shifts in the Se⁻ negative ion only:  
+      136 +keywords_el={Se-: IS: E}                                      
+      137 +Note: The negative ion notation (trailing dash) must be preser
+          +ved. `Se: IS: E` (without the dash) is WRONG — it means neutra
+          +l Se. Similarly, `O--` (two dashes) means doubly charged negat
+          +ive oxygen ion.                                               
+      138 +                                                              
+      139  SPECS (Specifications for Keywords in the Atomic Spectroscopy 
+           Bibliographic Database, ASBib2).
+      140  
+      141  The database covers three topics: 
+
+⏺ Update(Prompt_EL_new.md)
+  ⎿  Added 2 lines, removed 1 line
+      182  ○    Exception: For hydrogen isotopes, use symbols H for mass numb
+           er 1, D for deuterium and T for tritium instead of 1H, 2H, 3H.
+      183  ○    Do not use isotope numbers if the data precision is insuffici
+           ent to distinguish between different isotopes. For wavelength/
+           level measurements (W, EL, CL): include isotope variants ONLY 
+           if the paper reports measurably different data values for diff
+           erent isotopes (e.g., distinct wavelengths or levels for 12C v
+           s 13C). Do NOT add isotope variants just because an isotopical
+           ly enriched source or sample was used.
+      184  ○    For theoretical calculations (AT, TE): include isotope varian
+           ts only if the calculation was specifically performed for that
+            isotope and produces different values (e.g., for IS or Hfs ca
+           lculations). Do not add isotope variants to TE/AT keywords mer
+           ely because the paper studies an isotopically pure sample.
+      185 -○    When the species string must include BOTH the base element an
+          -d a specific isotope (because data for both are present), incl
+          -ude them together on the same keyword line: e.g., `C V; 13C V:
+          - CL: E`. Do NOT split them onto separate lines, and do NOT omi
+          -t the base form if data applies to it.                        
+      185 +○    When the species string must include BOTH the base element an
+          +d one or more specific isotopes (because data for all of them 
+          +are present), include them together on the same keyword line: 
+          +e.g., `C V; 13C V: CL: E` or `Rb I; 85Rb I; 87Rb I: CL: E`. Do
+          + NOT split them onto separate lines. Do NOT omit the base form
+          + if data applies to it. Do NOT omit any isotope for which the 
+          +paper provides data — if the paper reports data for both 85Rb 
+          +and 87Rb, the string must contain BOTH, not just one.         
+      186 +○    Negative ion notation: a negative ion is denoted by the eleme
+          +nt symbol followed by one or more trailing dashes (one dash pe
+          +r unit of negative charge). The dash is part of the species id
+          +entity — it MUST be preserved. `Se-` is the singly charged Se 
+          +anion; `Se` is the neutral Se atom — these are different speci
+          +es. When extracting keywords, do not strip trailing dashes.   
+      187  ○    For hyperfine structure (Hfs), always combine the element sym
+           bol without isotope number and the element symbol with the iso
+           tope number in the same keyword string. Example: "Cs I; 133Cs 
+           I: Hfs: E".
+      188  ○    For isotope shifts (IS), include only the base element symbol
+            without any mass numbers: e.g., `Th I: IS: T` (correct), NOT 
+           `229Th I: IS: T`.
+      189  
+
+⏺ Now Issue 4 — source code (E/T/O) discipline:
+
+⏺ Update(Prompt_EL_new.md)
+  ⎿  Added 8 lines
+       93  
+       94  7. **W (Wavelengths) is NEVER assigned with method type T.** T
+           heoretical wavelengths or transition energies must be represen
+           ted by `TE: T`, not `W: T`. The W code is only valid with meth
+           od types E or O.
+       95  
+       96 +**Allowed Method Type per code is STRICT** — never use a metho
+          +d type outside the "Allowed Method Types" column of the subjec
+          +t-code table. Notable constraints: EL, W, CL allow only E and 
+          +O (never T); TE, AT, PT allow only T (never E or O); ND, SE, Z
+          +E, Hfs, IS, QF, IP, SF, TA allow E, T, and O.                 
+       97 +                                                              
+       98 +**Method type discipline**: Determine the source of each datum
+          + from the paper's actual content:                             
+       99 +- `E` = measured directly with experimental apparatus (spectro
+          +meter, atomic clock, ion trap, etc.).                         
+      100 +- `T` = calculated from first principles or by theoretical mod
+          +el.                                                           
+      101 +- `O` = derived semi-empirically: combination of E and T, Ritz
+          + interpolation, parameter fitting to experimental data, theore
+          +tical calculation with experimental adjustment.               
+      102 +Do NOT switch the source code from what the paper actually rep
+          +orts. If isotope shifts are measured experimentally, write `IS
+          +: E` (not `IS: T`); if they are computed theoretically, write 
+          +`IS: T` (not `IS: E`).                                        
+      103 +                                                              
+      104  8. **Data Extraction Guidelines**
+      105     - Supplementary Data: If a paper mentions results are in "S
+           upplementary Material" or "Tables" (common in astrophysics), a
+           nalyze those tables to extract valid spectrum-specific keyword
+           s, unless their detailed description is provided in the main t
+           ext.
+      106  
+
+⏺ Adding final pre-output checklist to drive conservatism (target: zero extras):
+
+⏺ Update(Prompt_EL_new.md)
+  ⎿  Added 14 lines
+      280  
+      281  Assign AT only when the paper uses one of these specific ab in
+           itio methods. Do NOT assign AT for: model potential calculatio
+           ns, effective core potential (ECP) methods, pure density funct
+           ional theory (DFT) without Hartree-Fock exchange, or semi-empi
+           rical parametric methods (use PT for those).
+      282  Note: AT and TE are independent — each requires its own justif
+           ication. AT = the method is HF/DHF/MCDF/CI; TE = a table of co
+           mputed level values is provided. A paper can have AT without T
+           E (e.g., calculates only transition rates or only corrections,
+            without providing level tables), or TE without AT (e.g., uses
+            a model potential method). Assign both only when both conditi
+           ons are independently satisfied.
+      283 +                                                              
+      284 +3. **Final Pre-Output Checklist (zero-extras discipline)**    
+      285 +                                                              
+      286 +Before emitting the final `keywords_el` block, review EVERY ke
+          +yword line and confirm:                                       
+      287 +                                                              
+      288 +- [ ] The subject code is justified by an EXPLICIT result in t
+          +he paper (a specific table, equation, or numerical value — not
+          + just a passing mention or a related code).                   
+      289 +- [ ] The method type (E / T / O) matches how the paper actual
+          +ly obtained the value — not the inverse.                      
+      290 +- [ ] The species string lists exactly the spectra for which d
+          +ata are reported — no broader (over-expanded range) and no nar
+          +rower (dropped base form or dropped specific isotope).        
+      291 +- [ ] Isotope variants are included only if the paper reports 
+          +DISTINCT values for them.                                     
+      292 +- [ ] No code is added "for completeness" or because it usuall
+          +y accompanies another code. If you cannot point to the specifi
+          +c paragraph or table that supports a keyword, REMOVE it.      
+      293 +- [ ] No `W: T` (wavelengths are E or O only); no `CL: T`; no 
+          +`EL: T` (use `TE: T` instead).                                
+      294 +- [ ] Negative ion dashes are preserved; isotope mass numbers 
+          +attached to the correct element symbol.                       
+      295 +                                                              
+      296 +The cost of a missing keyword is a false negative (paper misse
+          +s a search). The cost of an extra keyword is a false positive 
+          +(a user searching for that topic gets a paper that doesn't act
+          +ually contain the data, eroding trust in the database). The la
+          +tter is worse — when in doubt, omit.                          
+
+⏺ Write(Prompt_EL_changes.md)
+  ⎿  Added 20 lines, removed 12 lines
+       1  # EL Prompt Changes Summary
+       2  
+       3 +Goal: maximize "complete match with no AI extras" rate (current
+         +ly 19/98 = 19%).                                               
+       4 +                                                               
+       5  Changes in `Prompt_EL_new.md` vs `Prompt_EL_old.md`:
+       6  
+       7  | Change | Addresses failure pattern |
+       8  |---|---|
+       9  | Rule 1 extended: explicit list of "do NOT add X just because 
+          Y is present" | AT+TE reflexive co-assignment, QF/IP/ND over-as
+          signment |
+       8 -| Rule 7 (new): W is never method type T | AI writing `W: T` (e
+         -.g., 24121 Müller) |                                           
+       9 -| Critical Rule 5 extended: range over-compression warning + ex
+         -ample | AI writing `H-Zr I` for `H I; C I; Ca I` (24084 Hall), 
+         -`Cr-Cu I` for `Cr-Fe I` (24042) |                              
+      10 -| Isotope rules extended in Section 5 | AI dropping base forms 
+         -(`4He I` alone), adding isotope variants when precision insuffi
+         -cient (24095 Manti `Ne I; 20Ne I; 22Ne I`), splitting combined 
+         -strings |                                                      
+      11 -| 3 new real examples | Show AT+TE independent use; show QF-onl
+         -y without TE; show list vs range |                             
+      12 -| **ND** definition: explicit warning against assigning for rou
+         -tine quantum number labels | ND: E/T over-assignment (24046, 24
+         -055, 24107, 24135 extras) |                                    
+      13 -| **CL** warning: inference does NOT apply in reverse to EL | A
+         -I adding CL+W when original has only EL: E (24060 Mosnier, 2406
+         -7 Ni extras) |                                                 
+      14 -| **TA** definition: mutual exclusivity with CL, explicit "neve
+         -r substitute CL/W for TA" | 24109 Kologrivov (TA→CL+W substitut
+         -ion) |                                                         
+      10 +| Rule 5 extended: range over-compression warning + Cr-Fe vs Cr
+         +-Cu example | AI writing `H-Zr I` for `H I; C I; Ca I` (24084 H
+         +all), `Cr-Cu I` for `Cr-Fe I` (24042) |                        
+      11 +| Rule 7 (new): W never method type T | AI writing `W: T` (2412
+         +1 Müller, 24122 Müller `CL: T`/`W: T`) |                       
+      12 +| Rule 7 (cont.): Allowed Method Type column is STRICT | CL: T 
+         +invalid combinations (24075 Peng) |                            
+      13 +| Rule 7 (cont.): Method type (E/T/O) discipline + examples | I
+         +S: E vs IS: T flips (24081 Yu, 24136 Gakkhar) |                
+      14 +| Isotope rules: include ALL isotopes with data, not just base 
+         +| AI dropping specific isotopes (24123 True dropped 87Rb) |    
+      15 +| Isotope rules: include isotope variants ONLY if distinct valu
+         +es | AI over-expanding isotopes (24095 Manti `Ne I; 20Ne I; 22N
+         +e I`) |                                                        
+      16 +| Isotope rules: negative ion dash MUST be preserved | 24079 Zh
+         +ang `Se-: IS: E` → AI: `Se: IS: E` |                           
+      17 +| 5 new real examples covering edge cases | AT+TE independence;
+         + QF-only; range vs list; negative ion |                        
+      18 +| **ND** definition: explicit warning against routine quantum n
+         +umber labels | ND over-assignment (24046, 24055, 24107, 24135 e
+         +xtras) |                                                       
+      19 +| **CL** warning: inference does NOT apply in reverse from EL |
+         + AI adding CL+W when original has only EL: E (24060 Mosnier, 24
+         +067 Ni) |                                                      
+      20 +| **TA** definition: mutual exclusivity with CL, "never substit
+         +ute" | 24109 Kologrivov (TA→CL+W substitution) |               
+      21  | **W** definition: CRITICAL note about W never being T | Reinf
+          orces Rule 7 |
+      16 -| **QF** constraint: test question "would a QED researcher find
+         - this useful?" | QF: T reflexive assignment on any highly charg
+         -ed ion paper |                                                 
+      17 -| **IP** constraint: explicit list of situations where IP must 
+         -NOT be assigned | IP: T reflexive assignment (24069, 24107, 241
+         -27 extras) |                                                   
+      18 -| **TE** constraint: explicit "do not assign when levels are in
+         -termediate tool" | TE: T added when paper only does AT correcti
+         -ons |                                                          
+      19 -| **AT** definition: named methods + explicit exclusions (DFT, 
+         -ECP, model potential) + independence note | AT added for non-HF
+         - methods; reflexive AT+TE |                                    
+      20 -| **IS** definition: reinforced "base element only, no mass num
+         -bers" + negative example | AI writing `229Th I: IS: T` instead 
+         -of `Th I: IS: T` |                                             
+      22 +| **QF** constraint: test question "would a QED researcher find
+         + this useful?" | QF: T reflexive assignment (24051, 24057, 2406
+         +9, 24073, 24085, 24111, 24120, 24124) |                        
+      23 +| **IP** constraint: explicit list of situations where IP must 
+         +NOT be assigned | IP: T reflexive assignment (24119, 24127 extr
+         +as) |                                                          
+      24 +| **TE** constraint: "do not assign when levels are intermediat
+         +e tool" | TE: T added when paper only does corrections |       
+      25 +| **AT** definition: named methods (HF/DHF/MCDF/CI) + explicit 
+         +exclusions (DFT, ECP, model potential) | AT over-assigned to no
+         +n-HF papers |                                                  
+      26 +| **AT/TE** independence note + example showing both-required-s
+         +eparately | Reflexive AT+TE co-assignment |                    
+      27 +| **IS** definition: reinforced "base element only" + negative 
+         +example | AI writing `229Th I: IS: T` |                        
+      28 +| **Final pre-output checklist** with cost-of-extra-vs-cost-of-
+         +missing framing | Drives zero-extras discipline |              
+⏺ Audit complete. Fixed 4 issues found in original update:
+
+  1. Cr-Fe example was technically wrong — Cr (Z=24), Mn (Z=25), Fe (Z=26) ARE
+  consecutive, so Cr-Fe I is correct. Rewrote example to show actual 24042
+  failure: paper has Cr-Fe (3 elements), AI extended to Cr-Cu (6 elements).
+  2. Missing rule for dropping specific isotopes — added "do NOT omit any
+  isotope for which the paper provides data" (addresses 24123 True dropping
+  87Rb).
+  3. Negative ion notation — added rule preserving trailing dashes (addresses
+  24079 Zhang Se- → Se).
+  4. Source code (E/T/O) discipline — added explicit rule + per-code
+  allowed-method-type strictness reminder (addresses 24081 Yu, 24136 Gakkhar IS:
+   E→T flips, plus 24075 Peng invalid CL: T).
+
+  Also added final pre-output checklist with framing: "cost of extra > cost of
+  missing" — drives zero-extras goal. Updated Prompt_EL_changes.md to reflect
+  new changes.
+
+  Files updated:
+  - /Users/themanaspandey/stuff/Prompt_EL_new.md
+  - /Users/themanaspandey/stuff/Prompt_EL_changes.md
+
+✻ Cooked for 3m 42s
+
+❯ after these prompts changes, we have retested and the results are here,       
+  @EL_test_set/ see and tell what do you see and is the error rate still so     
+  high?                                                                         
+  ⎿  Listed directory EL_test_set/
+  ⎿  Interrupted · What should Claude do instead?
+
+❯ /model                                                                        
+  ⎿  Set model to Opus 4.7 for this session
+
+❯ continue in caveman                                                           
+
+  Read 1 file, listed 1 directory (ctrl+o to expand)
+
+⏺ Bash(for d in 2025_Kobayashi_el_24042 2026_Maisenbacher_el_24073
+      2025_Muller_el_24050 2026_Drake_el_24061 2026_Manti_el_24095
+      1973_Hall_el_24084 2026_Kologrivov_el_2…)
+  ⎿  === 2025_Kobayashi_el_24042 ===
+     keywords_el={GENINT: 1.11: T
+     Cr-Cu I: AT: T
+     … +76 lines (ctrl+o to expand)
+
+⏺ Quick scan shows mixed: some improvements (24061 kept base, 24084 listed
+  individually, 24079 kept dash), some regressions (24042 still Cr-Cu, 24097
+  dropped all element kws, 24109 still TA→CL+W). Need full re-analysis.
+
+⏺ Bash(python3 -c "
+      import os…)
+  ⎿  Old folders: 99, New folders: 98
+     IDs in old not in new: ['24045']
+     IDs in new not in old: []
+
+❯ make similar md files with tables as you did the last time 
+
+⏺ Reading analyze script to adapt to new folder.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+⏺ Bash(cp /Users/themanaspandey/stuff/analyze_keywords.py
+      /Users/themanaspandey/stuff/analyze_keywords_v2.py
+      sed -i '' "s|stuff/test'|stuff/EL_test_set'|" /Users/thema…)
+  ⎿  381:    TEST_DIR = '/Users/themanaspandey/stuff/EL_test_set'
+     382:    OUT      = '/Users/themanaspandey/stuff/keywords_match_analysi
+     s_v2.md'
+     385:    ai      = parse_ai_folders(TEST_DIR)
+
+⏺ Bash(python3 analyze_keywords_v2.py)
+  ⎿  Written: /Users/themanaspandey/stuff/keywords_match_analysis_v2.md
+     Total original keywords : 237
+     Strict  matches         : 148/237 (62%)
+     … +2 lines (ctrl+o to expand)
+
+⏺ Computing entry-level stats and perfect-no-extras count:
+
+⏺ Bash(python3 << 'EOF'
+      import re…)
+  ⎿  Total entries: 100
+     With orig > 0: 91
+     ≥1 matched (strict): 68/98
+     … +10 lines (ctrl+o to expand)
+
+⏺ Stats compute. Now make comparison MD + append entry stats + v1-vs-v2 summary.
+
+⏺ Bash(python3 << 'EOF'
+      import re, os…)
+  ⎿  Wrote keywords_comparison_v2.md (100 rows)
+
+⏺ Now append entry-level stats to v2 match analysis + add v1-vs-v2 summary:
+
+  Read 2 files (ctrl+o to expand)
+
+⏺ Write(v1_vs_v2_summary.md)
+  ⎿  Wrote 58 lines to v1_vs_v2_summary.md
+       2 # v1 vs v2 Comparison: Did the Prompt Update Help?
+       3 **v1** = old prompt (`Prompt_EL_old.md`), analyzed in `keywords_
+         match_analysis.md` (data: `test/`)
+         match_analysis_v2.md` (data: `EL_test_set/`)alyzed in `keywords_
+       5 
+       6 ## Aggregate Stats (237 original keywords, 98 AI entries)
+       8 | Metric | v1 (old) | v2 (new) | Δ | Direction |
+       9 |---|---|---|---|---|
+      10 | Strict keyword matches | 160/237 (67%) | 148/237 (62%) | -12 (
+         -5pp) | ↓ worse |
+     … +81 lines (ctrl+o to expand)
+
+⏺ Done. Files written:
+
+  - keywords_comparison_v2.md — side-by-side table (100 rows)
+  - keywords_match_analysis_v2.md — per-entry + summary + entry stats +
+  perfect-no-extras
+  - v1_vs_v2_summary.md — direct v1→v2 comparison + spot checks + diagnosis
+  - analyze_keywords_v2.py — analysis script
+
+  TL;DR error rate:
+
+  ┌─────────────────────────────┬──────────────────────────┐
+  │           Metric            │         v1 → v2          │
+  ├─────────────────────────────┼──────────────────────────┤
+  │ Strict matches              │ 67% → 62% (worse)        │
+  ├─────────────────────────────┼──────────────────────────┤
+  │ Lenient matches             │ 78% → 72% (worse)        │
+  ├─────────────────────────────┼──────────────────────────┤
+  │ AI extras                   │ 171 → 154 (-10%, better) │
+  ├─────────────────────────────┼──────────────────────────┤
+  │ Perfect+no extras (strict)  │ 19/98 → 19/98 (flat)     │
+  ├─────────────────────────────┼──────────────────────────┤
+  │ Perfect+no extras (lenient) │ 20/98 → 21/98 (flat)     │
+  └─────────────────────────────┴──────────────────────────┘
+
+  Net: still bad. AI cut hallucinations 10% but also dropped real keywords at
+  similar rate. Best-case rate (perfect+clean) did not move. Several specific
+  bugs (TA→CL+W, Cr-Cu range, isotope base drops) persist — AI ignored explicit
+  prompt rules. 24097 even regressed (dropped all element keywords).
+
+✻ Cogitated for 3m 2s
+❯ Do you think that the new prompt has been used?                               
+
+⏺ Need to check how many v2 outputs differ from v1.
+
+⏺ Bash(python3 << 'EOF'
+      import os…)
+  ⎿  Identical v1==v2: 7/98
+     Different v1!=v2: 91/98
+     … +2 lines (ctrl+o to expand)
+
+⏺ Yes, new prompt used. Evidence:
+
+  - 91/98 entries (93%) differ from v1
+  - TP and LB sections now filled (24042, 24123) — old run mostly empty
+  - Some specific new-prompt rules landed: 24061 kept He I base, 24079 kept Se-
+  dash, 24084 listed elements individually
+
+  But AI ignored many rules despite explicit warnings:
+  - 24109 Kologrivov: IDENTICAL v1 vs v2 — TA→CL+W substitution unchanged
+  despite explicit rule
+  - 24042 still Cr-Cu I — my example specifically targeted this exact case
+  - 24050, 24073, 24123 still drop bases/isotopes despite explicit rule
+
+  7 identical entries: 24041, 24063, 24072 (trivially correct already), 24092,
+  24100 (empty), 24109 (regression — should have changed), 24132.
+
+  Verdict: prompt applied, AI selectively follows rules. Likely causes:
+  1. Prompt too long, rules buried
+  2. AI's training-time biases override prompt instructions on specific patterns
+  3. Multi-rule conflicts (e.g., "be conservative" overrides "include all
+  isotopes" → drops them)
+
+✻ Baked for 45s
+
+❯ So, you can see the issues are still there, how do you think we should change 
+   the prompt, so we get best results with high accuracy, i.e.  exact match     
+  with no extras? do you want to plan on this or search about it, we are using  
+  gemini 3 flash preview model mostly. but the model shouldn't be a big issue.  
+
+⏺ Plan, not search. Issue is prompt-engineering, not knowledge. Search won't
+  help.
+
+  Diagnosis: AI ignores rules buried in 270-line prompt. Rules competing with
+  training biases. Need different structure, not more rules.
+
+  Strategy: 4 changes ranked by expected impact
+
+  1. Few-shot with failed cases (biggest impact)
+  Replace abstract rules with concrete anti-patterns. Show actual failures from
+  v1/v2:
+  WRONG outputs (do NOT produce these):
+  Input has Cr,Mn,Fe → WRONG: Cr-Cu I → RIGHT: Cr-Fe I
+  Input has C V data + 13C V data → WRONG: 13C V alone → RIGHT: C V; 13C V
+  Input has TA → WRONG: CL+W substitute → RIGHT: TA (TA distinct code)
+  Input has Rb I, 85Rb I, 87Rb I → WRONG: Rb I; 85Rb I → RIGHT: keep all 3
+  Input has Th IV: IS: E → WRONG: IS: T flip → RIGHT: IS: E
+  Concrete > abstract. Pattern matching > rule following.
+
+  2. Mandatory self-critique output (high impact)
+  Force AI to think before output. Two-section format:
+  EVIDENCE_AUDIT:
+  - For each candidate keyword: cite exact table/section that supports it
+  - If cannot cite → drop
+
+  FINAL_KEYWORDS:
+  keywords_el={...}
+  User parses FINAL_KEYWORDS only. EVIDENCE forces grounding.
+
+  3. Strip prompt to ~50 lines (medium impact)
+  Current prompt too long. Gemini Flash Preview optimized for speed, attention
+  budget limited. Keep only: subject code table + anti-pattern bank + format
+  spec. Move everything else to retrievable reference.
+
+  4. Two-pass pipeline (highest accuracy, more cost)
+  - Pass 1: aggressive recall — extract all possible keywords
+  - Pass 2: conservative filter — for each, "is this justified by paper? answer
+  yes/no"
+  - Keep only "yes" keywords
+
+  Pass 2 catches hallucinations. Pass 1 catches misses.
+
+  My recommendation: start with #1 + #2 combined. Replace abstract rules with
+  10-15 anti-pattern examples (from v2 failures: 24042, 24050, 24073, 24109,
+  24123, 24095, etc.) + mandatory evidence audit. Keep prompt structure but swap
+   content.
+
+  If still not hitting target, add #4 (two-pass).
+
+  Want me to draft Prompt_EL_v3.md with this approach?
+
+✻ Churned for 37s
+
+❯ sure do it.                                                                   
+
+⏺ Write(Prompt_EL_v3.md)
+  ⎿  Wrote 203 lines to Prompt_EL_v3.md
+          `keywords_el` from attached PDF (and supplementary tables/mater
+         e or paragraph in the paper that justifies it. If you cannot cit
+         e a source, DROP the keyword.
+       3 ---
+       4 
+       6 ## OUTPUT FORMAT (MANDATORY — two sections, exactly as shown)
+       8 EVIDENCE_AUDIT:
+       9 - [candidate keyword]: [exact table title or section name from p
+      10 - [candidate keyword]: [exact table title or section name from p
+         aper supporting it]
+     … +254 lines (ctrl+o to expand)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Done. Prompt_EL_v3.md written (203 lines, down from 296 in v2).
+
+  Structure:
+  1. Role + output format (mandatory EVIDENCE_AUDIT + FINAL_KEYWORDS sections)
+  2. Subject codes table (compact)
+  3. Spectra string syntax (5 lines)
+  4. GENINT (3 lines)
+  5. 18 anti-patterns (AP-1 to AP-18) — concrete WRONG/RIGHT pairs from actual
+  v1/v2 failures
+  6. Conservative principle (cost-of-extra > cost-of-miss)
+  7. Output format reproduction
+
+  Key innovations vs v2:
+  - Evidence audit: every keyword must cite specific table/section. Forces
+  grounding.
+  - Anti-pattern bank: 18 concrete failed cases as WRONG→RIGHT pairs, not
+  abstract rules. Pattern matching beats rule following.
+  - Shorter overall: 203 vs 296 lines, less buried.
+  - AP-9 explicitly handles 1H I vs H I (hydrogen mass-1 redundancy — opposite
+  of base-keep rule).
+
+  Test plan: run Gemini Flash on same 98 papers with v3 prompt. Parse
+  FINAL_KEYWORDS block only. Compare to v2:
+  - Expected: perfect+no-extras jumps from 19/98 → target 40+/98
+  - Evidence audit acts as self-check, should cut extras significantly
+
+  Want script to extract FINAL_KEYWORDS from v3 output (since format is now
+  two-section)?
+
+✻ Worked for 1m 34s
+
+※ recap: Goal: improve AI keyword extraction from atomic physics PDFs to maximize exact matches with no extras. Drafted Prompt_EL_v3.md with anti-pattern bank and evidence audit. Next: run Gemini Flash on 98 papers with v3 prompt and re-analyze. (disable recaps in /config)
+
+❯ '/Users/themanaspandey/stuff/EL_test_set 2' is after the version 3            
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ V3 prompt used. Evidence audit working. Let me check critical failure cases
+  from v2.
+
+⏺ Bash(for d in 2025_Kobayashi_el_24042 2025_Muller_el_24050
+      2026_Maisenbacher_el_24073 2026_Manti_el_24095 2026_Kologrivov_el_24109
+      2026_True_el_24123 2026_Zhang_el_2…)
+  ⎿  === 2025_Kobayashi_el_24042 ===
+     FINAL_KEYWORDS:
+     keywords_el={Cr-Cu I: EL: O; PT: T
+     … +68 lines (ctrl+o to expand)
+
+⏺ V3 prompt has critical format violations — combined codes and combined method
+  types. Running analysis:
+
+⏺ Bash(cp /Users/themanaspandey/stuff/analyze_keywords_v2.py
+      /Users/themanaspandey/stuff/analyze_keywords_v3.py
+      sed -i '' "s|stuff/EL_test_set'|stuff/EL_test_set 2'|"…)
+  ⎿  Written: /Users/themanaspandey/stuff/keywords_match_analysis_v3.md
+     Total original keywords : 237
+     Strict  matches         : 61/237 (25%)
+     … +2 lines (ctrl+o to expand)
+
+⏺ Bash(python3 << 'EOF'
+      import re…)
+  ⎿  ≥1 matched strict: 32/98
+     ALL matched strict: 13/98
+     ALL matched lenient: 19/98
+     … +3 lines (ctrl+o to expand)
+
+⏺ V3 catastrophic regression. Format violations broke parser. Let me make MD
+  files and summary.
+
+⏺ Bash(cat >> /Users/themanaspandey/stuff/keywords_match_analysis_v3.md <<
+      'EOF'…)
+  ⎿  Wrote keywords_comparison_v3.md
+
+⏺ Write(v1_v2_v3_summary.md)
+  ⎿  Wrote 84 lines to v1_v2_v3_summary.md
+       2 # v1 vs v2 vs v3 — Full Comparison
+         | Metric | v1 (old) | v2 (new) | v3 (anti-pattern+audit) | Best 
+       4 |---|---|---|---|---|
+         )** | v1 |atches | 160/237 (67%) | 148/237 (62%) | **61/237 (25%
+       6 | Lenient matches | 185/237 (78%) | 172/237 (72%) | **89/237 (37
+       7 | AI extras | 171 | 154 | 154 | v2/v3 tie |
+         )** | v1 |ed (strict) | 69/98 (70%) | 68/98 (69%) | **32/98 (33%
+       9 | ALL matched (strict) | 51/98 (52%) | 44/98 (45%) | **13/98 (13
+      10 | ALL matched (lenient) | 57/98 (58%) | 50/98 (51%) | **19/98 (1
+         9%)** | v1 |
+     … +103 lines (ctrl+o to expand)
+❯ remember the original prompt anf check that for exact format @Prompt.md 
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Confirmed. Original Prompt.md rules:
+
+  Line 4-15: Output MUST be:
+  keywords_el={KW1
+  KW2
+  KW3},
+  keywords_tp={...},
+  keywords_lb={...}
+  - Each keyword on own line
+  - ONE } per topic
+  - "Do NOT include any explanations, markdown formatting, or code blocks"
+
+  Line 30 (Rule 2): "One Method Type Per Line — each subject code combined with
+  method type gets its own line. Never combine different combinations of
+  subjects and method types on the same line."
+
+  V3 violated original format contract directly:
+  1. EVIDENCE_AUDIT: section = explanations/prose → violates "no explanations"
+  rule
+  2. H I: SE: E, T, O → violates "One Method Type Per Line"
+  3. Cr-Cu I: EL: O; PT: T → violates "Never combine subjects and method types"
+  4. H I; C I; ... Cs I: W, CL, EL: E → violates both
+
+  V3's EVIDENCE_AUDIT block was the root cause. By breaking the strict output
+  contract, AI inferred format was negotiable → invented combined formats.
+
+  V4 fix: keep v2 base + add explicit format-violation anti-patterns + REMOVE
+  EVIDENCE_AUDIT (or run it as separate first pass with output discarded).
+  Original prompt format spec is non-negotiable.
+
+  Files written for v3:
+  - keywords_comparison_v3.md
+  - keywords_match_analysis_v3.md
+  - analyze_keywords_v3.py
+  - v1_v2_v3_summary.md
+
+  Want me to draft v4 (v2 base + format anti-patterns, no audit)?
+
+✻ Crunched for 2m 21s
+
+❯ This is going to bad, I want you to plan this well, you have all the 3        
+  previous prompts and all the 3 outputs we got from them, plan and understand  
+  what went wrong in all of these and learn what you should do.                 
+
+⏺ Reading plan file first to understand existing state.
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Need to research outputs more deeply. Reading sample failures from all 3
+  versions before drafting plan.
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Now I have enough understanding. Writing the plan file.
+
+⏺ Updated plan
+  ⎿  /plan to preview
+
+❯ the best outcome is perfect match with no AI extras 
+
+⏺ Updating plan to lock primary metric, then asking user the open questions.
+
+⏺ Updated plan
+  ⎿  /plan to preview
+  ⎿  Interrupted · What should Claude do instead?
+
+❯ /plan                                                                         
+  ⎿  Current Plan
+     /Users/themanaspandey/.claude/plans/i-want-you-to-reactive-sutton.md
+
+     Plan: Prompt v4 — Maximize Exact-Match + Zero-Extras Rate
+
+     Context
+
+     Primary objective (locked): maximize the rate of entries where ALL original
+     keywords match AND zero AI extras appear ("perfect match + zero extras").
+     This single metric is the success criterion — not raw match rate, not extras
+      count in isolation.
+
+     Current ceiling: 19/98 (19%) strict, 21/98 (21%) lenient. Three prompt
+     versions tried, all stuck at this ceiling — v3 actually regressed
+     catastrophically to 6/98 (6%).
+
+     ┌────────────────────┬────────┬─────────┬────────────────────┬─────────┐
+     │      Version       │ Strict │ Lenient │ Perfect+No-Extras  │ Total   │
+     │                    │    %   │    %    │       (S/L)        │ extras  │
+     ├────────────────────┼────────┼─────────┼────────────────────┼─────────┤
+     │ v1 (Prompt.md)     │ 67%    │ 78%     │ 19 / 20            │ 171     │
+     ├────────────────────┼────────┼─────────┼────────────────────┼─────────┤
+     │ v2                 │ 62%    │ 72%     │ 19 / 21            │ 154     │
+     │ (Prompt_EL_new.md) │        │         │                    │         │
+     ├────────────────────┼────────┼─────────┼────────────────────┼─────────┤
+     │ v3                 │ 25%    │ 37%     │ 6 / 9              │ 154     │
+     │ (Prompt_EL_v3.md)  │        │         │                    │         │
+     └────────────────────┴────────┴─────────┴────────────────────┴─────────┘
+
+     Model: Gemini 3 Flash Preview.
+
+     What Went Wrong in Each Version
+
+     v1 — baseline
+
+     - Long prose-style spec (237 lines), permissive examples
+     - AI hallucinates extras (TE+AT reflexive co-assignment, gratuitous
+     QF/IP/ND)
+     - AI drops base forms (C V; 13C V → 13C V alone)
+     - AI substitutes TA → CL+W
+     - AI compresses element lists into wrong ranges (H I; C I; Ca I → H-Zr I)
+     - Strips negative-ion dashes (Se- → Se)
+
+     v2 — added rules + warnings + checklist (296 lines)
+
+     - More conservative → cut SOME extras (-17) but also cut real matches (-12)
+     - Net: perfect+no-extras rate UNCHANGED (19→19)
+     - Specific rules ignored despite explicit warnings: AP-1 (Cr-Cu), AP-5 (base
+      drop), AP-10 (TA)
+     - Some rules landed: dash preservation, list-vs-range, AT/TE independence
+     (partial)
+     - Lesson: long prompt → key rules buried; "be more conservative" is too
+     vague — AI drops both noise AND signal
+
+     v3 — anti-pattern bank + EVIDENCE_AUDIT (203 lines)
+
+     - Catastrophic regression: strict 62%→25%, perfect 19→6
+     - Root cause: EVIDENCE_AUDIT section broke v1's strict output contract ("no
+     explanations, no markdown") → AI inferred format was negotiable → invented
+     combined-code/type formats:
+       - Cr-Cu I: EL: O; PT: T (two codes one line)
+       - H I: SE: E, T, O (three method types one line)
+       - H I; C I; ... Cs I: W, CL, EL: E (three codes one line)
+     - Parser cannot recognize these → match count crashed
+     - Species hallucination: "Kaonic Ne" invented for paper that's just Ne I
+     - Anti-patterns AP-1, AP-5, AP-7, AP-10 still ignored
+     - BUT: evidence audit DID catch real issues for some entries (e.g., 24042
+     honest about RPA/DFT being non-ab-initio → correctly dropped AT: T).
+     Reasoning was better; format was worse.
+
+     Root-Cause Synthesis
+
+     1. Format contract is fragile. Any new output section (EVIDENCE_AUDIT) makes
+      AI treat format as flexible. Original v1 spec ("output ONLY the keywords
+     fields ... no explanations, no markdown") must be preserved verbatim.
+     2. Anti-patterns help with mechanical rules, fail at semantic ones.
+       - Mechanical rules that landed: dash preservation, list-vs-range, hydrogen
+      mass-1 collapse
+       - Semantic rules that did NOT land: TA vs CL distinction, range bound
+     correctness, base form retention
+       - AI does pattern matching, not reasoning
+     3. Conservatism without precision = lost signal. v2's "be more conservative"
+      cut matches AND extras at same rate. Net zero gain. Need targeted
+     conservatism, not blanket.
+     4. Some "AI failures" are actually arguable. 24109 Kologrivov: paper Table
+     III is "Interpretation of the sulfur spectra" — TA vs CL is genuinely
+     ambiguous. AI may be right and reference may be questionable. Can't get to
+     100% just from prompt engineering.
+     5. Long prompts don't work for Gemini Flash. Model prioritizes recency and
+     salience. Rules in middle of 270-line prompt are dropped. Few-shot examples
+     + short, focused rules work better.
+     6. Self-critique CAN work but requires care. v3's evidence audit produced
+     useful reasoning when format wasn't broken. Need to keep the reasoning
+     benefit without breaking the output contract.
+
+     V4 Strategy
+
+     Two complementary deliverables. Prompt v4 hardens output discipline;
+     validator script provides mechanical safety net.
+
+     Deliverable 1: Prompt_EL_v4.md (target ~150 lines)
+
+     Structure (ordered by AI attention budget):
+
+     1. Role + output contract (verbatim from v1) — non-negotiable single-block
+     output, no prose, no extra sections, ONE } per topic.
+     2. Hard format laws (3-4 lines):
+       - ONE species : code : type per line. Never combine codes. Never combine
+     types. Never use comma/semicolon inside the code or type position.
+     3. Subject code table (compact, 15 rows) with "Allowed Method Types" column.
+     4. Spectra string syntax (8-10 lines): isotopes, negative ions, ranges,
+     isoelectronic.
+     5. GENINT compact reference (5-6 lines).
+     6. Three worked examples (input description → exact correct output, no
+     commentary):
+       - Pure experimental measurement paper (Hg I clock-style)
+       - Theoretical-only paper with AT+TE (HCI energy levels)
+       - Mixed paper with multiple isotopes (Rb I; 85Rb I; 87Rb I)
+     7. Anti-pattern bank — format violations FIRST, then semantic:
+       - F-1: combined codes on one line (from v3)
+       - F-2: combined types on one line (from v3)
+       - F-3: codes-inside-colon list (from v3)
+       - F-4: prose / extra sections / markdown around the block
+       - S-1 through S-10: the v3 semantic anti-patterns (range over-extension,
+     base drop, isotope expansion, TA distinct, dash preserve, source flip, AT/TE
+      independence, QF/IP/ND over-assignment)
+     8. Internal reasoning permission, external silence: "Think step by step
+     internally before emitting. Cite evidence to yourself. But emit ONLY the
+     keywords block — no audit, no explanation, no markdown."
+     9. Closing reminder of output contract.
+
+     Drop from v3: EVIDENCE_AUDIT visible output section.
+     Drop from v2: Verbose final-checklist section; redundant constraint
+     paragraphs.
+     Keep from v1: Exact output spec wording.
+     Keep from v2: ND warning, QF "QED researcher useful?" test, IP explicit
+     don't-list, AT method enumeration, TE table-required constraint, AT/TE
+     independence note.
+     Keep from v3: Anti-pattern WRONG/RIGHT pairs structure.
+
+     Deliverable 2: validate_keywords.py (post-processor, ~80 lines)
+
+     Mechanical safety net. Catches format violations the prompt can't prevent.
+
+     Function: parse one bibtex_AI_Generated.txt → emit cleaned/validated version
+      + violation report.
+
+     Validation rules:
+     - Extract keywords_el={...} block (regex)
+     - Split on newlines, strip
+     - For each line:
+       - Match regex ^(.+?):\s*([A-Za-z]+):\s*([ETO])$
+       - REJECT if multiple codes (line contains ; outside the species part, or
+     contains comma in code position)
+       - REJECT if multiple types in source position (e.g., E, T, O)
+       - REJECT if code not in valid code set
+       - REJECT if type not in {E, T, O}
+       - REJECT if code-type combo violates allowed (e.g., W: T, CL: T, EL: T)
+     - Emit cleaned block + write violations to stderr
+
+     Use: run on AI output before feeding to analyze_keywords.py. If we strip
+     malformed lines, we recover otherwise-lost matches.
+
+     Deliverable 3: Test harness run_v4_eval.sh / Python script
+
+     After AI generates outputs with v4 prompt into EL_test_set_v4/:
+     1. Run validator on every file → write cleaned versions
+     2. Run analyze_keywords_v4.py (clone of v3 analyzer pointing at cleaned
+     outputs)
+     3. Generate keywords_comparison_v4.md, keywords_match_analysis_v4.md
+     4. Generate v1_v2_v3_v4_summary.md comparing all four versions
+     5. Report perfect+no-extras delta vs prior best (v2: 19/98 strict, 21/98
+     lenient)
+
+     Files to Create
+
+
+
+     ┌───────────────────────────────────────────────────────┬─────────────────┐
+     │                         File                          │     Purpose     │
+     ├───────────────────────────────────────────────────────┼─────────────────┤
+     │                                                       │ New prompt      │
+     │ /Users/themanaspandey/stuff/Prompt_EL_v4.md           │ (target ~150    │
+     │                                                       │ lines)          │
+     ├───────────────────────────────────────────────────────┼─────────────────┤
+     │ /Users/themanaspandey/stuff/validate_keywords.py      │ Format-violatio │
+     │                                                       │ n filter        │
+     ├───────────────────────────────────────────────────────┼─────────────────┤
+     │                                                       │ Clone of v3     │
+     │ /Users/themanaspandey/stuff/analyze_keywords_v4.py    │ analyzer,       │
+     │                                                       │ points to v4    │
+     │                                                       │ output folder   │
+     ├───────────────────────────────────────────────────────┼─────────────────┤
+     │ /Users/themanaspandey/stuff/keywords_comparison_v4.md │ Side-by-side    │
+     │                                                       │ after v4 run    │
+     ├───────────────────────────────────────────────────────┼─────────────────┤
+     │ /Users/themanaspandey/stuff/keywords_match_analysis_v │ v4 per-entry    │
+     │ 4.md                                                  │ analysis +      │
+     │                                                       │ summary         │
+     ├───────────────────────────────────────────────────────┼─────────────────┤
+     │ /Users/themanaspandey/stuff/v1_v2_v3_v4_summary.md    │ All-version     │
+     │                                                       │ comparison      │
+     └───────────────────────────────────────────────────────┴─────────────────┘
+
+     Files to Reference / Reuse
+
+     - /Users/themanaspandey/stuff/Prompt.md — extract original output-format
+     spec verbatim (lines 1-16)
+     - /Users/themanaspandey/stuff/Prompt_EL_new.md — extract refined code
+     definitions (AT, TE, QF, IP, ND blocks)
+     - /Users/themanaspandey/stuff/Prompt_EL_v3.md — extract anti-pattern
+     WRONG/RIGHT pairs
+     - /Users/themanaspandey/stuff/analyze_keywords.py — reuse parsing/matching
+     logic
+     - /Users/themanaspandey/stuff/v1_v2_v3_summary.md — failure pattern
+     reference
+
+     Verification Plan
+
+     1. Format check on v4 prompt itself: confirm prompt does NOT introduce new
+     output sections beyond v1's spec.
+     2. Validator self-test: feed it 5 known-good and 5 known-bad lines from
+     v1/v2/v3 outputs; confirm correct accept/reject.
+     3. User runs v4 prompt on the 98 papers in their existing pipeline, dumps
+     output to EL_test_set_v4/.
+     4. Run analyzer on validated v4 output. Target metrics:
+       - Strict matches: aim ≥ 67% (recover v1 baseline)
+       - Perfect+no-extras (strict): aim ≥ 25/98 (beat v1/v2)
+       - Zero matches (strict): aim ≤ 15/98 (down from 21-23)
+     5. Spot-check entries where v1/v2/v3 all failed: 24042, 24050, 24073, 24095,
+      24097, 24109, 24123 — verify at least 3 now match exactly.
+     6. Report generated v1_v2_v3_v4_summary.md to user with verdict.
+
+     Open Questions for User (BEFORE building)
+
+     1. Is "exact match + zero extras" measured on STRICT or LENIENT? (Affects
+     how aggressive we are about base-form retention rules.)
+     2. For genuinely ambiguous cases (24109 TA vs CL), is the original reference
+      authoritative or could the reference itself be wrong? (Affects whether we
+     should target reference-matching or correctness.)
+     3. Are we allowed to add a validator post-processing step in your pipeline,
+     or does the prompt alone need to produce clean output?
+     4. Should v4 attempt to fill keywords_tp and keywords_lb sections (which
+     v2/v3 started populating) or leave them empty unless the paper is clearly
+     TP/LB focused?
+
+     "/plan open" to edit this plan in Antigravity
+
+❯ 1. strict rules, 2. target reference matching,3. prompt needs clean output.   
+  4. only fill EL keywords, we are checking for EL right now only, Tp and lb    
+  have different prompts. only write prompt for EL, no TP,Lb needs to be in the 
+   prompt, see the original prompt and only see the EL part.                    
+
+⏺ Updated plan
+  ⎿  /plan to preview
+
+⏺ Updated plan
+  ⎿  /plan to preview
+
+❯ remember also that keywords are only assigned for new results and not for old or cited one, keywords are only assigned with the papers genuinely cites new results 
+
+⏺ Updated plan
+  ⎿  /plan to preview
+
+⏺ Updated plan
+  ⎿  /plan to preview
+
+⏺ Updated plan
+  ⎿  /plan to preview
+
+⏺ Plan locked. Calling ExitPlanMode.
+⏺ User approved Claude's plan
+  ⎿  Plan saved to: ~/.claude/plans/i-want-you-to-reactive-sutton.md · /plan to 
+     edit
+     Plan: Prompt v4 — Maximize Exact-Match + Zero-Extras Rate
+
+     Context
+
+     Primary objective (locked): maximize the rate of entries where ALL original
+      keywords match AND zero AI extras appear ("perfect match + zero extras").
+     This single metric is the success criterion — not raw match rate, not
+     extras count in isolation.
+
+     Current ceiling: 19/98 (19%) strict, 21/98 (21%) lenient. Three prompt
+     versions tried, all stuck at this ceiling — v3 actually regressed
+     catastrophically to 6/98 (6%).
+
+     ┌────────────────────┬────────┬─────────┬────────────────────┬─────────┐
+     │      Version       │ Strict │ Lenient │ Perfect+No-Extras  │ Total   │
+     │                    │    %   │    %    │       (S/L)        │ extras  │
+     ├────────────────────┼────────┼─────────┼────────────────────┼─────────┤
+     │ v1 (Prompt.md)     │ 67%    │ 78%     │ 19 / 20            │ 171     │
+     ├────────────────────┼────────┼─────────┼────────────────────┼─────────┤
+     │ v2                 │ 62%    │ 72%     │ 19 / 21            │ 154     │
+     │ (Prompt_EL_new.md) │        │         │                    │         │
+     ├────────────────────┼────────┼─────────┼────────────────────┼─────────┤
+     │ v3                 │ 25%    │ 37%     │ 6 / 9              │ 154     │
+     │ (Prompt_EL_v3.md)  │        │         │                    │         │
+     └────────────────────┴────────┴─────────┴────────────────────┴─────────┘
+
+     Model: Gemini 3 Flash Preview.
+
+     What Went Wrong in Each Version
+
+     v1 — baseline
+
+     - Long prose-style spec (237 lines), permissive examples
+     - AI hallucinates extras (TE+AT reflexive co-assignment, gratuitous
+     QF/IP/ND)
+     - AI drops base forms (C V; 13C V → 13C V alone)
+     - AI substitutes TA → CL+W
+     - AI compresses element lists into wrong ranges (H I; C I; Ca I → H-Zr I)
+     - Strips negative-ion dashes (Se- → Se)
+
+     v2 — added rules + warnings + checklist (296 lines)
+
+     - More conservative → cut SOME extras (-17) but also cut real matches (-12)
+     - Net: perfect+no-extras rate UNCHANGED (19→19)
+     - Specific rules ignored despite explicit warnings: AP-1 (Cr-Cu), AP-5
+     (base drop), AP-10 (TA)
+     - Some rules landed: dash preservation, list-vs-range, AT/TE independence
+     (partial)
+     - Lesson: long prompt → key rules buried; "be more conservative" is too
+     vague — AI drops both noise AND signal
+
+     v3 — anti-pattern bank + EVIDENCE_AUDIT (203 lines)
+
+     - Catastrophic regression: strict 62%→25%, perfect 19→6
+     - Root cause: EVIDENCE_AUDIT section broke v1's strict output contract ("no
+      explanations, no markdown") → AI inferred format was negotiable → invented
+      combined-code/type formats:
+       - Cr-Cu I: EL: O; PT: T (two codes one line)
+       - H I: SE: E, T, O (three method types one line)
+       - H I; C I; ... Cs I: W, CL, EL: E (three codes one line)
+     - Parser cannot recognize these → match count crashed
+     - Species hallucination: "Kaonic Ne" invented for paper that's just Ne I
+     - Anti-patterns AP-1, AP-5, AP-7, AP-10 still ignored
+     - BUT: evidence audit DID catch real issues for some entries (e.g., 24042
+     honest about RPA/DFT being non-ab-initio → correctly dropped AT: T).
+     Reasoning was better; format was worse.
+
+     Root-Cause Synthesis
+
+     1. Format contract is fragile. Any new output section (EVIDENCE_AUDIT)
+     makes AI treat format as flexible. Original v1 spec ("output ONLY the
+     keywords fields ... no explanations, no markdown") must be preserved
+     verbatim.
+     2. Anti-patterns help with mechanical rules, fail at semantic ones.
+       - Mechanical rules that landed: dash preservation, list-vs-range,
+     hydrogen mass-1 collapse
+       - Semantic rules that did NOT land: TA vs CL distinction, range bound
+     correctness, base form retention
+       - AI does pattern matching, not reasoning
+     3. Conservatism without precision = lost signal. v2's "be more
+     conservative" cut matches AND extras at same rate. Net zero gain. Need
+     targeted conservatism, not blanket.
+     4. Some "AI failures" are actually arguable. 24109 Kologrivov: paper Table
+     III is "Interpretation of the sulfur spectra" — TA vs CL is genuinely
+     ambiguous. AI may be right and reference may be questionable. Can't get to
+     100% just from prompt engineering.
+     5. Long prompts don't work for Gemini Flash. Model prioritizes recency and
+     salience. Rules in middle of 270-line prompt are dropped. Few-shot examples
+      + short, focused rules work better.
+     6. Self-critique CAN work but requires care. v3's evidence audit produced
+     useful reasoning when format wasn't broken. Need to keep the reasoning
+     benefit without breaking the output contract.
+
+     User-Locked Constraints (from clarification round)
+
+     1. Metric = STRICT perfect+no-extras (base-form retention is hard
+     requirement, not lenient).
+     2. Target = match the original reference, even if AI's alternative
+     interpretation may be defensible. Reference is authoritative.
+     3. Pipeline = prompt-alone must produce clean output. NO post-processing
+     validator. Format discipline must live entirely in the prompt.
+     4. Scope = EL keywords ONLY. The prompt must NOT mention keywords_tp or
+     keywords_lb at all (those have separate prompts run separately). Output is
+     just keywords_el={...}.
+     5. Novelty filter (CORE rule) = keywords are assigned ONLY for data that
+     the paper genuinely presents as a NEW result. Do NOT assign keywords for:
+       - Values cited from prior literature and used as inputs (e.g., NIST
+     levels used to fit a new model)
+       - Values reproduced for comparison only (e.g., a table column showing
+     "previous values")
+       - Routine recomputations of already-known quantities
+       - Theoretical constants or ionization energies pulled from databases for
+     context
+     The paper must claim the value as its own contribution. If the paper's text
+      says "we measured X" or "we calculated X" → assign. If "we used X from Ref
+      [n]" or "X is taken from [database]" → DO NOT assign.
+     This rule is in v1 already but underweighted. v4 elevates it to a top-level
+      core principle next to the format laws.
+
+     V4 Strategy
+
+     Single deliverable: a tightened EL-only prompt that the AI cannot deviate
+     from. No validator. No TP/LB sections.
+
+     Deliverable 1: Prompt_EL_v4.md (target ~150 lines)
+
+     Structure (ordered by AI attention budget):
+
+     1. Role + output contract — EL-only. Output is exactly:
+     keywords_el={KEYWORD_EL1
+     KEYWORD_EL2
+     ...}
+     1. Single closing }. No prose. No markdown. No code blocks. No extra
+     sections. No keywords_tp, no keywords_lb — those are out of scope.
+     2. Novelty filter (top-level rule, appears BEFORE format laws). Assign
+     keywords only for data the paper presents as its own NEW result. Reject
+     cited/literature/reference values, comparison columns, and reused inputs.
+     Concrete test for AI: "would I cite THIS paper to retrieve THIS value?" If
+     no → skip the keyword.
+     3. Hard format laws (4-5 lines):
+       - One species : code : type per line.
+       - Never combine codes (no EL: O; PT: T).
+       - Never combine types (no SE: E, T, O).
+       - Never put comma between codes inside the colon (no W, CL, EL: E).
+       - ; is ONLY a separator between species in the spectrum string (never
+     between codes/types).
+     4. Subject code table (compact, ~15 rows, with allowed method types).
+     5. Spectra string syntax (8-10 lines): isotopes, negative ions, ranges,
+     isoelectronic.
+     6. GENINT compact reference (5-6 lines).
+     7. Three worked examples (input description → exact correct output, no
+     commentary):
+       - Pure experimental measurement paper (clock-style: EL, CL, W: E)
+       - Theoretical paper with AT+TE both justified (HCI energy levels)
+       - Mixed paper with multiple isotopes (Rb I; 85Rb I; 87Rb I: CL/W/EL/Hfs)
+     8. Anti-pattern bank — format violations FIRST, then semantic:
+       - F-1: combined codes on one line (taken from real v3 output)
+       - F-2: combined types on one line (taken from real v3 output)
+       - F-3: codes-inside-colon list (taken from real v3 output)
+       - F-4: any prose / extra section / markdown around the block
+       - S-1: range over-extension (Cr-Fe → not Cr-Cu) — 24042 case
+       - S-2: range under-truncation / wrong boundary (W XXVII-XXXVII not
+     XXVII-XXXII) — 24134, 24097
+       - S-3: mass compression to range when list has gaps (H-Zr ≠ specific
+     list) — 24084
+       - S-4: base form drop (C V; 13C V not 13C V alone) — 24050
+       - S-5: isotope drop (Rb I; 85Rb I; 87Rb I keep all) — 24123
+       - S-6: isotope over-expansion (Ne I not Ne I; 20Ne I; 22Ne I unless
+     distinct values) — 24095
+       - S-7: negative ion dash preservation (Se- not Se) — 24079
+       - S-8: hydrogen mass-1 collapse (H I not H I; 1H I) — 24073
+       - S-9: TA is distinct from CL+W — 24109
+       - S-10: method source flip (IS: E not IS: T if measured) — 24081
+       - S-11: AT+TE independence (don't co-assign reflexively) — 24106, 24101
+       - S-12: QF over-assignment (only if QED is the novel result)
+       - S-13: IP over-assignment (only if new numerical IE reported)
+       - S-14: ND over-assignment (only if labels are NEW/REVISED)
+       - S-15: W and CL forbid method type T (use TE: T)
+       - S-16: CL/W not inferred from EL alone (forward inference only)
+       - S-17: cited literature values are NOT new results — do not assign
+     keywords for them (covers v3 24123-style mistakes in reverse, and AI extras
+      that copy values from comparison tables)
+     9. Internal reasoning permission, external silence: "Reason step by step
+     internally before emitting. Cite evidence to yourself. Emit ONLY the
+     keywords_el={...} block."
+     10. Closing reminder of output contract — repeat the format spec verbatim
+     at the end (last thing AI reads before emitting).
+
+     Drop from v3: EVIDENCE_AUDIT visible output section. ALL TP/LB references.
+     Drop from v2: Verbose final-checklist section; redundant constraint
+     paragraphs; TP/LB sections.
+     Drop from v1: TP and LB sections entirely. SPECS preamble.
+     Keep from v1: Exact keywords_el output spec wording (adapted to EL-only).
+     Keep from v2: ND warning, QF "QED researcher useful?" test, IP explicit
+     don't-list, AT method enumeration, TE table-required constraint, AT/TE
+     independence note.
+     Keep from v3: Anti-pattern WRONG/RIGHT pairs structure (using real-failure
+     examples).
+
+     Deliverable 2: Test harness (when user provides v4 outputs)
+
+     After user runs v4 prompt on the 98 papers into EL_test_set_v4/ (or
+     wherever):
+     1. Run analyze_keywords_v4.py (clone of v3 analyzer pointing at the v4
+     output folder)
+     2. Generate keywords_comparison_v4.md, keywords_match_analysis_v4.md
+     3. Generate v1_v2_v3_v4_summary.md comparing all four versions on the
+     locked metric
+     4. Report perfect+no-extras (strict) delta vs prior best (19/98)
+     5. Spot-check the 18 anti-pattern target entries to see which landed
+
+     Files to Create
+
+     File: /Users/themanaspandey/stuff/Prompt_EL_v4.md
+     Purpose: EL-only prompt (target ~150 lines)
+     ────────────────────────────────────────
+     File: /Users/themanaspandey/stuff/analyze_keywords_v4.py
+     Purpose: Clone of v3 analyzer, points to v4 output folder (after user runs
+       prompt)
+     ────────────────────────────────────────
+     File: /Users/themanaspandey/stuff/keywords_comparison_v4.md
+     Purpose: Side-by-side after v4 run
+     ────────────────────────────────────────
+     File: /Users/themanaspandey/stuff/keywords_match_analysis_v4.md
+     Purpose: v4 per-entry analysis + summary
+     ────────────────────────────────────────
+     File: /Users/themanaspandey/stuff/v1_v2_v3_v4_summary.md
+     Purpose: All-version comparison on locked metric
+
+     Files to Reference / Reuse
+
+     - /Users/themanaspandey/stuff/Prompt.md — extract original output-format
+     spec verbatim (lines 1-16)
+     - /Users/themanaspandey/stuff/Prompt_EL_new.md — extract refined code
+     definitions (AT, TE, QF, IP, ND blocks)
+     - /Users/themanaspandey/stuff/Prompt_EL_v3.md — extract anti-pattern
+     WRONG/RIGHT pairs
+     - /Users/themanaspandey/stuff/analyze_keywords.py — reuse parsing/matching
+     logic
+     - /Users/themanaspandey/stuff/v1_v2_v3_summary.md — failure pattern
+     reference
+
+     Verification Plan
+
+     1. Format check on v4 prompt itself: confirm prompt has NO EVIDENCE_AUDIT,
+     NO keywords_tp, NO keywords_lb. Only EL output spec.
+     2. Lint v4 examples: every worked example must be valid against the same
+     format laws the prompt enforces — no combined codes/types in examples.
+     3. User runs v4 prompt on the 98 papers in their existing Gemini Flash
+     pipeline, dumps output to a new folder (e.g., EL_test_set_v4/).
+     4. Run analyzer on v4 output. Locked target (STRICT perfect+no-extras): aim
+      ≥ 30/98 (beat 19/98 baseline by ≥50%). Secondary metrics monitored: strict
+      raw match rate (recover ≥67%), zero-matches count (down from 21-23).
+     5. Spot-check the 16 anti-pattern target entries: 24042, 24050, 24073,
+     24079, 24081, 24084, 24095, 24097, 24109, 24123, 24134, 24138, 24101,
+     24106, 24115, 24127 — verify at least 8 now match the reference exactly.
+     6. Generate v1_v2_v3_v4_summary.md and report verdict to user.
+
+⏺ Writing v4 prompt now.
+
+⏺ Write(Prompt_EL_v4.md)
+  ⎿  Wrote 208 lines to Prompt_EL_v4.md
+          `keywords_el` from the attached PDF (and any supplementary tabl
+         es). Scope is EL (Energy Levels and Spectral Lines) ONLY. Do not
+         parate prompts.ds_tp` or `keywords_lb` — those are handled by se
+       2 
+       4 ## OUTPUT CONTRACT (NON-NEGOTIABLE)
+       5 Emit exactly this and nothing else — no prose, no markdown, no c
+       6 ode fences, no commentary, no extra sections:
+       7 ```
+       9 KEYWORD2_el={KEYWORD1
+      10 KEYWORD3}
+     … +315 lines (ctrl+o to expand)
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+⏺ Prompt clean. Lines 1, 17, 146 reference banned terms only in
+  negative/instructive context. 208 lines total.
+
+  Now prepping v4 analyzer for when user generates outputs.
+
+⏺ Bash(cp /Users/themanaspandey/stuff/analyze_keywords_v3.py
+      /Users/themanaspandey/stuff/analyze_keywords_v4.py
+      sed -i '' "s|stuff/EL_test_set 2'|stuff/EL_test_set_v4'…)
+  ⎿  381:    TEST_DIR = '/Users/themanaspandey/stuff/EL_test_set_v4'
+     382:    OUT      = '/Users/themanaspandey/stuff/keywords_match_analysi
+     s_v4.md'
+     385:    ai      = parse_ai_folders(TEST_DIR)
+
+⏺ Done. Three deliverables:
+
+  1. /Users/themanaspandey/stuff/Prompt_EL_v4.md (208 lines) — EL-only prompt:
+    - Output contract: only keywords_el={...}, no TP/LB
+    - Novelty filter as top-level rule (above format laws)
+    - 6 hard format laws (with regex shape)
+    - Compact subject code table
+    - Spectra syntax (8 rules)
+    - GENINT compact reference
+    - 3 worked examples (clock-style, AT+TE, multi-isotope)
+    - 22 anti-patterns: F-1..F-4 (format) + S-1..S-18 (semantic), all from real
+  failures
+    - Internal reasoning permission with external silence
+    - Closing format reminder
+  2. /Users/themanaspandey/stuff/analyze_keywords_v4.py — points at
+  EL_test_set_v4/ folder (user creates after running v4 prompt)
+  3. Plan file locked at
+  /Users/themanaspandey/.claude/plans/i-want-you-to-reactive-sutton.md
+
+  Next steps (user action required):
+  1. Run Prompt_EL_v4.md through Gemini Flash on the 98 papers
+  2. Drop outputs into /Users/themanaspandey/stuff/EL_test_set_v4/<year>_<author
+  >_el_<id>/bibtex_AI_Generated.txt
+  3. Ping me — I'll run analyzer + build keywords_comparison_v4.md,
+  keywords_match_analysis_v4.md, v1_v2_v3_v4_summary.md
+
+  Target: STRICT perfect+no-extras ≥ 30/98 (vs 19/98 baseline).
+
+✻ Baked for 4m 11s
+
+※ recap: Goal: maximize "perfect match + zero AI extras" rate for EL keyword extraction (currently 19/98). Just wrote Prompt_EL_v4.md and the v4 analyzer. Next: you run v4 prompt through Gemini Flash on the 98 papers, drop outputs into EL_test_set_v4/, then ping me. (disable recaps in /config)

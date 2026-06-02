@@ -1,0 +1,13 @@
+EVIDENCE_AUDIT:
+- Sr II: IS: E: Table 1. Comparison of measured isotopic shifts with the literature data
+- Sr II: IS: O: Section 5. KING DIAGRAM
+- GENINT: 1.13: E: Title: Measurement of the Isotopic Shift of the S1/2–D5/2 Clock Transition in Monoisotopic Clouds of Strontium Ions
+- [DROPPED - IS rule]: 84Sr II: IS: E
+- [DROPPED - IS rule]: 86Sr II: IS: E
+- [DROPPED - IS rule]: 88Sr II: IS: E
+
+FINAL_KEYWORDS:
+keywords_el={Sr II: IS: E,O
+GENINT: 1.13: E},
+keywords_tp={},
+keywords_lb={}

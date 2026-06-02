@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- Ni XIII: AT: T: Section II. METHOD ("We carry out our CI + MBPT calculations using the AMBIT package")
+- Ni XIII; 58Ni XIII: TE: T: Table I: Calculated energies (in cm−1) of the lowest four excited states of Ni12+ (Section II specifies Rrms for 58Ni)
+- Ni XIII: IS: T: Table IV: Calculated isotope shifts ΔνIS for the selected transitions in Ni12+
+- Ni XIII: QF: T: [DROPPED - QED is a routine correction in the energy level calculation, not the primary focus]
+- GENINT: 1.8: T: Section II. METHOD (AMBIT package)
+- GENINT: 1.13: T: Abstract ("promising candidate for highly charged ion optical clocks")
+- GENINT: 1.24: T: Section IV. SUMMARY AND OUTLOOK ("excellent candidates for probing fifth force effects")
+
+FINAL_KEYWORDS:
+keywords_el={Ni XIII: AT: T
+Ni XIII; 58Ni XIII: TE: T
+Ni XIII: IS: T},
+keywords_tp={GENINT: 1.8: T
+GENINT: 1.13: T
+GENINT: 1.24: T},
+keywords_lb={}

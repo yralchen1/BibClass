@@ -1,0 +1,12 @@
+EVIDENCE_AUDIT:
+- GENINT: 1.8: T: Section 6: Evaluation of Methodology Efficiency
+- Cm I: [DROPPED - no tabulated energy levels or transition data provided, only performance metrics in Table 5]
+- AT: [DROPPED - methodological paper, no resulting atomic data reported for specific spectra]
+- TE: [DROPPED - no tabulated theoretical energy values]
+- EL: [DROPPED - no tabulated energy levels]
+- W: [DROPPED - no tabulated wavelengths]
+
+FINAL_KEYWORDS:
+keywords_el={GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

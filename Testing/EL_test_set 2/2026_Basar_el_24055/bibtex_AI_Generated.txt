@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- Pr I: EL: E: Table 3: Lines classified with help of the new levels.
+- Pr I: W: E: Table 1: Investigated spectral lines and observed fluorescence lines.
+- Pr I: CL: E: Table 1: Investigated spectral lines and observed fluorescence lines.
+- Pr I: Hfs: E: Table 3: Lines classified with help of the new levels.
+- Pr II: W: E: [DROPPED - only one unclassified line mentioned in Table 1, not a primary result]
+- Pr I: ZE: E: [DROPPED - explicitly stated not investigated in Introduction]
+- Pr I: IS: E: [DROPPED - only one stable isotope 141Pr exists]
+
+FINAL_KEYWORDS:
+keywords_el={Pr I: EL: E
+Pr I: W: E
+Pr I: CL: E
+Pr I: Hfs: E},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,23 @@
+EVIDENCE_AUDIT:
+- IP: Table 1. Chemical element; nuclear charge, Z; extrapolated, hydrogen-like ions ZIE(Z−1)+0 values (keV)
+- IP: Table 2. Chemical element, nuclear charge, number of interpolated IE values from this study
+- SF: Section 3. Methodology and Outcome for Extrapolative Assessment of 13 New IE Values of Hydrogen-like Ions
+- SF: Section 4. Methodology and Outcome for Interpolative Assessment of 162 New IE Values of Multielectron Ions
+- EL: [DROPPED - paper reports ionization energies (IP), not energy levels (EL)]
+- W: [DROPPED - no wavelengths reported]
+- CL: [DROPPED - no classified lines reported]
+- TA: [DROPPED - no transition arrays reported]
+- SE: [DROPPED - no Stark effect data]
+- ZE: [DROPPED - no Zeeman effect data]
+- Hfs: [DROPPED - no hyperfine structure data]
+- IS: [DROPPED - no isotope shifts]
+- QF: [DROPPED - no QED/Lamb shifts as primary result]
+- TE: [DROPPED - method is semi-empirical (O), not theoretical (T)]
+- AT: [DROPPED - no ab initio calculations]
+- PT: [DROPPED - no parametric theory fitting of levels]
+- ND: [DROPPED - no new designations]
+
+FINAL_KEYWORDS:
+keywords_el={Zn-Nb I-XLI; Mo XLII: IP; SF: O},
+keywords_tp={},
+keywords_lb={}

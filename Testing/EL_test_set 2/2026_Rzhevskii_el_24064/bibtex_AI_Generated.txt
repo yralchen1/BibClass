@@ -1,0 +1,13 @@
+EVIDENCE_AUDIT:
+- [C I; 12C I; 13C I; 14C I: TE: T]: Table I: Nonrelativistic energies of even-parity states of most common carbon isotopes
+- [C I: IS: T]: Table V: Isotopic shifts of fine-structure intervals relative to 12C
+- [C I; 12C I; 13C I; 14C I: AT: T]: [DROPPED - ECG method not in allowed list for AT]
+- [C I: QF: T]: [DROPPED - QED is a correction, not the primary quantity]
+- [13C I: Hfs: T]: [DROPPED - no tabulated HFS constants or splittings]
+- [C I: EL: T]: [DROPPED - EL is for experimental/semi-empirical values, use TE for theoretical]
+
+FINAL_KEYWORDS:
+keywords_el={C I; 12C I; 13C I; 14C I: TE: T
+C I: IS: T},
+keywords_tp={},
+keywords_lb={}

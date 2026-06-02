@@ -1,0 +1,10 @@
+```bibtex
+keywords_el={GENINT: 1.3: E
+GENINT: 1.3: T
+GENINT: 1.9: E
+GENINT: 1.9: T},
+keywords_tp={GENINT: 1.3: E
+GENINT: 1.3: T},
+keywords_lb={GENINT: 1.0: E
+GENINT: 1.0: T}
+```

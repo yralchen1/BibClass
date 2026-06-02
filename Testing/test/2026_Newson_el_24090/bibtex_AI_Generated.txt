@@ -1,0 +1,10 @@
+keywords_el={GENINT: 1.10: E
+GENINT: 1.15: E
+GENINT: 1.24: E
+Ps I; H I: EL: E
+Ps I; H I: CL: E
+Ps I; H I: W: E
+Ps I; H I: ZE: E
+Ps I; H I: QF: E},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,24 @@
+EVIDENCE_AUDIT:
+- 16O V; 18O V: W: E: Table II: Experimental and theoretical resonance energies for the Ka transition 1s22s2 1S0 -> 1s2s22p3/2 1P1 in Be-like 16O4+ and 18O4+
+- 16O V; 18O V: CL: E: Table II: Experimental and theoretical resonance energies for the Ka transition 1s22s2 1S0 -> 1s2s22p3/2 1P1 in Be-like 16O4+ and 18O4+
+- 16O V; 18O V: TE: T: Table II: Experimental and theoretical resonance energies for the Ka transition...; Table III: Comparison of energy levels...; Table IV: Comparison of energy levels...
+- 16O V; 18O V: AT: T: Section III: THEORY (discusses FAC, GRASP, MDFGME, CI+SM)
+- O V: IS: E: Table II: Experimental and theoretical resonance energies for the Ka transition... (measured isotope shift)
+- O V: IS: T: Table II: Experimental and theoretical resonance energies for the Ka transition...; Table IV: Comparison of energy levels... (calculated isotope shift)
+- [DROPPED - no experimental level table]: 16O V; 18O V: EL: E
+- [DROPPED - EL does not allow method T, use TE: T]: 16O V; 18O V: EL: T
+- [DROPPED - used for calibration, no new measurement reported]: 14N VI; 16O VII: W: E
+- [DROPPED - QED is a component, not the primary computed quantity]: QF: T
+- GENINT: 1.8: T: Section III: THEORY (discusses atomic codes FAC, GRASP, MDFGME)
+- GENINT: 1.18: E, T: Section I: INTRODUCTION (discusses plasma diagnostics for astrophysical plasmas)
+
+FINAL_KEYWORDS:
+keywords_el={16O V; 18O V: W: E
+16O V; 18O V: CL: E
+16O V; 18O V: TE: T
+16O V; 18O V: AT: T
+O V: IS: E, T
+GENINT: 1.8: T
+GENINT: 1.18: E, T},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,4 @@
+keywords_el={GENINT: 1.19: T
+Ar I; Cu I; Sn I; Hg I; U-Og I: AT: T},
+keywords_tp={},
+keywords_lb={}

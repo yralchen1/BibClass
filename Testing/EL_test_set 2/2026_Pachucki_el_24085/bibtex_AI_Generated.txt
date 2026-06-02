@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- He I: IS: T,O: Table II: Pure QED contributions to the 3He - 4He isotope shift; Table V: Determination of the 3He - 4He nuclear charge difference
+- 3He I, 4He I: AT: T: Section III: LEADING QED IN HELIUM ATOM (describes the use of three-particle Hamiltonian and expectation values)
+- 3He I, 4He I: QF: T: Table I: Expansion of the mα5 QED correction in the mass ratio for low-lying states of helium
+- 3He I, 4He I: TE: T: Table I: Expansion of the mα5 QED correction in the mass ratio for low-lying states of helium
+- 3He I: Hfs: T: Table III: Hyperfine mixing contributions to the 3He - 4He isotope shift
+- [DROPPED - EL: T not allowed]: Table I: Expansion of the mα5 QED correction in the mass ratio for low-lying states of helium
+- [DROPPED - W: E not measured]: Table V: Determination of the 3He - 4He nuclear charge difference (cites external measurements)
+
+FINAL_KEYWORDS:
+keywords_el={He I: IS: T,O
+3He I, 4He I: AT: T
+3He I, 4He I: QF: T
+3He I, 4He I: TE: T
+3He I: Hfs: T},
+keywords_tp={He I
+3He I
+4He I},
+keywords_lb={}

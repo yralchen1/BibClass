@@ -1,0 +1,20 @@
+EVIDENCE_AUDIT:
+- [Sr I: TE: T]: Table II: Two-electron removal energy for 1S0 state (cm−1) and excitation energies for some low-lying even- and odd-parity excited states of Sr.
+- [87Sr I: Hfs: T]: Table III: E1, HFS, and M1 reduced matrix elements (in a.u.) for Sr... (HFS section).
+- [Sr I: IS: T]: Table VIII: The normal mass shift (GHz-amu), specific mass shift (GHz-amu) and field shift (MHz fm−2) factors of Sr calculated using FSRCC theory.
+- [Sr I: SE: T]: Table VI: The value of α (a.u.) for ground state, 5s2 1S0, of Sr using PRCC theory.
+- [GENINT: 1.8: T]: Section II.A: Two-valence FSRCC Theory.
+- [GENINT: 1.13: T]: Section I: INTRODUCTION.
+- [Sr I: AT: T]: [DROPPED - method FSRCC/PRCC not in allowed list (HF, DHF, MCDF, MCDHF, CI, CI+MBPT)]
+- [Sr I: QF: T]: [DROPPED - QED is a correction, not the primary computed quantity]
+- [Sr I: IP: T]: [DROPPED - value is for double ionization, not ground-state IE]
+
+FINAL_KEYWORDS:
+keywords_el={Sr I: TE: T
+87Sr I: Hfs: T
+Sr I: IS: T
+Sr I: SE: T
+GENINT: 1.8: T
+GENINT: 1.13: T},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,11 @@
+EVIDENCE_AUDIT:
+- Nb I: EL: E: Table 1 ("Revised Nb I energy values of even parity") and Table 2 ("Revised Nb I energy values of odd parity")
+- Nb I: W: E: Table 3 ("List of lines of Nb I")
+- Nb I: CL: E: Table 3 ("List of lines of Nb I")
+- 93Nb I: Hfs: E: [DROPPED - hyperfine constants A and B are cited from literature (column 11 of Tables 1 & 2), not new results of this paper]
+- Nb I: ND: E: [DROPPED - paper revises existing levels, does not provide new or revised quantum labels]
+
+FINAL_KEYWORDS:
+keywords_el={Nb I: EL: E; W: E; CL: E},
+keywords_tp={},
+keywords_lb={}

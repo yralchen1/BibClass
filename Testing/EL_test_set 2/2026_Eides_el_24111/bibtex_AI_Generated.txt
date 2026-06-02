@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- Mu I: Hfs: T: Eq (6) "$\Delta \nu_{HFS}^{th}(Mu) = 4\,463\,302\,873(515)$ Hz"
+- Mu I: TE: T: Eq (6) "$\Delta \nu_{HFS}^{th}(Mu) = 4\,463\,302\,873(515)$ Hz"
+- GENINT: 1.10: T: Title "Muonium hyperfine splitting uncertainty revisited"
+- [DROPPED - Mu I: Hfs: E]: Cited from LAMPF experiments (Refs 7, 8), not measured in this work.
+- [DROPPED - Mu I: W: E]: Cited from LAMPF experiments (Refs 7, 8), not measured in this work.
+- [DROPPED - 133Cs I; 87Rb I]: Mentioned as sources for alpha in literature, no data reported.
+
+FINAL_KEYWORDS:
+keywords_el={Mu I: Hfs: T
+Mu I: TE: T
+GENINT: 1.10: T},
+keywords_tp={},
+keywords_lb={}

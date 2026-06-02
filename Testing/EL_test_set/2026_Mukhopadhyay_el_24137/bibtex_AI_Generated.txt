@@ -1,0 +1,6 @@
+keywords_el={GENINT: 1.8: T
+Ar I; Kr I; Xe I; Rn I; Zn I; Cd I; Hg I: IP: T
+Ar III; Kr III; Xe III; Rn III; Zn III; Cd III; Hg III: AT: T
+Ar III; Kr III; Xe III; Rn III; Zn III; Cd III; Hg III: TE: T},
+keywords_tp={},
+keywords_lb={}

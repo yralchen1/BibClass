@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- 85Rb I; 87Rb I: ZE: E, T: Abstract and Section 2.1 Fundamental and atomic constants
+- 85Rb I; 87Rb I: CL: E: Table 2 Table of the assigned frequencies for the pi spectrum
+- 85Rb I; 87Rb I: W: E: Table 2 Table of the assigned frequencies for the pi spectrum
+- [DROPPED - EL]: No table of energy level values provided.
+- [DROPPED - Hfs]: Table 1 (values from Ref [13]).
+- [DROPPED - IS]: Table 1 (values from Ref [19, 20]).
+- [DROPPED - TE]: No table of theoretical transition energies.
+
+FINAL_KEYWORDS:
+keywords_el={85Rb I; 87Rb I: ZE: E, T
+85Rb I; 87Rb I: CL: E
+85Rb I; 87Rb I: W: E},
+keywords_tp={85Rb I
+87Rb I},
+keywords_lb={5s 2S1/2
+5p 2P1/2}

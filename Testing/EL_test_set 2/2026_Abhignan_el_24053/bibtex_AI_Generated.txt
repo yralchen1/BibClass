@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- H I: TE: T: Table 3, 4, 5, 6, 7, 8, 9 (Calculated energy levels of H I in various fields/perturbations)
+- H I: SE: T: Table 3, 4, 5, 6 (Calculated energy levels of H I in an electric field)
+- H I: ZE: T: Table 8, 9 (Calculated energy levels of H I in a magnetic field)
+- H-; He-B He-like: TE: T: Table 1 and Table 2 (Calculated ground-state energies of He-like ions H- through B IV)
+- [DROPPED - AT]: Perturbation theory and resummation methods used are not among the allowed ab initio types (HF, CI, etc.).
+- [DROPPED - EL]: All tabulated values are theoretical (T), not experimental (E) or semi-empirical (O).
+
+FINAL_KEYWORDS:
+keywords_el={H I: TE: T
+H I: SE: T
+H I: ZE: T
+H-; He-B He-like: TE: T},
+keywords_tp={},
+keywords_lb={}

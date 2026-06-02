@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- [AT: T]: Section 2.3 "MCDHF Method" describes the use of the relativistic multiconfiguration Dirac–Hartree–Fock method for calculations.
+- [Hfs: T]: Table 3 "The first-order HFI shift..." and Table 4 "The second-order HFI shift..." provide calculated hyperfine interaction shifts for 229Th LXXXVII and 229Th LXXXVIII.
+- [IS: T]: Table 2 "The field shifts..." provides calculated field shifts (isomer shifts) for Th LXXXVII and Th LXXXVIII.
+- [GENINT: 1.8: T]: Page 5, "all calculations were performed using the GRASP2018 package" and Page 3, "The software package RIS4 was employed".
+- [GENINT: 1.13: T]: Section 1 "Introduction" discusses the application to building a high-precision nuclear clock.
+- [GENINT: 1.23: T]: Title and throughout the paper, the focus is on the 229Th nuclear transition.
+- [EL: T]: [DROPPED - no tabulated atomic energy levels, only shifts in the nuclear transition frequency]
+- [TE: T]: [DROPPED - no tabulated atomic transition energies, only shifts in the nuclear transition frequency]
+
+FINAL_KEYWORDS:
+keywords_el={229Th LXXXVII,LXXXVIII: AT: T
+229Th LXXXVII,LXXXVIII: Hfs: T
+Th LXXXVII,LXXXVIII: IS: T
+GENINT: 1.8: T
+GENINT: 1.13: T
+GENINT: 1.23: T},
+keywords_tp={},
+keywords_lb={}

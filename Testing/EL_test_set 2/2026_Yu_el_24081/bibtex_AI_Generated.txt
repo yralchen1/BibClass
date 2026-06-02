@@ -1,0 +1,23 @@
+EVIDENCE_AUDIT:
+- 229Th IV: TE: T: Table 1: Energies of low-lying states in the 229Th3+ ion
+- 229Th IV: TE: T: Table 5: Predicted hyperfine splitting shifts ∆W and transition frequencies for the Ig,6d3/2 → Ig,7p1/2 transition
+- 229Th IV: TE: T: Table 6: Predicted hyperfine splitting shifts ∆W and total transition frequencies for the Ig,7s1/2 → Ig,7p1/2 transition
+- 229Th IV: TE: T: Table 7: Predicted hyperfine splitting shifts ∆W and total transition frequencies for the Ig,7p1/2 → Im,7s1/2 EB transition
+- 229Th IV: Hfs: T: Table 2: Hyperfine structure constants A in units of MHz for low-lying states of the nuclear ground state
+- Th IV: IS: T: Table 3: Field shift factors FS in units of GHz/fm2 for low-lying states in the 229Th3+ ion
+- Th IV: IS: T: Table 4: Isotope shifts ∆νIS in units of MHz between low-lying states from 232Th to 229gTh
+- 229Th IV: AT: T: Section 2. Method
+- GENINT: 1.23: T: Section 1. Introduction
+- [DROPPED - EL: E]: Table 1 contains experimental values from literature (Ref 23), not new measurements.
+- [DROPPED - W: E]: Transition wavelengths in Fig 1 are from literature (Ref 23), not new measurements.
+- [DROPPED - CL: E]: Line assignments are from literature, not new results.
+- [DROPPED - TP: T]: Linewidths in Fig 1 and text are from literature (Refs 21, 24, 25), not new calculations.
+
+FINAL_KEYWORDS:
+keywords_el={229Th IV: TE: T
+229Th IV: Hfs: T
+Th IV: IS: T
+229Th IV: AT: T
+GENINT: 1.23: T},
+keywords_tp={},
+keywords_lb={}

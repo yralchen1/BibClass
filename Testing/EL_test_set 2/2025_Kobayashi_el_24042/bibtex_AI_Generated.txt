@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- Cr-Cu I: EL: O: Table III. F0, F2, G1, and G3 are the Slater–Condon parameters.
+- Cr-Cu I: PT: T: Table III. F0, F2, G1, and G3 are the Slater–Condon parameters.
+- GENINT: 1.11: T: Section 1. Introduction
+- [DROPPED - W: E]: no experimental wavelengths tabulated
+- [DROPPED - CL: E]: no line classifications tabulated
+- [DROPPED - TE: T]: no table of calculated transition energies provided
+- [DROPPED - AT: T]: method (RPA/DFT) not in allowed ab initio list
+- [DROPPED - IP: T]: no new ionization potential reported
+- [DROPPED - ND: T]: no new designations reported
+
+FINAL_KEYWORDS:
+keywords_el={Cr-Cu I: EL: O; PT: T
+GENINT: 1.11: T},
+keywords_tp={},
+keywords_lb={}

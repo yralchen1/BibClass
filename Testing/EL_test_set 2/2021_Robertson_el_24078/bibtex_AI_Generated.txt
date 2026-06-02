@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- EL: Table 1: Energy level data for divalent atoms currently included in divalent_atom_data, with references
+- SF: Table B.1: Tabulated values of the Rydberg–Ritz parameters for 88Sr and 174Yb
+- IP: Table B.1: Tabulated values of the Rydberg–Ritz parameters for 88Sr and 174Yb
+- SE: Section 3.4: Single-atom properties for divalent atoms (discusses Stark maps) and Section 3.8: Dynamic polarisabilities and magic wavelengths
+- ZE: Section 3: Overview of the new functions (mentions linear Zeeman shifts) and Table C.2: Methods and function listing (getZeemanEnergyShift)
+- AT: Section 3.1: Divalent atoms dipole and quadrupole matrix elements (discusses model potential and numerical integration) and Appendix A: The single active electron approximation
+- GENINT 1.8: Program summary (Program Title: ARC 3.0)
+- GENINT 1.13: Section 3.7: Optical lattices: Bloch bands, Bloch states, Wannier states (mentions atomic clocks)
+
+FINAL_KEYWORDS:
+keywords_el={H I; Li I; 6,7Li I; Na I; K I; 39,40,41K I; Rb I; 85,87Rb I; Cs I; 133Cs I; Ca I; 40Ca I; Sr I; 88Sr I; Yb I; 174Yb I: EL: O; SF: O; IP: O
+H I; Li I; 6,7Li I; Na I; K I; 39,40,41K I; Rb I; 85,87Rb I; Cs I; 133Cs I; Ca I; 40Ca I; Sr I; 88Sr I; Yb I; 174Yb I: SE: T; ZE: T; AT: T},
+keywords_tp={GENINT: 1.8: T; GENINT: 1.13: T},
+keywords_lb={}

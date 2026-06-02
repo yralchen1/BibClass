@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- Tb I; 159Tb I: W: E: Table 1: Lines of atomic terbium measured with LIF.
+- Tb I; 159Tb I: CL: E: Table 1: Lines of atomic terbium measured with LIF.
+- Tb I; 159Tb I: Hfs: E: Table 3: Experimental magnetic dipole and electric quadrupole hyperfine structure constants A and B (in MHz) for levels of even parity of atomic terbium together with values from the literature.
+- Tb I; 159Tb I: Hfs: E: Table 4: Experimental magnetic dipole and electric quadrupole hyperfine structure constants A and B (in MHz) for levels of odd parity of atomic terbium together with values from the literature.
+- Tb I; 159Tb I: EL: E: [DROPPED - energy level values in Tables 1, 3, and 4 are cited from literature (ref [3])]
+- Tb I; 159Tb I: ND: E: [DROPPED - no new or revised quantum labels are reported]
+
+FINAL_KEYWORDS:
+keywords_el={Tb I; 159Tb I: W: E
+Tb I; 159Tb I: CL: E
+Tb I; 159Tb I: Hfs: E},
+keywords_tp={},
+keywords_lb={}

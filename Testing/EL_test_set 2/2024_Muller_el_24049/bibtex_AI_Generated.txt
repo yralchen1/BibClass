@@ -1,0 +1,23 @@
+EVIDENCE_AUDIT:
+- 13C V: W: E: Table 5.1: Measured resonance frequencies of the 3SJ -> 3PJ' transitions in 13C4+
+- 13C V: CL: E: Table 5.1: Measured resonance frequencies of the 3SJ -> 3PJ' transitions in 13C4+
+- 13C V: Hfs: E: Table 5.5: Hyperfine structure parameters determined from fits of Eq. (2.16) and Eq. (2.18) to the transition frequencies listed in Tab. 5.1
+- C V: IS: E: Table 5.6: Isotope shifts delta nu 12,13 of the 1s2s 3S1 -> 1s2p 3P0,1,2 transitions between 12C4+ and 13C4+
+- C V: IS: T: Table 5.6: The field-shift constant F and mass shift are theoretical values calculated by V. A. Yerokhin and K. Pachucki
+- 13C V: TE: T: Table 2.3: Values of the matrix elements <gamma J || T(1) || gamma' J'> for the 1s2p 3P0,1,2 and 1P1 states in 13C4+
+- 87Sr II: Hfs: E: Table A.1: Agreement chi^2_red of four different models fitted to the hyperfine structure spectrum of the 5s 2S1/2 -> 5p 2P3/2 transition in 87Sr+
+- 87Sr II: CL: E: Figure A.1: Level scheme of the 5s 2S1/2, 5p 2P1/2,3/2 and 4d 2D3/2,5/2 states in 87Sr+ and the laser-driven 5s 2S1/2 -> 5p 2P3/2 transition
+- GENINT: 1.8: T: Section 3: Python package qspec
+
+FINAL_KEYWORDS:
+keywords_el={13C V: W: E
+13C V: CL: E
+13C V: Hfs: E
+C V: IS: E
+C V: IS: T
+13C V: TE: T
+87Sr II: Hfs: E
+87Sr II: CL: E
+GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

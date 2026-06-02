@@ -1,0 +1,8 @@
+keywords_el={GENINT: 1.10: T
+GENINT: 1.15: T
+He I: IS: T
+He I: QF: T
+He I; 3He I: Hfs: T
+H I; He II: QF: T},
+keywords_tp={},
+keywords_lb={}

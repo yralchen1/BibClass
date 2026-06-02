@@ -1,0 +1,15 @@
+EVIDENCE_AUDIT:
+- TE: Table I, II, III (tabulated calculated energy level shifts)
+- SE: Abstract, Section II.A (thermal Stark effect as the primary focus of the thermal shift)
+- Hfs: Table VI, VII, VIII (tabulated thermal shifts for hyperfine transition frequencies)
+- AT: Section III (fully relativistic Dirac equation solved using B-splines and DKB approach)
+- [DROPPED - ZE]: Zeeman effect mentioned as part of the total thermal shift but no specific Zeeman data (like g-factors) provided.
+- [DROPPED - QF]: Self-energy is a QED correction, but the novelty is the thermal part, not the zero-temperature QED quantity itself.
+- [DROPPED - EL]: Method type T is not allowed for EL; used TE instead.
+- GENINT 1.13: Section I (discussion of atomic clocks and thermal shifts)
+- GENINT 1.15: Section I (discussion of precise determination of fundamental physical constants)
+
+FINAL_KEYWORDS:
+keywords_el={H-Ca H-like; 3He II; 7Li III; 13C VI; 14N VII; 27Al XIII; 39K XIX; Sc XXI; 45Sc XXI; Fe XXVI; 57Fe XXVI; Zn XXX; Rb XXXVII; 85Rb XXXVII; Zr XL; In XLIX; 113In XLIX; Sn L; Cs LV; 133Cs LV; Nd LX; Tb LXV; 159Tb LXV; Yb LXX; Re LXXV; 185Re LXXV; Hg LXXX; Pb LXXXII; 207Pb LXXXII; Bi LXXXIII; 209Bi LXXXIII; U XCII; 235U XCII: TE: T; SE: T; Hfs: T; AT: T},
+keywords_tp={GENINT: 1.13: T; 1.15: T},
+keywords_lb={}

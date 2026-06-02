@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- N II: AT: T: 2.1. Theoretical methods
+- N II: TE: T: Table 2. Inner-shell excitation energies (E) of 2s2p2(4P)3d configuration in N II
+- GENINT: 1.18: T: 4. Conclusion
+- N II: CL: O: [DROPPED - theoretical paper, TE: T is more appropriate for calculated line lists]
+- N II: EL: O: [DROPPED - no new semi-empirical level values reported, only comparisons]
+- N III: TE: T: [DROPPED - N III levels only shown in figure for reference, not tabulated]
+
+FINAL_KEYWORDS:
+keywords_el={N II: AT: T
+N II: TE: T
+GENINT: 1.18: T},
+keywords_tp={AT
+TE
+1.18},
+keywords_lb={N II}

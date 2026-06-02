@@ -1,0 +1,1187 @@
+@article{24041EL,
+  journal={Phys. Rev. A},
+  volume={112},
+  pages={062811},
+  title={QED Calculations of Intra-L-Shell Doubly Excited States in Be-like Ions},
+  author={A. V. Malyshev and Y. S. Kozhedub and V. M. Shabaev and I. I. Tupitsyn},
+  year={2025},
+  doi={10.1103/97gb-k9ts},
+  keywords_el={Ar-U Be-like: TE: T
+Ar-U Be-like: AT: T
+Ar-U Be-like: QF: T}}
+
+@article{24042EL,
+  journal={J. Phys. Soc. Jpn.},
+  volume={94},
+  pages={084705},
+  Evolume={94},
+  Epages={128001},
+  Eyear={2025},
+  title={Effects of Electron-Hole Pair Excitations on K$\alpha$ X-ray Emission Spectra in 3d Transition Metals},
+  author={H. Kobayashi and T. Nomura},
+  year={2025},
+  doi={10.7566/jpsj.94.084705},
+  notes={X-ray characteristic lines},
+  keywords_el={Cr-Fe I: TE: T}}
+
+@article{24043EL,
+  journal={High En. Dens. Phys.},
+  volume={58},
+  pages={101255},
+  title={Collisional-Radiative Spectral Analysis Code PrismSPECT},
+  author={I. E. Golovkin and M. F. Gu and J. J. MacFarlane and J. Sebald and T. Walton},
+  year={2026},
+  doi={10.1016/j.hedp.2025.101255},
+  notes={Atomic codes},
+  keywords_el={}}
+
+@article{24044EL,
+  journal={Phys. Rev. A},
+  volume={112},
+  pages={062815},
+  title={High-Precision EUV Spectroscopy of the 2s2p~$^1$P$_1$ -- 2s$^2$~$^1$S$_0$ Transition in Be-like S$^{12+}$ and Cl$^{13+}$: Test of QED Effects},
+  author={X. P. Zhou and X. Liu and W. Q. Wen and Y. Yuan and Z. K. Huang and H. B. Wang and M. Y. Wan and J. Xiao and Y. S. Kozhedub and A. V. Malyshev and V. M. Shabaev and J. G. Li and S. F. Zhang and X. Ma},
+  year={2025},
+  doi={10.1103/5dls-tz48},
+  keywords_el={S-Cl Be-like: CL: E
+S-Cl Be-like: W: E
+S-Cl Be-like: EL: E
+S-Cl Be-like: TE: T
+S-Cl Be-like: QF: T
+S-Cl Be-like: QF: E}}
+
+@article{24045EL,
+  journal={Phys. Rev. A},
+  volume={112},
+  pages={063113},
+  title={Quantitative Fine-Structure-Level Study of Direct-Double-Auger-Decay Effects on Level Population Evolution in Krypton Under Ultrafast X-ray Irradiation},
+  author={J. Yan and C. Gao and Y.-J. Li and C.-Y. Chen and J.-L. Zeng and J.-M. Yuan},
+  year={2025},
+  doi={10.1103/9pbb-d31m},
+  notes={Auger electron spectra; X-ray characteristic lines},
+  keywords_el={Kr I-VI: AT: T}}
+
+@article{24046EL,
+  journal={Chin. Phys. B},
+  volume={35},
+  pages={013201},
+  title={New Spectroscopic Data on Even-Parity Autoionization States for Two-Color Two-Step Photoionization of Nickel Atom},
+  author={J.-Y. Zhang and J.-Y. Xiong and H.-R. Zhou and C.-H. Zhu and H.-M. Sun and L.-D. Wang and K.-C. Ma and J.-J. Chai and Y.-F. Li},
+  year={2026},
+  doi={10.1088/1674-1056/adf4ae},
+  keywords_el={Ni I: EL: E
+Ni I: CL: E
+Ni I: W: E}}
+
+@article{24047EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012814},
+  title={High-Accuracy Non-Born-Oppenheimer Calculations with All-Electron Explicitly Correlated Gaussians of Finite-Nuclear-Mass Effects in the Spectrum of the Ten Lowest $^1$D Rydberg States of Beryllium},
+  author={M. Stanke and A. K{\c e}dziorski and L. Adamowicz},
+  year={2026},
+  doi={10.1103/4bty-dy3z},
+  keywords_el={Be I; 9Be I: TE: T
+Be I; 9Be I: AT: T}}
+
+@article{24048EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012806},
+  title={Splitting Isotope Shift in the 1s2p~$^3$P$_{0,1,2}$ Fine-Structure Triplet in $^{12,13,14}$C$^{4+}$: Experiment and Theory},
+  author={P. M\"uller and K. K\"onig and E. Burbach and G. W. F. Drake and P. Imgram and B. Maass and T. M. Maggio and W. N\"ortersh\"auser and J. Spahn},
+  year={2026},
+  doi={10.1103/24k3-r2gp},
+  keywords_el={C V: IS: E
+He-Ne He-like: IS: T
+C V: TE: T}}
+
+@phdthesis{24049EL,
+  type={Ph.D. Thesis},
+  school={Technische Universit\"at Darmstadt},
+  address={Germany},
+  title={Laserspectroscopic Determination of the Nuclear Charge Radius of $^{13}$C},
+  author={P. M\"uller},
+  year={2024},
+  doi={10.26083/tuprints-00026746},
+  keywords_el={C V; 13C V: CL: E
+C V; 13C V; Sr II; 87Sr II: Hfs: E
+C V; 13C V: W: E}}
+
+@article{24050EL,
+  journal={Nature Comm.},
+  volume={16},
+  pages={6234},
+  title={The Nuclear Charge Radius of $^{13}$C},
+  author={P. M\"uller and M. Heinz and P. Imgram and K. K\"onig and B. Maass and T. Miyagi and W. N\"ortersh\"auser and R. Roth and A. Schwenk},
+  year={2025},
+  doi={10.1038/s41467-025-60280-9},
+  keywords_el={C V; 13C V: CL: E
+C V; 13C V: W: E
+C V; 13C V: Hfs: E
+C V: IS: E}}
+
+@article{24051EL,
+  journal={Phys. Rev. Lett.},
+  volume={131},
+  pages={243001},
+  title={Collinear Laser Spectroscopy of 2~$^3$S$_1$~$\rightarrow$~2~$^3$P$_J$ Transitions in Helium-like $^{12}$C$^{4+}$},
+  author={P. Imgram and K. K\"onig and B. Maa{\ss} and P. M\"uller and W. N\"ortersh\"auser},
+  year={2023},
+  doi={10.1103/PhysRevLett.131.243001},
+  keywords_el={C V; 12C V: CL: E
+C V; 12C V: W: E}}
+
+@article{24052EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012805},
+  title={Precision Measurement of the $^{176}$Lu$^+$ $^3$D$_1$ Microwave Clock Transitions},
+  author={M. D. K. Lee and Q. Zhao and Q.-C. Qin and Z. Zhang and N. Jayjong and K. J. Arnold and M. D. Barrett},
+  year={2026},
+  doi={10.1103/s23f-pnph},
+  notes={atomic clocks; frequency standards},
+  keywords_el={Lu II; 176Lu II: Hfs: E
+Lu II; 176Lu II: W: E
+Lu II; 176Lu II: CL: E
+Lu II; 176Lu II: ZE: E
+Lu II; 176Lu II: SE: E}}
+
+@article{24053EL,
+  journal={Pramana J. Phys.},
+  volume={100},
+  pages={5},
+  title={Convergence in Divergent Series Related to Perturbation Methods Using Continued Exponential and shanks' Transformations},
+  author={V. Abhignan},
+  year={2026},
+  doi={10.1007/s12043-025-03074-4},
+  keywords_el={H I: SE: T
+H I: ZE: T
+H I: AT: T}}
+
+@article{24054EL,
+  journal={Eur. Phys. J. D},
+  volume={80},
+  pages={1},
+  title={Rb Vapour Zeeman Optical Spectroscopy in a Self-Calibrated Magnetic Field},
+  author={S. Scotto and D. Ciampini and R. Battesti and C. Rizzo and E. Arimondo},
+  year={2026},
+  doi={10.1140/epjd/s10053-025-01112-9},
+  keywords_el={Rb I; 85Rb I; 87Rb I: ZE: E}}
+
+@article{24055EL,
+  journal={J. Quant. Spectrosc. Radiat. Transfer},
+  volume={351},
+  pages={109799},
+  title={Hyperfine Structure Investigation of Spectral Lines of the Praseodymium Atom in the Visible Spectral Region},
+  author={G\"u. Ba{\c s}ar and G\"o. Ba{\c s}ar and L. Windholz and G. H. Guth\"ohrlein},
+  year={2026},
+  doi={10.1016/j.jqsrt.2025.109799},
+  keywords_el={Pr I; 141Pr I: Hfs: E
+Pr I: CL: E
+Pr I: W: E
+Pr I: EL: E}}
+
+@article{24056EL,
+  journal={Chem. Phys.},
+  volume={604},
+  pages={113090},
+  title={Plasma Screening Effects on the Atomic Structure and Collision Strength of He-like C~V Ion},
+  author={N. Kumar and Shivankar and D. Dawra and M. Dimri and M. Mohan and A. K. S. Jha},
+  year={2026},
+  doi={10.1016/j.chemphys.2026.113090},
+  keywords_el={C V: TE: T
+C V: AT: T}}
+
+@article{24057EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012812},
+  title={Precise Ab Initio Calculations of $^4$He (1snp~$^3$P$_J$) Fine Structure of High Rydberg States},
+  author={H. Fang and J. Chi and X.-Q. Qi and Y.-H. Zhang and L.-Y. Tang and T.-Y. Shi},
+  year={2026},
+  doi={10.1103/j3by-7j54},
+  keywords_el={He I; 4He I: TE: T
+He I; 4He I: SF: T}}
+
+@article{24058EL,
+  journal={Phys. Rev. Applied},
+  volume={25},
+  pages={014004},
+  title={Compact 780-nm Rb Optical Clock},
+  author={Z.-D. Chen and T.-Y. Liu and R.-A. Yang and Q.-H. Yang and Y. Wang and J. Miao and J.-M. Chen and D. Pan and S.-Y. Cao and Z.-G. Zhang and J.-J. Wu and J.-B. Chen},
+  year={2026},
+  doi={10.1103/6pt5-zgmd},
+  notes={atomic clocks},
+  keywords_el={Rb I; 87Rb I: W: E
+Rb I; 87Rb I: CL: E
+Rb I; 87Rb I: Hfs: E
+Rb I; 87Rb I: EL: E}}
+
+@article{24059EL,
+  journal={J. Quant. Spectrosc. Radiat. Transfer},
+  volume={352},
+  pages={109812},
+  title={Relativistic Multiconfiguration Calculations of Energy Levels, Transition Rates and Hyperfine Constants in Neutral Indium},
+  author={B. Atalay},
+  year={2026},
+  doi={10.1016/j.jqsrt.2026.109812},
+  keywords_el={In I: AT: T
+In I: TE: T
+In I; 115In I: Hfs: T}}
+
+@article{24060EL,
+  journal={Atoms},
+  volume={14},
+  pages={3},
+  title={L-Shell Photon Excitation Cross Sections for the Chlorine Isonuclear Sequence Cl$^{q+}$ (q~=~1--4): An Experimental Study},
+  author={J.-P. Mosnier and E. T. Kennedy and D. Cubaynes and S. Guilbaud and J.-M. Bizau},
+  year={2026},
+  doi={10.3390/atoms14010003},
+  keywords_el={Cl II-V: EL: E}}
+
+@article{24061EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012810},
+  title={Theory for the Rydberg States of Helium: Results for 2~$\leq$~n~$\leq$~35 and Comparison with Experiments for the Singlet and Triplet P States},
+  author={G. W. F. Drake and A. T. Bondy and O. P. Hallett and B. C. Najem},
+  year={2026},
+  doi={10.1103/1dbh-rjjn},
+  keywords_el={He I; 4He I: TE: T
+He I; 4He I: QF: T
+He I; 4He I: IP: T
+He I; 4He I: AT: T}}
+
+@article{24062EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012815},
+  title={Hyperfine-Resolved Dielectronic Recombination Resonances Near the Threshold of Li-like Ions at a Heavy-Ion Storage Ring},
+  author={Y. Yuan and H.-K. Huang and W.-Q. Wen and Z.-K. Huang and S. Fritzsche and H.-B. Wang and X.-P. Zhou and M.-Y. Wan and S. Schippers and S.-X. Wang and C. Liu and Y.-S. Liu and L.-F. Zhu and X.-W. Ma},
+  year={2026},
+  doi={10.1103/c7rp-dxsq},
+  keywords_el={Sc XIX; 45Sc XIX; Sn XLVIII; 119Sn XLVIII; Re LXXIII; 187Re LXXIII: AT: T
+Sc XIX; 45Sc XIX; Sn XLVIII; 119Sn XLVIII; Re LXXIII; 187Re LXXIII: Hfs: T
+Sc XIX; Sn XLVIII; Re LXXIII: TE: T}}
+
+@article{24063EL,
+  journal={Atoms},
+  volume={14},
+  pages={7},
+  title={Calculation of Hyperfine Structure in Tm~II},
+  author={A. I. Bondarev},
+  year={2026},
+  doi={10.3390/atoms14010007},
+  keywords_el={Tm II: ZE: T
+Tm II: AT: T
+Tm II; 169Tm II: Hfs: T}}
+
+@article{24064EL,
+  journal={Phys. Rev. Research},
+  volume={8},
+  pages={013126},
+  title={Fine-Structure Splittings in Low-Lying Triplet States of the Carbon Atom},
+  author={P. Rzhevskii and D. Tumakov and T. Shomenov and S. Bubin},
+  year={2026},
+  doi={10.1103/v4jk-j7c9},
+  keywords_el={C I: IS: T
+C I; 12C I; 13C I; 14C I: TE: T
+C I; 12C I; 13C I; 14C I: AT: T}}
+
+@article{24065EL,
+  journal={J. Quant. Spectrosc. Radiat. Transfer},
+  volume={353},
+  pages={109852},
+  title={Re-Evaluation and Clarification of Discrepancies in Hyperfine Structure Constants of Nb~II Based on Experimental and Semi-Empirical Data},
+  author={L. Windholz and S. Kr\"oger and J. Ruczkowski and M. Elantkowska},
+  year={2026},
+  doi={10.1016/j.jqsrt.2026.109852},
+  keywords_el={Nb II; 93Nb II: Hfs: E
+Nb II: CL: E
+Nb II: W: E
+Nb II: EL: E}}
+
+@article{24066EL,
+  journal={Spectrochim. Acta, Part B},
+  volume={216},
+  pages={106946},
+  title={New Energy Levels of Atomic Holmium Discovered by Laser Spectroscopy in the Near Infrared Spectral Range},
+  author={S. K{\i}n Barka and G\"u. Ba{\c s}ar and S. Kr\"oger and G\"o. Ba{\c s}ar},
+  year={2024},
+  doi={10.1016/j.sab.2024.106946},
+  keywords_el={Ho I: EL: E
+Ho I: CL: E
+Ho I: W: E
+Ho I; 165Ho I: Hfs: E}}
+
+@article{24067EL,
+  journal={RAS Techniques and Instruments},
+  volume={5},
+  pages={p. rzaf065},
+  title={ExoAtom: A Database of Atomic Spectra in ExoMol Format},
+  author={Q.-H. Ni and R.-J. Wang and T.-Y. Xie and J.-X. Zhang and C. Hill and S. N. Yurchenko and J. Tennyson},
+  year={2026},
+  doi={10.1093/rasti/rzaf065},
+  notes={Atomic databases},
+  keywords_el={}}
+
+@article{24068EL,
+  journal={J. Quant. Spectrosc. Radiat. Transfer},
+  volume={352},
+  pages={109830},
+  title={New Hyperfine Structure Data of Atomic Terbium Measured by Laser Spectroscopic Methods},
+  author={S. K{\i}n Barka and \.I. K. \"Ozt\"urk and F. G\"uzel{\c c}imen and G\"u. Ba{\c s}ar and S. Kr\"oger and G\"o. Ba{\c s}ar},
+  year={2026},
+  doi={10.1016/j.jqsrt.2026.109830},
+  keywords_el={Tb I; 159Tb I: Hfs: E}}
+
+@article{24069EL,
+  journal={Chin. Phys. B},
+  volume={35},
+  pages={023103},
+  title={High-Z Benchmarking: Probing the Sub-eV Frontier and an Extensive Li-like Uranium Atomic Dataset},
+  author={S.-A. Li and Y. Wang and X.-L. Chong and Y.-R. Luo and F. Zhang},
+  year={2026},
+  doi={10.1088/1674-1056/ae311a},
+  keywords_el={U XC: AT: T
+U XC: TE: T}}
+
+@article{24070EL,
+  journal={At. Data Nucl. Data Tables},
+  volume={168},
+  pages={101771},
+  title={Revised Level Energies of Nb~I},
+  author={L. Windholz and S. Kr\"oger},
+  year={2026},
+  doi={10.1016/j.adt.2025.101771},
+  keywords_el={Nb I: EL: E
+Nb I: W: E
+Nb I: CL: E}}
+
+@article{24071EL,
+  journal={Bull. Lebedev Physics Institute},
+  volume={52},
+  pages={S829--S835},
+  title={Features of Studying K-Spectra of Aluminum in a Plasma Produced by Various Methods},
+  author={I. N. Tilikin and T. A. Shelkovenko and A. A. Kologrivov and A. R. Mingaleev and A. A. Rupasov and A. M. Chekmarev and S. A. Pikuz},
+  year={2025},
+  doi={10.3103/S1068335625604078},
+  notes={plasma diagnostics},
+  keywords_el={Al XII,XIII: W: E}}
+
+@article{24072EL,
+  journal={Momento-Revista de Fisica},
+  number={72},
+  pages={119304},
+  title={The Ground State and Low-Lying Excited States of the Helium Atom in Dense Plasma},
+  author={H. S. El-Gendy},
+  year={2026},
+  doi={10.15446/mo.n72.119304},
+  notes={plasma environment effects},
+  keywords_el={He-B He-like: TE: T}}
+
+@article{24073EL,
+  journal={Nature},
+  volume={650},
+  pages={845--851},
+  title={Sub-Part-Per-Trillion Test of the Standard Model with Atomic Hydrogen},
+  author={L. Maisenbacher and V. Wirthl and A. Matveev and A. Grinin and R. Pohl and T. W. H\"ansch and T. Udem},
+  year={2026},
+  doi={10.1038/s41586-026-10124-3},
+  notes={fundamental constants},
+  keywords_el={H I; 1H I: CL: E
+H I; 1H I: W: E
+H I; 1H I: QF: E}}
+
+@article{24074EL,
+  journal={Plasma Phys. Controlled Fusion},
+  volume={68},
+  pages={025013},
+  title={Collisional-Radiative Modeling of M1 Transition Spectra for W$^{31+}$--W$^{39+}$ Ions within the 500--900~{\AA} Range},
+  author={Y.-T. Li and X.-B. Ding and L. Zhang and K. Yao and Y. Yang and J. Xiao and C.-Z. Dong},
+  year={2026},
+  doi={10.1088/1361-6587/ae4061},
+  keywords_el={W XXXII-XL: TE: T
+W XXXII-XL: AT: T
+W XXXII,XXXVI-XXXVII: CL: O}}
+
+@article{24075EL,
+  journal={Chin. Phys. B},
+  volume={34},
+  pages={053101},
+  title={Detailed Discussion of Discrepancy Between Theoretical and Observed Spectral Lines in Kr-like W$^{38+}$ Based on Advanced Consideration of Core Electron Correlations},
+  author={G.-Q. Peng and K. Wang and J. Yan and W. Kang},
+  year={2025},
+  doi={10.1088/1674-1056/adbdbe},
+  keywords_el={W XXXIX: CL: O
+W XXXIX: EL: O
+W XXXIX: AT: T
+W XXXIX: TE: T}}
+
+@article{24076EL,
+  journal={Phys. Scr.},
+  volume={96},
+  pages={125631},
+  title={Visible Spectroscopy of Highly Charged Tungsten Ions with the JET Charge Exchange Diagnostic},
+  author={A. Thorman and E. Litherland-Smith and S. Menmuir and N. Hawkes and M. O'Mullane and E. Delabie and B. Lomanowski and J. M. Fontdecaba and S. Scully and JET Contributors},
+  year={2021},
+  doi={10.1088/1402-4896/ac387b},
+  keywords_el={W XVIII,XIX,XXIV,XXV-XXIX,XXXI,XXXIV,XXXVIII,XL,XLIII,XLV,XLVII,L,LII,LV,LVII: CL: E
+W VI,XVIII,XIX,XXIV,XXV-XXIX,XXXI,XXXIV,XXXVIII,XL,XLIII,XLV,XLVII,L,LII,LV,LVII: W: E}}
+
+@article{24077EL,
+  journal={Comput. Phys. Commun.},
+  volume={220},
+  pages={319--331},
+  title={ARC: An Open-Source Library for Calculating Properties of Alkali Rydberg Atoms},
+  author={N. {\v S}ibali\'c and J. D. Pritchard and C. S. Adams and K. J. Weatherill},
+  year={2017},
+  doi={10.1016/j.cpc.2017.06.015},
+  notes={Atomic codes},
+  keywords_el={}}
+
+@article{24078EL,
+  journal={Comput. Phys. Commun.},
+  volume={261},
+  pages={107814},
+  title={ARC 3.0: An Expanded Python Toolbox for Atomic Physics Calculations},
+  author={E. J. Robertson and N. {\v S}ibali\'c and R. M. Potvliege and M. P. A. Jones},
+  year={2021},
+  doi={10.1016/j.cpc.2020.107814},
+  notes={Atomic codes},
+  keywords_el={}}
+
+@article{24079EL,
+  journal={J. Chem. Phys.},
+  volume={164},
+  pages={054303},
+  title={Revisiting the Electron Affinity of Selenium},
+  author={R. Zhang and W.-R. Jie and J.-Y. Chen and Q.-H. Liu and C.-G. Ning},
+  year={2026},
+  doi={10.1063/5.0311920},
+  keywords_el={Se-: IP: E
+Se-: EL: E
+Se-: IS: E}}
+
+@article{24080EL,
+  journal={Int. J. Theor. Phys.},
+  volume={65},
+  pages={38},
+  title={A Comparative Study of Slater-Type Functions with Integer and Noninteger Principal Quantum Numbers for Evaluating Atomic Electron Density Accuracy},
+  author={E. Sahin},
+  year={2026},
+  doi={10.1007/s10773-025-06246-5},
+  keywords_el={He-Xe I: AT: T}}
+
+@article{24081EL,
+  journal={Chin. Phys. B},
+  volume={35},
+  pages={023701},
+  title={Prediction of I$_g$,6d$_{3/2}$~$\rightarrow$~I$_g$, 7p$_{1/2}$, I$_g$, 7s$_{1/2}$~$\rightarrow$~I$_g$, 7p$_{1/2}$ and I$_g$, 7p$_{1/2}$~$\rightarrow$~I$_m$, 7s$_{1/2}$ Transition Frequencies in $^{229}$Th$^{3+}$ Ion},
+  author={S.-C. Yu and C.-B. Li and L. She},
+  year={2026},
+  doi={10.1088/1674-1056/ae0016},
+  notes={nuclear clocks},
+  keywords_el={Th IV; 229Th IV: AT: T
+Th IV; 229Th IV; 232Th IV: TE: T
+Th IV; 229Th IV: Hfs: T
+Th IV: IS: E}}
+
+@article{24082EL,
+  journal={Phys. Rev. Applied},
+  volume={25},
+  pages={014053},
+  title={Turquoise Magic Wavelength of the $^{87}$Sr Clock Transition},
+  author={G. Kestler and R. J. Sedlik and E. C. Trapp and M. S. Safronova and J. T. Barreiro},
+  year={2026},
+  doi={10.1103/rp9f-664g},
+  notes={atomic clocks},
+  keywords_el={Sr I; 87Sr I: SE: E
+Sr I; 87Sr I: SE: T}}
+
+@article{24083EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={p. L011101},
+  title={Investigating Roles of Triple Excitations for High-Precision Determination of Clock Properties of Alkaline-Earth-Metal Singly Charged Ions},
+  author={A. Chakraborty and V. Katyal and B. K. Sahoo},
+  year={2026},
+  doi={10.1103/zh99-b1m3},
+  notes={atomic clocks},
+  keywords_el={Ca II; Sr II; Ba II: SE: T
+Ca II; Sr II; Ba II: AT: T
+Ca II; 43Ca II; Sr II; 87Sr II; Ba II; 137Ba II: Hfs: T}}
+
+@book{24084EL,
+  booktitle={An Atlas of Infrared Spectra of the Solar Photosphere and of Sunspot Umbrae, in the Spectral Intervals 4040~cm$^{-1}$--5095~cm$^{-1}$, 5550~cm$^{-1}$--6700~cm$^{-1}$, 7400~cm$^{-1}$--8790~cm$^{-1}$},
+  publisher={Kitt Peak National Solar Observatory},
+  address={Tucson, AZ, USA},
+  title={An Atlas of Infrared Spectra of the Solar Photosphere and of Sunspot Umbrae, in the Spectral Intervals 4040~cm$^{-1}$--5095~cm$^{-1}$, 5550~cm$^{-1}$--6700~cm$^{-1}$, 7400~cm$^{-1}$--8790~cm$^{-1}$},
+  author={D. N. B. Hall},
+  year={1973},
+  keywords_el={H I; C I; O I; Na-S I; K-Fe I; Ca II; Ni I; Zn I; Cs I: CL: E
+H I; C I; O I; Na-S I; K-Fe I; Ca II; Ni I; Zn I; Cs I: W: E}}
+
+@article{24085EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={012824},
+  title={QED Nuclear Recoil Effect in Helium Isotope Shift},
+  author={K. Pachucki and V. Patk\'o{\v s} and V. A. Yerokhin},
+  year={2026},
+  doi={10.1103/3p73-984r},
+  keywords_el={He I: IS: T
+He I; 3He I; 4He I: QF: T}}
+
+@article{24086EL,
+  journal={Ukr. J. Phys.},
+  volume={71},
+  number={1},
+  pages={3--8},
+  title={Calculation of the Hartree-Fock Energies for p-Type Shells of Some Negative Ions},
+  author={M. J. AL-Sharaa and H. Yo. Ya. Al-Kazrajy and Q. Sh. Al Khafaji and Sh. A. Kadhim},
+  year={2026},
+  doi={10.15407/ujpe71.1.3},
+  keywords_el={S-; Cl-; K-; Sc-: AT: T
+S-; Cl-; K-; Sc-: TE: T}}
+
+@article{24087EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022813},
+  title={Relativistic Calculations of Energy Levels, Field Shift Factors, and Polarizabilities of Mercury and Copernicium},
+  author={H.-X. Liu and J.-Z. Han and Y.-M. Yu and Y.-F. Ge and Y. Liu and Z.-G. Huang},
+  year={2026},
+  doi={10.1103/ntv1-8d5w},
+  notes={atomic clocks; new physics; superheavy elements},
+  keywords_el={Hg I; Cn I: IP: T
+Hg I; Cn I: TE: T
+Hg I; Cn I: SE: T
+Hg I; Cn I: QF: T}}
+
+@article{24088EL,
+  journal={Appl. Phys. B},
+  volume={132},
+  pages={28},
+  title={Unmasking Blended Optogalvanic Lines: Composite Spectrum Center-of-Gravity Metrology with a Monte-Carlo Uncertainty Chain},
+  author={C. E. Simien},
+  year={2026},
+  doi={10.1007/s00340-026-08647-8},
+  keywords_el={Gd I: CL: E
+Gd I: W: E}}
+
+@article{24089EL,
+  journal={Can. J. Phys.},
+  volume={104},
+  pages={1--16},
+  title={Inner-Shell Excitation Energies, Transition Rates, and Autoionization Rates of 2s2p$^2$($^4$P)3d Configuration in N~II},
+  author={X.-Z. Shen and J.-P. Lin and K. Wang and P. J\"onsson},
+  year={2026},
+  doi={10.1139/cjp-2025-0215},
+  keywords_el={N II: TE: T
+N II: AT: T}}
+
+@article{24090EL,
+  journal={Phys. Rev. Lett.},
+  volume={136},
+  pages={033001},
+  title={Phase-Variation Ramsey Spectroscopy of the 2$^3$S$_1$~$\rightarrow$~2$^3$P$_2$ Interval in Positronium},
+  author={D. M. Newson and D. B. Cassidy},
+  year={2026},
+  doi={10.1103/f2m8-5zxj},
+  notes={exotic atoms},
+  keywords_el={H I: CL: E
+H I: W: E
+H I: QF: E}}
+
+@article{24091EL,
+  journal={Chin. Phys. Lett.},
+  volume={43},
+  pages={020301},
+  title={Enhanced Sensitivity of Nuclear Transition Frequency Shift in the Highly-Charged $^{229}$Th$^{87+}$ and $^{229}$Th$^{86+}$ Ions},
+  author={H.-Y. Zheng and Y.-L. Xu and J.-G. Li and Y.-H. Zhang and T.-Y. Shi and L.-Y. Tang},
+  year={2026},
+  doi={10.1088/0256-307X/43/2/020301},
+  notes={nuclear clocks},
+  keywords_el={Th I-IV,XXXVII,LV,LXXIII,LXXXVII-XC; 229Th I-IV,XXXVII,LV,LXXIII,LXXXVII-XC: AT: T
+Th I-IV,XXXVII,LV,LXXIII,LXXXVII-XC; 229Th I-IV,XXXVII,LV,LXXIII,LXXXVII-XC: IS: T}}
+
+@article{24092EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022802},
+  title={Atomic Polarizabilities for Excited States of the 2s$^2$2p$^2$(3s,3p) Configurations of Atomic Nitrogen Determined from the Static Stark-Effect Shifts at High Electric Fields},
+  author={S. Werbowy},
+  year={2026},
+  doi={10.1103/z5w2-jyhk},
+  keywords_el={N I: SE: E
+N I: SE: T
+N I: SE: O}}
+
+@article{24093EL,
+  journal={J. Quant. Spectrosc. Radiat. Transfer},
+  volume={354},
+  pages={109856},
+  title={Theoretical Study of Energy Levels and Radiative Transitions of K-Shell Excited States in the Be-like Sc$^{17+}$ Ion},
+  author={Y. Sun and F. Hu and Q. Chen and C.-C. Sang and D.-D. Liu and X. Liu and C. Han and Z. Shi},
+  year={2026},
+  doi={10.1016/j.jqsrt.2026.109856},
+  notes={X-ray characteristic lines},
+  keywords_el={Sc XVIII: AT: T
+Sc XVIII: TE: T}}
+
+@article{24094EL,
+  journal={J. Fusion Energy},
+  volume={45},
+  pages={17},
+  title={EUV Spectroscopic Analysis of Highly Charged Kr$^{24+}$ Ion for Impurity Seeding Studies in Fusion Plasmas via Electron-Impact Excitation and Collisional-Radiative Modeling},
+  author={S. Gupta and T. Oishi and M. Goto and T. Kawate and Y. Kawamoto and Y.-L. Liu and I. Murakami},
+  year={2026},
+  doi={10.1007/s10894-026-00552-4},
+  keywords_el={Kr XXV: CL: E
+Kr XXV: W: E
+Kr XXV: TE: T
+Kr XXV: AT: T}}
+
+@article{24095EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022815},
+  title={Precision Test of Bound-State QED at Intermediate Z with Kaonic Neon},
+  author={S. Manti and F. Sgaramella and L. Abbene and C. Amsler and F. Artibani and M. Bazzi and G. Borghi and D. Bosnar and M. Bragadireanu and A. Buttacavoli and M. Carminati and A. Clozza and F. Clozza and L. De Paolis and R. Del Grande and K. Dulski and C. Fiorini and I. Fri{\v s}{\v c}o\'c and C. Guaraldo and M. A. Iliescu and P. Indelicato and M. Iwasaki and A. Khreptak and J. Marton and P. Moskal and H. Ohnishi and K. Piscicchia and F. Principato and A. Scordo and M. Silarski and D. Sirghi and F. Sirghi and M. Skurzok and J. Sommerfeldt and A. Spallone and K. Toho and L. Toscano and O. Vazquez Doce and J. Zmeskal and C. Curceanu and SIDDHARTA-2 Collaboration},
+  year={2026},
+  doi={10.1103/rry5-tdqb},
+  notes={exotic atoms; fundamental constants},
+  keywords_el={Ne I: W: E
+Ne I: CL: E
+Ne I: QF: E
+Ne I: QF: T
+Ne I: TE: T
+Ne I: IS: T}}
+
+@article{24096EL,
+  journal={Appl. Phys. B},
+  volume={132},
+  pages={32},
+  title={Selective Resonance Ionization of Calcium Odd Isotopes with Odd-Even Selection Rules},
+  author={S. R. Wells and Y. Iwata and M. Miyabe and S. Hasegawa},
+  year={2026},
+  doi={10.1007/s00340-026-08641-0},
+  keywords_el={Ca I: IS: E
+Ca I; 43Ca I: Hfs: E
+Ca I; 43Ca I: CL: E
+Ca I; 43Ca I: W: E}}
+
+@article{24097EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022807},
+  title={Electrostatic Potentials and Electron Densities of Atoms of Transuranic Elements (Z~=~93--120)},
+  author={I. I. Tupitsyn and I. Yu. Tolstikhina and V. P. Shevelko},
+  year={2026},
+  doi={10.1103/d27g-hz5h},
+  notes={Superheavy elements},
+  keywords_el={Ar I; Cu I; Sn I; Hg I; U I; Np-Og I: AT: T}}
+
+@article{24098EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022806},
+  title={All-Order Wichmann-Kroll Contribution in Heavy Electronic and Exotic Atoms},
+  author={J. Sommerfeldt and P. Indelicato},
+  year={2026},
+  doi={10.1103/ylft-n4f9},
+  notes={exotic atoms},
+  keywords_el={Ar XVIII; Xe LIV; Pb LXXXII; 208Pb LXXXII; U XCII; 238U XCII: QF: T}}
+
+@article{24099EL,
+  journal={J. Phys. B},
+  volume={59},
+  pages={045001},
+  title={Relativistic Atomic Structure Calculations for Highly-Charged Ni-like Ions with Applications to Laser Spectroscopy},
+  author={Dipti},
+  year={2026},
+  doi={10.1088/1361-6455/ae4305},
+  keywords_el={Xe-Fm Ni-like: TE: T
+Xe-Fm Ni-like: AT: T}}
+
+@article{24100EL,
+  journal={Optics Continuum},
+  volume={5},
+  pages={334--341},
+  title={Microscope Slide as Beam Splitter for Fourier Transform Interferometers},
+  author={M.-Q. Wen},
+  year={2026},
+  doi={10.1364/OPTCON.581436},
+  notes={Measurement techniques},
+  keywords_el={}}
+
+@article{24101EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022810},
+  title={Magic Wavelengths and Triple Magic Trapping Conditions for 5s$^2$~$^1$S$_0$ and 5s5p~$^3$P$_{0,2}$ States of Sr Atoms},
+  author={Y.-M. Wang and Q.-Y. Liu and Y.-B. Tang and L. Wu and D.-H. Zhang and C.-Z. Dong and J. Jiang},
+  year={2026},
+  doi={10.1103/9qff-x9ht},
+  notes={atomic clocks},
+  keywords_el={Sr I: SE: T
+Sr I: AT: T}}
+
+@article{24102EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={022811},
+  title={Parts-Per-Million-Accurate Determination of the K$\alpha$ Photoionization Resonance of Be-like Oxygen with Resolution of Its $^{16}$O--$^{18}$O Isotopic Shift},
+  author={J. Danisch and M. Botz and C.-T. Shah and M. Togawa and J. Goes and D. Hache and F. Grilo and P. Amaro and V. A. Yerokhin and S. K\"uhn and A. Mohamed and R. Totani and M. de Simone and S. Orlando and T. Pfeifer and F. Nicastro and M. Coreno and J. R. Crespo L\'opez-Urrutia},
+  year={2026},
+  doi={10.1103/d4h7-ykwn},
+  notes={X-ray characteristic lines},
+  keywords_el={O V: CL: E
+O V: EL: E
+O V: IS: E
+O V: W: E
+O V: QF: T
+O V; 16O V; 18O V: TE: T
+O V: IS: T}}
+
+@article{24103EL,
+  journal={Atoms},
+  volume={14},
+  pages={15},
+  title={Atomic Ions Ionization Energy Values Assessment: Interpolative Empirical Analysis},
+  author={M. S. Sendova},
+  year={2026},
+  doi={10.3390/atoms14030015},
+  keywords_el={H-Mo H-like-Cr-like: IP: O}}
+
+@article{24104EL,
+  journal={Bull. Lebedev Physics Institute},
+  volume={52},
+  pages={S1010--S1017},
+  title={Measurement of the Isotopic Shift of the S$_{1/2}$-D$_{5/2}$ Clock Transition in Monoisotopic Clouds of Strontium Ions},
+  author={K. K. Trichev and P. V. Borisyuk and P. A. Cherepanov and D. O. Tregubov and G. Quintana Acosta},
+  year={2025},
+  doi={10.3103/S1068335625604650},
+  notes={atomic clocks},
+  keywords_el={Sr II: IS: E}}
+
+@article{24105EL,
+  journal={Atoms},
+  volume={14},
+  pages={9},
+  title={Study of the Triplet States in the Autoionizing Electron Spectra of He and Ar Induced by Low-Energy Electrons},
+  author={B. P. Marinkovi\'c and L. Avaldi and J. J. Jureta},
+  year={2026},
+  doi={10.3390/atoms14020009},
+  notes={Auger electron spectra},
+  keywords_el={He I; Ar I: EL: E}}
+
+@article{24106EL,
+  journal={Low Temperature Physics},
+  volume={52},
+  pages={257--261},
+  title={Atomic Structure Calculations of Singly Ionized Vanadium},
+  author={S. V. Gedeon and V. Yu. Lazur and V. I. Kazakov},
+  year={2026},
+  doi={10.1063/10.0042377},
+  keywords_el={V II: AT: T}}
+
+@article{24107EL,
+  journal={Atoms},
+  volume={14},
+  pages={13},
+  title={Dielectronic Recombination Strengths and Plasma Rate Coefficients of Lithium-like Argon Ions: Theory and Experiment},
+  author={H.-K. Huang and Z.-K. Huang and Y. Yuan and H.-B. Wang and Z. Muhammad and C. Liu and W.-Q. Wen and L.-F. Zhu and X.-W. Ma and S. Fritzsche},
+  year={2026},
+  doi={10.3390/atoms14020013},
+  keywords_el={Ar XV: EL: E
+Ar XV: AT: T}}
+
+@article{24108EL,
+  journal={Mon. Not. R. Astron. Soc.},
+  volume={546},
+  pages={p. stag237},
+  title={Electron Impact Excitation of Te~IV and V and Level Resolved R-Matrix Photoionization of Te~I--IV with Application to Modelling of AT2017gfo},
+  author={L. P. Mulholland and C. A. Ramsbottom and C. P. Ballance and A. Sneppen and S. A. Sim},
+  year={2026},
+  doi={10.1093/mnras/stag237},
+  keywords_el={Te IV-V: AT: T}}
+
+@article{24109EL,
+  journal={J. Appl. Phys.},
+  volume={139},
+  pages={093305},
+  title={An Intensive Source of Soft X-ray Radiation Based on Laser Produced Plasma of Sulfur},
+  author={A. A. Kologrivov and A. T. Sahakyan and V. N. Puzyrev and M. M. Zakharchuk and S. A. Pikuz},
+  year={2026},
+  doi={10.1063/5.0287350},
+  keywords_el={S VII-IX,XI-XIV: TA: E}}
+
+@article{24110EL,
+  journal={Atoms},
+  volume={14},
+  pages={17},
+  title={Study of the Hyperfine Structure of Sr~II, Ba~I and Ba~II: An MCDHF Approach for Modeling the Low-Lying Levels},
+  author={L. Nezosi and L. Maison and P. Palmeri and P. J\"onsson and M. Godefroid},
+  year={2026},
+  doi={10.3390/atoms14030017},
+  keywords_el={Ba I-II; 137Ba I-II; 135Ba II; Sr II; 87Sr II: Hfs: T}}
+
+@article{24111EL,
+  journal={Mod. Phys. Lett. A},
+  volume={In press},
+  pages={2650074},
+  title={Muonium Hyperfine Splitting Uncertainty Revisited},
+  author={M. I. Eides},
+  year={2026},
+  doi={10.1142/S0217732326500744},
+  notes={exotic atoms},
+  keywords_el={H I: Hfs: T}}
+
+@article{24112EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={032801},
+  title={Thermal One-Loop Self-Energy Correction for Hydrogen-like Systems: Relativistic Approach},
+  author={M. A. Reiter and D. A. Solovyev and A. A. Bobylev and D. A. Glazov and T. A. Zalialiutdinov},
+  year={2026},
+  doi={10.1103/sp69-lqbw},
+  keywords_el={H-U H-like: QF: T
+H I; He II; 3He II; Li III; 7Li III; C VI; 13C VI; N VII; 14N VII; Al XIII; 27Al XIII; K XIX; 39K XIX; Sc XXI; 45Sc XXI; Fe XXVI; 57Fe XXVI; Rb XXXVII; 85Rb XXXVII; In XLIX; 113In XLIX; Cs LV; 133Cs LV; Tb LXV; 159Tb LXV; Re LXXV; 185Re LXXV; Pb LXXXII; 207Pb LXXXII; Bi LXXXIII; 209Bi LXXXIII; U XCII; 235U XCII: Hfs: T
+H-U H-like: SE: T}}
+
+@article{24113EL,
+  journal={J. Quant. Spectrosc. Radiat. Transfer},
+  volume={355},
+  pages={109889},
+  title={Spectroscopy of Ultra-Cold $^{39}$K Rydberg Atoms in an AC-Driven Magneto-Optical Trap (AC-MOT)},
+  author={J. C. Agomuo and M. Harvey and A. J. Murray},
+  year={2026},
+  doi={10.1016/j.jqsrt.2026.109889},
+  keywords_el={K I; 39K I: EL: E
+K I; 39K I: SF: E
+K I; 39K I: CL: E
+K I; 39K I: W: E}}
+
+@article{24114EL,
+  journal={At. Data Nucl. Data Tables},
+  volume={169},
+  pages={101786},
+  title={Relativistic Configuration-Interaction Calculations of Transitions for Low-Lying States in the Lithium Isoelectronic Sequence},
+  author={L. G{\l}owacki},
+  year={2026},
+  doi={10.1016/j.adt.2025.101786},
+  keywords_el={Li-Lv Li-like: TE: T
+Li-Lv Li-like: IP: T
+Li-Lv Li-like: AT: T}}
+
+@article{24115EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={p. L020801},
+  title={Comprehensive Assessment of Th$^{3+}$ Properties for Nuclear Clock and Fundamental Physics Applications},
+  author={A. Chakraborty and B. K. Sahoo},
+  year={2026},
+  doi={10.1103/88jn-939s},
+  notes={nuclear clocks},
+  keywords_el={Th IV: IS: T
+Th IV: SE: T
+Th IV; 229Th IV: Hfs: T
+Th IV; 229Th IV: AT: T}}
+
+@article{24116EL,
+  journal={Phys. Rev. Lett.},
+  volume={136},
+  pages={092503},
+  title={Effects of Nuclear Hyperfine Mixing on $^{229}$Th$^{3+}$ Ions},
+  author={J. Zhou and X. Wang},
+  year={2026},
+  doi={10.1103/8jhh-ktfy},
+  notes={nuclear clocks},
+  keywords_el={Th IV: TE: T
+Th IV: AT: T}}
+
+@article{24117EL,
+  journal={At. Data Nucl. Data Tables},
+  volume={169},
+  pages={101793},
+  title={High Precision Calculations of the Ionization Energies and Fine-Structure Splittings of the Rydberg D States of Lithium Atom},
+  author={D. Sun and L.-M. Wang and Z.-C. Yan},
+  year={2026},
+  doi={10.1016/j.adt.2026.101793},
+  keywords_el={Li I; 7Li I; 6Li I: TE: T
+Li I; 7Li I; 6Li I: AT: T
+Li I; 7Li I; 6Li I: QF: T
+Li I: IS: T}}
+
+@article{24118EL,
+  journal={J. Phys. Chem. Ref. Data},
+  volume={55},
+  pages={013103},
+  title={Atomic Data Benchmarked by Large-Scale Multiconfiguration Dirac-Hartree-Fock Calculations for Beryllium},
+  author={S. J. Wu and S. W. Tian and R. Si and K. Wang and P. J\"onsson and G. Gaigalas and M. Godefroid and A. M. Amarsi and C. Y. Chen},
+  year={2026},
+  doi={10.1063/5.0285265},
+  keywords_el={Be I: TE: T
+Be I: ZE: T
+Be I: IS: T
+Be I; 9Be I: Hfs: T
+Be I: AT: T}}
+
+@article{24119EL,
+  journal={At. Data Nucl. Data Tables},
+  volume={169},
+  pages={101794},
+  title={Single Ionization of the Mo$^+$ Ion for the Ground and Metastable Configurations},
+  author={V. Jonauskas},
+  year={2026},
+  doi={10.1016/j.adt.2026.101794},
+  keywords_el={Mo II: TE: T
+Mo II: AT: T}}
+
+@article{24120EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={032810},
+  title={Calculations of Isotope Shifts in Highly Charged Ni$^{12+}$ Ion},
+  author={S.-C. Yu and H. Guan and L. She and C.-B. Li},
+  year={2026},
+  doi={10.1103/wh32-yfjk},
+  notes={atomic clocks; search for new physics},
+  keywords_el={Ni XIII: IS: T
+Ni XIII: TE: T
+Ni XIII: AT: T}}
+
+@article{24121EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={033105},
+  title={Photoionization of the Li Atom: Convergent-Close-Coupling Calculations with a Focus on Two-Electron Removal},
+  author={A. M\"uller and A. S. Kheifets and I. Bray and D. V. Fursa},
+  year={2026},
+  doi={10.1103/l4xt-3sxy},
+  keywords_el={Li I: TE: T
+Li I: AT: T}}
+
+@article{24122EL,
+  journal={Phys. Rev. A},
+  volume={111},
+  pages={053108},
+  title={Single and Double Photoionization of the Li-like B$^{2+}$ Ion: Strong Ionization-Excitation Contributions},
+  author={A. M\"uller and P.-M. Hillenbrand and S.-X. Wang and S. Schippers and S. Reinwardt and M. Martins and J. Seltmann and F. Trinter and I. Bray and D. V. Fursa and A. S. Kheifets},
+  year={2025},
+  doi={10.1103/PhysRevA.111.053108},
+  notes={X-ray characteristic lines},
+  keywords_el={B III; 11B III: EL: E
+B III,IV: TE: T
+B III,IV: AT: T
+B III; 11B III: CL: E
+B III; 11B III: W: E}}
+
+@article{24123EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={032811},
+  title={Experimental Determination of S, D, F, and G Energy Levels in Rubidium},
+  author={T. M. True and D. T. Nice and J. C. Mindrup and C. A. Rice and G. P. Perram},
+  year={2026},
+  doi={10.1103/5wyj-9jqj},
+  keywords_el={Rb I; 85Rb I; 87Rb I: CL: E
+Rb I; 85Rb I; 87Rb I: W: E
+Rb I; 85Rb I; 87Rb I: EL: E
+Rb I; 85Rb I; 87Rb I: SF: E
+Rb I; 85Rb I; 87Rb I: Hfs: E}}
+
+@article{24124EL,
+  journal={J. Chem. Phys.},
+  volume={164},
+  pages={114302},
+  title={Magic Wavelengths with QED Correction for the 2$^3$S$_1$~$\rightarrow$~2$^3$P$_J$ Transitions of Helium-4},
+  author={S.-S. Lu and J.-T. Li and Y.-J. Wang and W.-J. Mao and Z.-R. Zhu and F.-F. Wu},
+  year={2026},
+  doi={10.1063/5.0323943},
+  keywords_el={He I; 4He I: SE: T
+He I; 4He I: AT: T}}
+
+@article{24125EL,
+  journal={Nature Comm. Phys.},
+  volume={In press},
+  pages={online},
+  title={Accelerating Atomic Fine Structure Determination with Graph Reinforcement Learning},
+  author={M. Ding and V.-A. Darvariu and A. N. Ryabtsev and N. Hawes and J. C. Pickering},
+  year={2026},
+  doi={10.1038/s42005-026-02582-y},
+  notes={Atomic codes},
+  keywords_el={}}
+
+@article{24126EL,
+  journal={Nucl. Fusion},
+  volume={66},
+  pages={046030},
+  title={Efficient Modelling of Tungsten X-ray and EUV Emission Under ITER Plasma Conditions},
+  author={R.-J. Bao and D. Mitnik and L. Zhang and Z.-F. Cheng and M. O'Mullane and S. Morita and P. Abreu and H.-Q. Liu},
+  year={2026},
+  doi={10.1088/1741-4326/ae511d},
+  keywords_el={W XLV-XLVIII,LXIII-LXVI: AT: T
+W XLV-XLVIII,LXIII-LXVI: TE: T}}
+
+@article{24127EL,
+  journal={Acta Phys. Sin.},
+  volume={75},
+  pages={030302},
+  title={Theoretical Study on Electron-Impact Single Ionization Cross-Section of W$^{13+}$ Ion},
+  author={S.-P. Zhang and F.-J. Zhang and M.-J. Li and D.-H. Zhang},
+  year={2026},
+  doi={10.7498/aps.75.20251275},
+  language={Chin.},
+  keywords_el={W XIV: TE: T
+W XIV: AT: T}}
+
+@article{24128EL,
+  journal={Nature Photonics},
+  volume={In press},
+  pages={online},
+  title={Orders-Of-Magnitude Improvement in Precision Spectroscopy of an Inner-Shell Orbital Clock Transition in Neutral Ytterbium},
+  author={T. Ishiyama and K. Ono and H. Kawase and T. Takano and R. Asano and A. Sunaga and Y. Yamamoto and M. Tanaka and Y. Takahashi},
+  year={2026},
+  doi={10.1038/s41566-026-01857-8},
+  notes={atomic clocks},
+  keywords_el={Yb I: IS: E}}
+
+@article{24129EL,
+  journal={East Eur. J. Phys.},
+  number={1},
+  pages={148--155},
+  title={Relativistic Configuration-Interaction Photoionization Data for Ne-Like Isoelectronic Sequence},
+  author={O. Abu Haija and G. A. Alna'washi and S. M. Hamasha and M. T. Gning and I. Sakho and M. Al Shorman},
+  year={2026},
+  doi={10.26565/2312-4334-2026-1-13},
+  keywords_el={Ca-Cr Ne-like: TE: T}}
+
+@article{24130EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={032819},
+  title={Laboratory Measurements of Ca~XIX Dielectronic Recombination Satellites},
+  author={F. Grilo and M. Botz and C.-T. Shah and T. Pfeifer and J. R. Crespo L\'opez-Urrutia and P. Amaro},
+  year={2026},
+  doi={10.1103/2x7s-bv7g},
+  keywords_el={Ca XVIII: CL: E
+Ca XVIII: W: E
+Ca XVIII: EL: E
+Ca XVIII: TE: T
+Ca XVIII: AT: T}}
+
+@article{24131EL,
+  journal={Plasma Fusion Res.},
+  volume={21},
+  pages={2501015},
+  title={Triumphs, Twilight and Resurgence of the NIST Atomic Spectroscopy Group},
+  author={Yu. Ralchenko},
+  year={2026},
+  doi={10.1585/pfr.21.2501015},
+  keywords_el={}}
+
+@article{24132EL,
+  journal={Atoms},
+  volume={14},
+  pages={20},
+  title={jj to LSJ Transformation for Configuration State Functions with an Arbitrary Number of Open Shells},
+  author={G. Gaigalas},
+  year={2026},
+  doi={10.3390/atoms14030020},
+  notes={atomic codes},
+  keywords_el={GENINT: 1.4: T}}
+
+@article{24133EL,
+  journal={Atoms},
+  volume={14},
+  pages={21},
+  title={Extension of an Efficient Approach for Spin-Angular Integrations in Atomic Structure Calculations},
+  author={G. Gaigalas},
+  year={2026},
+  doi={10.3390/atoms14030021},
+  notes={Atomic codes},
+  keywords_el={GENINT: 1.4: T}}
+
+@article{24134EL,
+  journal={Atoms},
+  volume={14},
+  pages={24},
+  title={Ni- and Co-like Xe Ion EUV Spectra Produced by Excitation Around the Ionisation Threshold of Xe~XXVII},
+  author={E. Tr\"abert},
+  year={2026},
+  doi={10.3390/atoms14030024},
+  keywords_el={Xe XXVII-XXXVII: W: E}}
+
+@article{24135EL,
+  journal={Eur. Phys. J. D},
+  volume={80},
+  pages={31},
+  title={Study of the $^1$P$^o$ Resonance Series in B$^{3+}$, N$^{5+}$ and F$^{7+}$ Ions},
+  author={S. Laulan and M.-A. Albert and S. Barmaki},
+  year={2026},
+  doi={10.1140/epjd/s10053-026-01131-0},
+  keywords_el={B IV; N VI; F VIII: TE: T
+B IV; N VI; F VIII: AT: T
+B IV; N VI; F VIII: SF: T}}
+
+@article{24136EL,
+  journal={Phys. Rev. A},
+  volume={113},
+  pages={032817},
+  title={Fock-Space Relativistic Coupled-Cluster Two-Valence Calculations of Clock Transition Properties, Dipole Polarizability, and Isotope Shifts in Fermionic and Bosonic Sr},
+  author={P. Gakkhar and D. Angom and B. K. Mani},
+  year={2026},
+  doi={10.1103/k2mx-wczj},
+  notes={atomic clocks},
+  keywords_el={Sr I: IS: E
+Sr I: AT: T
+Sr I: SE: T}}
+
+@article{24137EL,
+  journal={J. Chem. Theory Comput.},
+  volume={In press},
+  pages={online},
+  title={Reduced-Cost Four-Component Relativistic Double Ionization Potential Equation-of-Motion Coupled-Cluster Approaches with 4-Hole 2-Particle Excitations and Three-Body Clusters},
+  author={T. Mukhopadhyay and M. Mukherjee and K. Gururangan and P. Piecuch and A. K. Dutta},
+  year={2026},
+  doi={10.1021/acs.jctc.5c01791},
+  keywords_el={Ar I; Kr I; Xe I; Rn I: AT: T}}
+
+@article{24138EL,
+  journal={Phys. Scr.},
+  volume={101},
+  pages={135402},
+  title={RMBPT Energy Level Calculations for 4f$^n$6s Ground Configurations in Singly Ionized Lanthanides: Pr~II--Eu~II and Tb~II--Tm~II},
+  author={X. W. Zhang and F. H. Qu and X. Liu and J. G. Li and Y. Zou and J. Xiao},
+  year={2026},
+  doi={10.1088/1402-4896/ae5364},
+  keywords_el={Sm-Eu II; Tb-Tm II: AT: T
+Sm-Eu II; Tb-Tm II: TE: T}}
+
+@article{24139EL,
+  journal={Phys. Rev. Lett.},
+  volume={136},
+  pages={113001},
+  title={Stringent Constraints on New Pseudoscalar and Vector Bosons from Precision Hyperfine Splitting Measurements},
+  author={C. Quint and F. Hei{\ss}e and J. Jaeckel and L. Leimenstoll and C. H. Keitel and Z. Harman},
+  year={2026},
+  doi={10.1103/rvt1-93v2},
+  notes={Search for new physics},
+  keywords_el={H I; 1H I; He I; 3He I; Be II,IV; 9Be II,IV; In XLVII,XLIX; 115In XLVII,XLIX; Xe LII,LIV; 131Xe LII,LIV; Cs LIII,LV; 133Cs LIII,LV; Bi LXXXI,LXXXIII; 209Bi LXXXI,LXXXIII: AT: T
+H I; 1H I; He I; 3He I; Be II,IV; 9Be II,IV; In XLVII,XLIX; 115In XLVII,XLIX; Xe LII,LIV; 131Xe LII,LIV; Cs LIII,LV; 133Cs LIII,LV; Bi LXXXI,LXXXIII; 209Bi LXXXI,LXXXIII: Hfs: T}}
+
+@article{24140EL,
+  journal={Plasma Fusion Res.},
+  volume={21},
+  pages={2401006},
+  title={Photoexcitation Spectroscopy of Highly Charged Ions for Application to Astronomy Using a Compact Electron Beam Ion Trap (EBIT) at the Synchrotron Radiation Facility SPring-8},
+  author={L. Hirata and Y. Amano and M. Togawa and H. A. Sakaue and N. Nakamura and M. Sawada and H. Suzuki and M. Oura and H. Yamaguchi},
+  year={2026},
+  doi={10.1585/pfr.21.2401006},
+  keywords_el={O VII; Fe XVII: W: E
+O VII; Fe XVII: CL: E}}
+

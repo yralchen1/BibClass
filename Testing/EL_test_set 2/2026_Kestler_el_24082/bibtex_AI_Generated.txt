@@ -1,0 +1,11 @@
+EVIDENCE_AUDIT:
+- 87Sr I: SE: E, T: Abstract ("In this work, we experimentally measure the magic wavelength to be 497.4364(4) nm.") and Section II ("To compute the Sr magic wavelength, we calculate the 1S0 and 3P0 polarizabilities...")
+- 87Sr I: AT: T: Section II ("We refer to this method as CI+all-order approach", "CI+MBPT approach")
+- GENINT: 1.13: E, T: Title ("Turquoise magic wavelength of the 87Sr clock transition")
+
+FINAL_KEYWORDS:
+keywords_el={87Sr I: SE: E, T
+87Sr I: AT: T
+GENINT: 1.13: E, T},
+keywords_tp={},
+keywords_lb={}

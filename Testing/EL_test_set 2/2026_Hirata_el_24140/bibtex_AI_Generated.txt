@@ -1,0 +1,12 @@
+EVIDENCE_AUDIT:
+- [O VII: CL: E]: Table 1: Best-fit parameters for the oxygen Heα, iron 3C and 3G spectra.
+- [Fe XVII: CL: E]: Table 1: Best-fit parameters for the oxygen Heα, iron 3C and 3G spectra.
+- [GENINT: 1.18: E]: Abstract (application to plasma spectral modeling)
+- [Fe XVII: TP: E]: Section 4.2 Oscillator strength ratio constraint.
+
+FINAL_KEYWORDS:
+keywords_el={O VII: CL: E
+Fe XVII: CL: E
+GENINT: 1.18: E},
+keywords_tp={Fe XVII: TP: E},
+keywords_lb={}

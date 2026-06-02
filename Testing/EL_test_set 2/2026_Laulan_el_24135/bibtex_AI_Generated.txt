@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- B IV; N VI; F VIII: AT: T: Section 2 Theory
+- B IV; N VI; F VIII: TE: T: Table 2 Ground-state energy of B3+, N5+ and F7+ ions.
+- B IV; N VI; F VIII: TE: T: Table 5 Our computed (E, Γ) results of the doubly excited 1Po resonance states of B3+ under N = 2 and N = 3 compared with the other theoretical data.
+- B IV; N VI; F VIII: TE: T: Table 6 Our computed (E, Γ) results of the doubly excited 1Po resonance states of N5+ under N = 2 and N = 3 compared with the other theoretical data.
+- B IV; N VI; F VIII: TE: T: Table 7 Our computed (E, Γ) results of the doubly excited 1Po resonance states of F7+ under N = 2 and N = 3 compared with the other theoretical data.
+- B IV; N VI; F VIII: EL: T: [DROPPED - EL is for experimental/semi-empirical data, TE is for theoretical]
+- B IV; N VI; F VIII: ND: T: [DROPPED - labels are standard, grouping is characterization]
+- B IV; N VI; F VIII: IP: T: [DROPPED - no new ground-state IE reported]
+- GENINT: 1.8: T: [DROPPED - conservative approach, focus is on results]
+- B IV; N VI; F VIII: SF: T: [DROPPED - Rydberg-Ritz formula used for characterization, not primary result]
+
+FINAL_KEYWORDS:
+keywords_el={B IV; N VI; F VIII: AT: T
+B IV; N VI; F VIII: TE: T},
+keywords_tp={},
+keywords_lb={}

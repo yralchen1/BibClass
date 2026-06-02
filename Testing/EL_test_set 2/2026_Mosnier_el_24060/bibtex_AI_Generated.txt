@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- Cl II-V: EL: E: Table 1. Energy (eV), absolute (Mb eV) and relative strength... of the Cl+ and Cl2+ ions; Table 2. Energy (eV), absolute (Mb eV) and relative strength... of the Cl3+ and Cl4+ ions.
+- Cl II-V: CL: E: Table 1. Energy (eV), absolute (Mb eV) and relative strength... of the Cl+ and Cl2+ ions; Table 2. Energy (eV), absolute (Mb eV) and relative strength... of the Cl3+ and Cl4+ ions.
+- Cl II-V: TP: E: Table 1. Energy (eV), absolute (Mb eV) and relative strength... of the Cl+ and Cl2+ ions; Table 2. Energy (eV), absolute (Mb eV) and relative strength... of the Cl3+ and Cl4+ ions; Figure 12. Variations of the oscillator strengths... as a function of the charge of the Cl ion.
+- GENINT: 1.18: E: Abstract
+- Ar I: W: E: [DROPPED - calibration line from literature [34]]
+- Cl VI-VIII: TP: E: [DROPPED - data for Cl5+ (Cl VI) is from literature [33], Cl6+ and Cl7+ are extrapolated]
+- Cl-: [DROPPED - literature mention only]
+- HCl: [DROPPED - literature mention only]
+- Cl2: [DROPPED - literature mention only]
+
+FINAL_KEYWORDS:
+keywords_el={Cl II-V: EL: E
+Cl II-V: CL: E
+GENINT: 1.18: E},
+keywords_tp={Cl II-V: TP: E},
+keywords_lb={}

@@ -1,0 +1,23 @@
+EVIDENCE_AUDIT:
+- [EL]: [DROPPED - Paper reports theoretical calculations, not experimental values]
+- [W]: [DROPPED - No measured wavelengths reported]
+- [CL]: [DROPPED - No line classifications for bound-bound transitions]
+- [TA]: [DROPPED - Transitions are to specific Rydberg states, not configuration arrays]
+- [SE]: [DROPPED - No Stark effect data]
+- [ZE]: [DROPPED - No Zeeman effect data]
+- [Hfs]: [DROPPED - No hyperfine structure data]
+- [IS]: [DROPPED - No isotope shift data]
+- [QF]: [DROPPED - Section 2.4 states QED effects are excluded]
+- [TE]: [Table 2: Calculated Spectroscopic Parameters: Resonance energies (En), quantum defects (delta_n), transition rates (A_fi^E1), and oscillator strengths (g_fij) for 1s22s22p6 np (1P1) resonances in Ca10+]
+- [AT]: [Section 2.1: Atomic structure: framework of the Dirac equation]
+- [PT]: [DROPPED - No parametric fitting used]
+- [SF]: [Section 2.3: Resonance energy and quantum defect]
+- [IP]: [DROPPED - Thresholds are for inner shells (1s, 2s), not the ground-state ionization potential]
+- [ND]: [DROPPED - No new or revised quantum labels]
+- [transition rates]: [Table 2: Calculated Spectroscopic Parameters: Resonance energies (En), quantum defects (delta_n), transition rates (A_fi^E1), and oscillator strengths (g_fij) for 1s22s22p6 np (1P1) resonances in Ca10+]
+- [oscillator strengths]: [Table 2: Calculated Spectroscopic Parameters: Resonance energies (En), quantum defects (delta_n), transition rates (A_fi^E1), and oscillator strengths (g_fij) for 1s22s22p6 np (1P1) resonances in Ca10+]
+
+FINAL_KEYWORDS:
+keywords_el={Ca-Cr Ne-like: AT; SF; TE: T},
+keywords_tp={Ca-Cr Ne-like: transition rates, oscillator strengths: T},
+keywords_lb={}

@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- [EL]: [DROPPED - data is theoretical (TE)]
+- [W]: [DROPPED - data is theoretical (TE)]
+- [CL]: [DROPPED - data is theoretical (TE)]
+- [TE]: Table 1: RCI-cc calculations without QED corrections for the ground state ionization energies, transition energies and oscillator strengths of Li-like ions
+- [TE]: Table 2: RCI-cv calculations without QED corrections for the excitation energies vs. ground state of Li-like ions
+- [AT]: Section 2.1: RCI method
+- [IP]: Table 1: RCI-cc calculations without QED corrections for the ground state ionization energies, transition energies and oscillator strengths of Li-like ions
+- [QF]: Table 3: Calculated QED corrections to the excitation energies vs. ground state of Li-like ions
+
+FINAL_KEYWORDS:
+keywords_el={Li-Lv Li-like: TE; AT; IP; QF: T},
+keywords_tp={Li-Lv Li-like: T},
+keywords_lb={Li I; Ne VIII; Si XII; Fe XXIV; U XC}

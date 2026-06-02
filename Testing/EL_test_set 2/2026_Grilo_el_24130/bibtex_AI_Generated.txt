@@ -1,0 +1,24 @@
+EVIDENCE_AUDIT:
+- Ne IX: Table IV: Experimental photon energies (channels) and He-like energies
+- Ar XVII: Table IV: Experimental photon energies (channels) and He-like energies
+- Ca XVIII: Table I: Fitted experimental electron (Ee) and photon energies (Egamma) of KLL satellite transitions; Table II: Same as Table I but for the KLn (3 <= n <= 8) satellite transitions
+- Ca XIX: Table IV: Experimental photon energies (channels) and He-like energies
+- EL: Table I and II: Tabulated experimental and theoretical resonance energies (Ee)
+- W: Table I, II, and IV: Tabulated experimental photon energies (Egamma) and line measurements
+- CL: Table I, II, and IV: Transitions assigned to specific labels (p, o, r, t, s, j, k, n, m) or He-like lines (w, x, y, z)
+- TE: Table I, II, and IV: Tabulated theoretical transition energies from FAC, AUTOLSJ, MZ, and CI+QED
+- AT: Section III: Theory (describes FAC calculations using the configuration-interaction approach)
+- GENINT: 1.8: Section III: Theory (mentions Flexible Atomic Code)
+- GENINT: 1.18: Section I: Introduction and Section IV.D: XRISM observation (discusses plasma diagnostics)
+- Ca XVII: [DROPPED - no tabulated energy or wavelength data]
+- Ar XVIII: [DROPPED - no tabulated energy or wavelength data]
+- Ba: [DROPPED - background contamination, no tabulated data]
+- W: [DROPPED - background contamination, no tabulated data]
+
+FINAL_KEYWORDS:
+keywords_el={Ne IX; Ar XVII; Ca XVIII,XIX: W: E; CL: E; TE: T; AT: T
+Ca XVIII: EL: E, T
+GENINT: 1.8: T
+GENINT: 1.18: E, T},
+keywords_tp={},
+keywords_lb={}

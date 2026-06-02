@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- [U XC: TE: T]: Table 2: Energies (E, in eV) and lifetimes (τ, in s) of (1s2)nl levels with n ≤ 6 for U89+.
+- [U XC: AT: T]: Section 2.1: Relativistic configuration interaction; Section 2.2: Multiconfiguration Dirac–Hartree–Fock.
+- [U XC: QF: T]: Table 1: Breit, self–energy (SE), and vacuum–polarization (VP) contributions to the 2p excitation energies (in eV) of U89+.
+- [GENINT: 1.8: T]: Section 2.1: Relativistic configuration interaction; Section 2.2: Multiconfiguration Dirac–Hartree–Fock.
+- [GENINT: 1.18: T]: Abstract ("rendering this dataset valuable for applications in plasma spectroscopy").
+- [EL: E]: [DROPPED - copied from literature for comparison, not new data]
+- [W: E]: [DROPPED - no new experimental wavelengths]
+- [CL: E]: [DROPPED - no new experimental line classifications]
+
+FINAL_KEYWORDS:
+keywords_el={U XC: TE: T
+U XC: AT: T
+U XC: QF: T
+GENINT: 1.8: T
+GENINT: 1.18: T},
+keywords_tp={U XC: T},
+keywords_lb={U XC}

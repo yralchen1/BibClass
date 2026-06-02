@@ -1,0 +1,26 @@
+EVIDENCE_AUDIT:
+- [W: E]: Table I: Experimental transition energies E(exp.) for KNe
+- [CL: E]: Table I: Experimental transition energies E(exp.) for KNe
+- [TE: T]: Table I: Experimental transition energies E(exp.) for KNe (column E(calc.))
+- [IS: T]: Table I: Experimental transition energies E(exp.) for KNe (column ΔE(isot.))
+- [QF: T]: Table I: Experimental transition energies E(exp.) for KNe (column E(QED))
+- [AT: T]: Section II. METHODS (Multiconfiguration Dirac-Fock General Matrix Elements (MCDFGME) code)
+- [GENINT: 1.10]: Title ("kaonic neon")
+- [GENINT: 1.15]: Section II. METHODS (kaon mass determination)
+- [EL]: [DROPPED - no tabulated energy levels, only transition energies]
+- [TA]: [DROPPED - lines are assigned to specific levels]
+- [ND]: [DROPPED - standard labels used]
+- [IP]: [DROPPED - no new IE reported]
+- [SE]: [DROPPED - not studied]
+- [ZE]: [DROPPED - not studied]
+- [Hfs]: [DROPPED - not studied]
+- [SF]: [DROPPED - no series formulae]
+- [PT]: [DROPPED - ab initio method used]
+
+FINAL_KEYWORDS:
+keywords_el={Kaonic Ne: W: E; CL: E; IS: T
+Kaonic Ne; Kaonic 20,22Ne: TE: T; QF: T; AT: T
+GENINT: 1.10: E, T
+GENINT: 1.15: E, T},
+keywords_tp={},
+keywords_lb={}

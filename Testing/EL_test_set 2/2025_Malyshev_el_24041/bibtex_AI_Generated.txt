@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- AT: T: Section II. THEORETICAL APPROACH AND COMPUTATIONAL DETAILS
+- QF: T: Table VIII. Non-QED and QED contributions to the excitation energies of the 2p2p 3P0,1,2, 2p2p 1D2, and 2p2p 1S0 states from the 2s2s 1S0 ground state in Be-like ions.
+- TE: T: Table IV. The excitation energies of the 2s2p 3P0,1,2 and 2s2p 1P1 states from the 2s2s 1S0 ground state in Be-like ions (in eV).
+- TE: T: Table V. The excitation energies of the 2p2p 3P0,1,2, 2p2p 1D2, and 2p2p 1S0 states from the 2s2s 1S0 ground state in Be-like ions (in eV).
+- TE: T: Table VI. The 2p2p 3P -> 2s2p 3P transition energies in Be-like ions (in eV).
+- TE: T: Table VII. The selected transition energies in Be-like ions (in eV).
+- [DROPPED - literature values only]: EL: E
+- [DROPPED - literature values only]: W: E
+- [DROPPED - literature values only]: CL: E
+- [DROPPED - no isotope shifts reported]: IS: T
+- [DROPPED - neglected]: Hfs: T
+
+FINAL_KEYWORDS:
+keywords_el={Ar XV; Kr XXXIII; Mo XXXIX; Xe LI; Au LXXVI; Pb LXXIX; Bi LXXX; Th LXXXVII; U LXXXIX: AT, QF, TE: T},
+keywords_tp={},
+keywords_lb={}

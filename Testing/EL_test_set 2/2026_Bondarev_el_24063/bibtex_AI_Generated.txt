@@ -1,0 +1,23 @@
+EVIDENCE_AUDIT:
+- Tm II; 169Tm II: Hfs: T: Table 1. A comparison of the magnetic dipole hyperfine structure constants A (in MHz) calculated using the CI and CI + RPA methods...
+- Tm II; 169Tm II: ZE: T: Table 2. Magnetic dipole hyperfine structure constants A (in MHz) calculated using the CI and CI + RPA methods... [includes Landé g factors]
+- Tm II; 169Tm II: AT: T: Section 2. Theory
+- EL: [DROPPED - energy levels in Table 1 and 2 are from NIST ASD [35]]
+- TE: [DROPPED - no table of calculated energy levels provided]
+- W: [DROPPED - no wavelengths reported]
+- CL: [DROPPED - no classified lines reported]
+- ND: [DROPPED - no new designations reported]
+- IP: [DROPPED - no ionization potential reported]
+- IS: [DROPPED - no isotope shifts reported]
+- QF: [DROPPED - QED corrections mentioned but not calculated]
+- SE: [DROPPED - no Stark effect data]
+- TA: [DROPPED - no transition array data]
+- SF: [DROPPED - no series formulae]
+- PT: [DROPPED - ab initio CI method used, not parametric fitting]
+
+FINAL_KEYWORDS:
+keywords_el={Tm II; 169Tm II: Hfs: T
+Tm II; 169Tm II: ZE: T
+Tm II; 169Tm II: AT: T},
+keywords_tp={},
+keywords_lb={}

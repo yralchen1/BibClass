@@ -1,0 +1,22 @@
+EVIDENCE_AUDIT:
+- AT: T: Section 2.1. MCDHF and Section 2.2. Breit and QED (RCI)
+- TE: T: Table 3: Excited energies (relative to the ground state 4p6, in unit cm−1) for levels 4p6 and 4p54d of W38+ from our calculation (TP+SE2, Eour)
+- TE: T: Table 4: Transition data for E1, M1, E2, M2, and E3 from the 4p6 and 4p54d ... the transition wavelength λ (in unit Å)
+- QF: T: Table 1: Contributions of Breit and QED corrections to the excited energy ... SE1–SE3 correspond to the three different methods ... for calculating self-energy
+- ND: O: Section 3.3. Discrepancy analysis (proposes reassignment of 799.23 Å line to 774.8 Å)
+- EL: O: Table 3: Excited energies ... (5a was adjusted according to 774.8 A.)
+- GENINT: 1.18: T: Section 1. Introduction (discussion of magnetic confinement fusion and plasma diagnostics)
+- [DROPPED - W: E]: Experimental wavelengths in Table 2 and Table 4 are sourced from literature (Radtke [37], NIST [70]), not measured in this work.
+- [DROPPED - CL: E]: Line classifications in Table 4 for experimental wavelengths are from literature or routine, except for the reassignment covered by ND.
+- [DROPPED - EL: E]: Experimental energy levels in Table 3 (ENIST) are from literature (NIST [70]).
+
+FINAL_KEYWORDS:
+keywords_el={W XXXIX: AT: T
+W XXXIX: TE: T
+W XXXIX: QF: T
+W XXXIX: ND: O
+W XXXIX: EL: O
+GENINT: 1.18: T},
+keywords_tp={W XXXIX: TP: T
+W XXXIX: AT: T},
+keywords_lb={W XXXIX}

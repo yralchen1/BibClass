@@ -1,0 +1,19 @@
+EVIDENCE_AUDIT:
+- Te I-V: AT: T: Section 2 ATOMIC STRUCTURE and Section 5 PHOTOIONIZATION
+- Te IV,V: EL: E: Table 2: Calculated Te IV levels compared with literature experimental values and Table 3: The first 24 calculated Te V levels compared with the values of A. Tauheed et al. (2000)
+- Te IV,V: TE: T: Table 2: Calculated Te IV levels compared with literature experimental values and Table 3: The first 24 calculated Te V levels compared with the values of A. Tauheed et al. (2000)
+- Te I-III: IP: T: Section 5.1 Te I, Section 5.2 Te II, and Section 5.3 Te III
+- Te IV: W: E: [DROPPED - astrophysical observation of 1.08 um feature in AT2017gfo, not laboratory measurement]
+- Te IV: CL: E: [DROPPED - no line list provided]
+- Te IV: IP: T: [DROPPED - no numerical value reported in text]
+- Te IV: E1, M: T: Section 2.1 Te IV
+- Te V: E1: T: Section 2.2 Te V
+
+FINAL_KEYWORDS:
+keywords_el={Te I-V: AT: T
+Te IV,V: EL: E
+Te IV,V: TE: T
+Te I-III: IP: T},
+keywords_tp={Te IV: E1, M: T
+Te V: E1: T},
+keywords_lb={}

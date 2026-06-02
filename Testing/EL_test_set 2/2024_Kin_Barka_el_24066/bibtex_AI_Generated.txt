@@ -1,0 +1,21 @@
+EVIDENCE_AUDIT:
+- Ho I: EL: E: Table 3: New levels together with their hyperfine structure constants A and B (in MHz)
+- Ho I: W: E: Table 2: List of Ho I lines measured with LIF spectroscopy to identify new levels, with classification (new levels are emphasized in bold font)
+- Ho I: CL: E: Table 2: List of Ho I lines measured with LIF spectroscopy to identify new levels, with classification (new levels are emphasized in bold font)
+- Ho I: Hfs: E: Table 3: New levels together with their hyperfine structure constants A and B (in MHz)
+- Ho I: Hfs: T: Table 7: Comparison of calculated level energies and hfs constants A and B from [26,34] with our new experimental data
+- Ho I: TE: T: Table 7: Comparison of calculated level energies and hfs constants A and B from [26,34] with our new experimental data
+- Ho I: PT: T: [DROPPED - comparison with previous semi-empirical results, no new fitting performed]
+- Ho I: ND: E: [DROPPED - routine labels for new levels]
+- Ho I: AT: T: [DROPPED - semi-empirical used, not ab initio]
+- Ho I: IS: E: [DROPPED - only one isotope]
+
+FINAL_KEYWORDS:
+keywords_el={Ho I: EL: E
+Ho I: W: E
+Ho I: CL: E
+Ho I: Hfs: E
+Ho I: Hfs: T
+Ho I: TE: T},
+keywords_tp={},
+keywords_lb={Ho I}

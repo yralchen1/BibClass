@@ -1,0 +1,12 @@
+keywords_el={GENINT: 1.13: E
+GENINT: 1.22: E
+GENINT: 1.24: E
+Yb I: IS: E
+Yb I; 168Yb I; 170Yb I; 172Yb I; 174Yb I; 176Yb I: W: E
+Yb I; 168Yb I; 170Yb I; 172Yb I; 174Yb I; 176Yb I: CL: E
+Yb I: ZE: E
+Yb I: SE: E
+Yb I; Yb II: AT: T},
+keywords_tp={Yb I: L: E
+Yb I: M: E},
+keywords_lb={}

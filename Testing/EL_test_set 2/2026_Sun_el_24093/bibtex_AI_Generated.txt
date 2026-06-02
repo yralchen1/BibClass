@@ -1,0 +1,17 @@
+EVIDENCE_AUDIT:
+- Sc XVIII: AT: T: Section 2.1 "MCDHF and RCI method" describes the ab initio calculation.
+- Sc XVIII: TE: T: Table 1 "Energy levels (cm−1) of low-lying... states", Table 2 "Energy levels (cm−1) and wave function composition...", and Table 5 "Transition energy ΔE (cm−1), wavelengths λ (Å)..." provide tabulated theoretical values.
+- GENINT: 1.18: T: Abstract mentions results are crucial for "plasma diagnostics and modelling."
+- [DROPPED - EL]: Table 1 "Exp." column contains literature values (NIST [23], Ref [40]), not new measurements.
+- [DROPPED - W]: Table 5 "Ref. [25]" and "Others" columns contain literature values, not new measurements.
+- [DROPPED - CL]: Method type T is not allowed for CL.
+- [DROPPED - QF]: QED is mentioned in Section 2.1 as a standard correction, not the primary focus of the study.
+- [DROPPED - IP]: No new ionization potential value is reported.
+- [DROPPED - ND]: No new or revised designations are provided.
+
+FINAL_KEYWORDS:
+keywords_el={Sc XVIII: AT: T
+Sc XVIII: TE: T
+GENINT: 1.18: T},
+keywords_tp={},
+keywords_lb={}

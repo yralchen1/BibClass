@@ -1,0 +1,21 @@
+EVIDENCE_AUDIT:
+- C V: AT: T: Section 2.2 "Relativistic configuration interaction (RCI) incorporating APS potential"
+- C V: TE: T: Table 1 "Energy eigenvalues (in eV) with increasing active energy sets upto n = 4 for the lowest 15 fine structure levels of He-like C V ion."
+- C V: TE: T: Table 3 "Energy eigenvalues (in eV) for the lowest 14 excited states of C V ion at kTe = 200 eV and various free electron densities (ne in cm− 3)."
+- Al XII: TE: T: Table 2 "Comparison of transition energy (in eV) of He-like C V, Al XII, Ar XVII in dense plasma environment with experiments at different plasma conditions."
+- Ar XVII: TE: T: Table 2 "Comparison of transition energy (in eV) of He-like C V, Al XII, Ar XVII in dense plasma environment with experiments at different plasma conditions."
+- C V: TP: T: Fig. 3 "Transition probability as a function of free electron density for the transitions 1s2 1S0→1s3p 3P1, 1P1 of He-like C V."
+- GENINT: 1.18: T: Abstract
+- [DROPPED - routine ingredient]: QF: T (QED corrections mentioned in Section 2.2 but not the primary result)
+- [DROPPED - literature value]: IP: T (Ionization potential depression mentioned in Section 1 and 2 but no new value reported)
+- [DROPPED - not polarizability]: SE: T (Plasma shifts discussed but not Stark polarizabilities/BBR shifts)
+- [DROPPED - routine labels]: ND: T (Standard quantum labels used in Table 1 and 3)
+- [DROPPED - forbidden method type]: CL: T (W and CL forbid method type T)
+- [DROPPED - forbidden method type]: W: T (W and CL forbid method type T)
+- [DROPPED - specific transitions]: TA: T (Table 4 reports specific transitions, not configuration arrays)
+
+FINAL_KEYWORDS:
+keywords_el={C V: AT: T
+C V; Al XII; Ar XVII: TE: T},
+keywords_tp={C V: TP: T},
+keywords_lb={GENINT: 1.18: T}

@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- 13C V: W: E, O: Table 1 | Electronic transition frequencies ν13 and isotope shifts δν12,13 of the 1s2s 3S(J,F), F → 1s2p 3P(J',F') transitions in 13C4+
+- 13C V: CL: E, O: Table 1 | Electronic transition frequencies ν13 and isotope shifts δν12,13 of the 1s2s 3S(J,F), F → 1s2p 3P(J',F') transitions in 13C4+
+- 13C V: Hfs: E: Table 1 | Electronic transition frequencies ν13 and isotope shifts δν12,13 of the 1s2s 3S(J,F), F → 1s2p 3P(J',F') transitions in 13C4+
+- C V: IS: E: Table 1 | Electronic transition frequencies ν13 and isotope shifts δν12,13 of the 1s2s 3S(J,F), F → 1s2p 3P(J',F') transitions in 13C4+
+- GENINT: 1.24: E: Abstract (mentions 3σ discrepancy with muonic atom result and proton-radius puzzle)
+- [DROPPED - nuclear] AT: T: Table 2 (lists nuclear charge radii from ab initio nuclear structure calculations, not atomic energy levels)
+- [DROPPED - nuclear] TE: T: Table 2 (lists nuclear charge radii, not atomic energy levels)
+- [DROPPED - literature] QF: T: Results (mentions NRQED calculations from ref 54)
+
+FINAL_KEYWORDS:
+keywords_el={13C V: W: E, O
+13C V: CL: E, O
+13C V: Hfs: E
+C V: IS: E
+GENINT: 1.24: E},
+keywords_tp={},
+keywords_lb={}

@@ -1,0 +1,16 @@
+EVIDENCE_AUDIT:
+- Hfs: Table I: Values for ξ, I, gNP_I, and specific differences (D21 for helium and hydrogen, Δ'E for the rest) for different elements.
+- AT: Section "Theory" (page 3, paragraph 4) and "End Matter" (page 8, paragraph 1) describing DHF calculations.
+- GENINT: 1.24: Title: "Stringent Constraints on New Pseudoscalar and Vector Bosons from Precision Hyperfine Splitting Measurements"
+- [DROPPED - ZE]: [no tabulated Zeeman data, only theoretical discussion of shielding in Section C]
+- [DROPPED - IS]: [no tabulated isotope shift data, only literature comparison in Figure 1]
+- [DROPPED - QF]: [QED corrections mentioned as ingredients but not the primary tabulated result]
+- [DROPPED - TE]: [redundant with Hfs: T for hyperfine splittings]
+- [DROPPED - EL]: [no energy level table, only HFS splittings]
+
+FINAL_KEYWORDS:
+keywords_el={H I; 3He II; 9Be II,IV; 131Xe LII,LIV; 133Cs LIII,LV; 209Bi LXXXI,LXXXIII: Hfs: E, T
+9Be II; 131Xe LII; 133Cs LIII; 209Bi LXXXI: AT: T
+GENINT: 1.24: E, T},
+keywords_tp={},
+keywords_lb={}

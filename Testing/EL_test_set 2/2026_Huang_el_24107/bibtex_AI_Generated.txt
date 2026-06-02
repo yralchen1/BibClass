@@ -1,0 +1,14 @@
+EVIDENCE_AUDIT:
+- Ar XV: EL: E; TE: T; AT: T; SF: T: Table 1. Comparison of calculated and measured resonance energies (Ed) and strengths (Sd) for 2p1/210ℓ and 2p3/210ℓ.
+- GENINT: 1.8: T: 2.1. Theory
+- GENINT: 1.18: E, T: Abstract
+- Ar XVI: [DROPPED - target ion for DR, but no new energy level data reported for it]
+- DR: [DROPPED - no subject code for dielectronic recombination]
+- TP: [DROPPED - resonance strengths are not transition probabilities]
+
+FINAL_KEYWORDS:
+keywords_el={Ar XV: EL: E; TE: T; AT: T; SF: T
+GENINT: 1.8: T
+GENINT: 1.18: E, T},
+keywords_tp={},
+keywords_lb={}

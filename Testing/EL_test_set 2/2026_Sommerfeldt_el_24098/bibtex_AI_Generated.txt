@@ -1,0 +1,25 @@
+EVIDENCE_AUDIT:
+- [208Pb LXXXII; 238U XCII: QF: T]: Table I: Nuclear model dependence of the all-order Wichmann and Kroll contribution to the Lamb shift in hydrogenlike 208 82Pb (R = 5.5012 fm) and 238 92U (R = 5.8571 fm) given in units of eV.
+- [208Pb LXXXII; 238U XCII: TE: T]: Table I: Nuclear model dependence of the all-order Wichmann and Kroll contribution to the Lamb shift in hydrogenlike 208 82Pb (R = 5.5012 fm) and 238 92U (R = 5.8571 fm) given in units of eV.
+- [208Pb LXXXII; 238U XCII: AT: T]: Section II: ONE-LOOP VACUUM POLARIZATION POTENTIAL
+- [muonic 40Ar; muonic 132Xe; muonic 238U: QF: T]: Table II: Uehling and all-order Wichmann and Kroll contribution to the Lamb shift in muonic 40 18Ar (R = 3.4274 fm), 132 54Xe (R = 4.7859 fm), and 238 92U (R = 5.8571 fm) given in units of eV.
+- [muonic 40Ar; muonic 132Xe; muonic 238U: TE: T]: Table II: Uehling and all-order Wichmann and Kroll contribution to the Lamb shift in muonic 40 18Ar (R = 3.4274 fm), 132 54Xe (R = 4.7859 fm), and 238 92U (R = 5.8571 fm) given in units of eV.
+- [muonic 40Ar; muonic 132Xe; muonic 238U: AT: T]: Section II: ONE-LOOP VACUUM POLARIZATION POTENTIAL
+- [antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: QF: T]: Table III: Uehling and all-order Wichmann an Kroll contribution to the Lamb shift in antiprotonic 40 18Ar (R = 3.4274 fm), 132 54Xe (R = 4.7859 fm), and 238 92U (R = 5.8571 fm) given in units of eV.
+- [antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: TE: T]: Table III: Uehling and all-order Wichmann an Kroll contribution to the Lamb shift in antiprotonic 40 18Ar (R = 3.4274 fm), 132 54Xe (R = 4.7859 fm), and 238 92U (R = 5.8571 fm) given in units of eV.
+- [antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: AT: T]: Section II: ONE-LOOP VACUUM POLARIZATION POTENTIAL
+- [GENINT: 1.10: T]: Abstract
+
+FINAL_KEYWORDS:
+keywords_el={208Pb LXXXII; 238U XCII: QF: T
+208Pb LXXXII; 238U XCII: TE: T
+208Pb LXXXII; 238U XCII: AT: T
+muonic 40Ar; muonic 132Xe; muonic 238U: QF: T
+muonic 40Ar; muonic 132Xe; muonic 238U: TE: T
+muonic 40Ar; muonic 132Xe; muonic 238U: AT: T
+antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: QF: T
+antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: TE: T
+antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: AT: T
+GENINT: 1.10: T},
+keywords_tp={},
+keywords_lb={}

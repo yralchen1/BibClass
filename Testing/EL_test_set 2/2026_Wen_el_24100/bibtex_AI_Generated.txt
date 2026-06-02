@@ -1,0 +1,10 @@
+EVIDENCE_AUDIT:
+- [W]: [DROPPED - Paper reports broad continuum spectra of a tungsten filament (Fig. 2, 3), not discrete atomic transitions.]
+- [EL]: [DROPPED - No atomic energy levels are tabulated or reported.]
+- [CL]: [DROPPED - No spectral lines are classified.]
+- [AT]: [DROPPED - No ab initio calculations of atomic properties are performed.]
+
+FINAL_KEYWORDS:
+keywords_el={},
+keywords_tp={},
+keywords_lb={}

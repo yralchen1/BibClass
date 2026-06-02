@@ -1,0 +1,12 @@
+EVIDENCE_AUDIT:
+- Se: EL: E: Section III.C (3P2–3P1 energy-level splitting of Se)
+- Se-: EL: E: Table II (Binding energies of observed transitions A–C)
+- 76Se-; 77Se-; 78Se-; 80Se-; 82Se-: EL: E: Table I (Measured EA(Se) values for various isotopes of Se)
+- Se-: IS: E: Table I (Measured EA(Se) values for various isotopes of Se)
+
+FINAL_KEYWORDS:
+keywords_el={Se: EL: E
+Se-; 76Se-; 77Se-; 78Se-; 80Se-; 82Se-: EL: E
+Se-: IS: E},
+keywords_tp={},
+keywords_lb={}

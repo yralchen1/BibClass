@@ -1,0 +1,11 @@
+keywords_el={C V; 12C V; 13C V; 14C V: W: E
+C V; 12C V; 13C V; 14C V: CL: E
+C V: IS: E
+C V; 13C V: Hfs: E
+C V; 13C V: Hfs: T
+He-Ne He-like: IS: T
+He-Ne He-like: TE: T
+He-Ne He-like: AT: T
+C V: QF: T},
+keywords_tp={},
+keywords_lb={}

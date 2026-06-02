@@ -1,0 +1,18 @@
+EVIDENCE_AUDIT:
+- He I: TE: T: Table II: Comparison of the nonrelativistic energies for the n 1P and 3P states of helium for the case of infinite nuclear mass
+- 4He I: TE: T: Table V: Calculated negative ionization frequencies of the n 1P1 and n 3Pc (centroid) states of 4He
+- 4He I: QF: T: Table IV: Contributions to the 27 1P1 and 27 3PJ negative ionization frequencies of 4He
+- 4He I: EL: O: Table VII: Combined ionization energies I' of the 2 1S0 and 2 3S1 states of 4He
+- 4He I: TP: T: Table IX: Matrix elements of the spin-dependent operators in the Breit interaction
+- [DROPPED - 4He I: AT: T]: Method (variational Hylleraas) is not in the allowed list (HF, DHF, MCDF, MCDHF, CI, CI+MBPT).
+- [DROPPED - 4He I: IP: T]: Reports ionization energies for metastable 2S states, not the ground state.
+- [DROPPED - 4He I: IS: T]: Mentions isotope shift discrepancy for 3He but does not tabulate new values.
+- [DROPPED - 3He I]: No new data tabulated for this isotope.
+
+FINAL_KEYWORDS:
+keywords_el={He I: TE: T
+4He I: TE: T
+4He I: QF: T
+4He I: EL: O},
+keywords_tp={4He I: TP: T},
+keywords_lb={}

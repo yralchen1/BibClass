@@ -1,0 +1,12 @@
+EVIDENCE_AUDIT:
+- Li I: AT: T: Section II.A.3 "Construction of Li+ target states" and Section II.A.5 "Initial-state wave function"
+- GENINT: 1.8: T: Section II.A.9 "Computational implementation and accuracy"
+- Li I: TE: T: [DROPPED - no tabulated energy levels or transition energies]
+- Li I: IP: T: [DROPPED - uses literature value for ionization potential]
+- Li I: ND: T: [DROPPED - uses existing resonance designations]
+
+FINAL_KEYWORDS:
+keywords_el={Li I: AT: T
+GENINT: 1.8: T},
+keywords_tp={},
+keywords_lb={}

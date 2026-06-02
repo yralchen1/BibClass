@@ -1,0 +1,22 @@
+```
+EVIDENCE_AUDIT:
+- Yb I: IS: E: Fig 3d "Summary of the measured ISs"
+- Yb I: SE: E: Extended Data Fig 3 "Lattice light shift"
+- Yb I: ZE: E: Extended Data Fig 4 "Investigation of the quadratic Zeeman shift"
+- Yb I: AT: T: Section "Atomic calculations for electronic factors" and Extended Data Table 1
+- Yb II: AT: T: Extended Data Table 1
+- GENINT: 1.13: E,T: Page 1 "new optical frequency standard"
+- GENINT: 1.24: E,T: Page 1 "search for a hypothetical boson"
+- [DROPPED - no absolute frequency table]: Yb I: W: E
+- [DROPPED - no energy level table]: Yb I: EL: E
+- [DROPPED - no energy level table]: Yb I: TE: T
+- [DROPPED - routine classification]: Yb I: CL: E
+
+FINAL_KEYWORDS:
+keywords_el={Yb I: IS: E; SE: E; ZE: E; AT: T
+Yb II: AT: T
+GENINT: 1.13: E,T
+GENINT: 1.24: E,T},
+keywords_tp={},
+keywords_lb={}
+```
