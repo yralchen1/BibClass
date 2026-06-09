@@ -1,0 +1,6 @@
+```
+keywords_el={208Pb LXXXII; 238U XCII: QF: T
+muonic 40Ar; muonic 132Xe; muonic 238U: QF: T
+antiprotonic 40Ar; antiprotonic 132Xe; antiprotonic 238U: QF: T
+GENINT: 1.10: T}
+```

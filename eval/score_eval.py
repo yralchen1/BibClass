@@ -77,6 +77,7 @@ def main():
     ap.add_argument("--analyzer", default=str(DEFAULT_ANALYZER),
                     help=f"analyze_keywords.py to reuse (default: {DEFAULT_ANALYZER})")
     ap.add_argument("--label", default="", help="Optional label for stdout (e.g. 'v4', 'two-pass')")
+    ap.add_argument("--exclude", default="", help="Comma-separated reference IDs to exclude (e.g. few-shot example papers held out of scoring)")
     args = ap.parse_args()
 
     az = load_analyzer(Path(args.analyzer))
@@ -84,6 +85,11 @@ def main():
     orig = az.parse_bibtex(args.ref)
     ai = az.parse_ai_folders(args.ai_dir)
     results = az.analyze(orig, ai)
+
+    excluded = {e.strip() for e in args.exclude.split(",") if e.strip()}
+    if excluded:
+        results = {eid: r for eid, r in results.items() if eid not in excluded}
+        print(f"Excluded {len(excluded)} held-out entries: {', '.join(sorted(excluded))}")
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)

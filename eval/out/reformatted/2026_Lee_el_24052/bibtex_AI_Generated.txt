@@ -1,0 +1,9 @@
+```
+keywords_el={Lu II; 176Lu II: W: E
+Lu II; 176Lu II: CL: E
+Lu II; 176Lu II: EL: E
+Lu II; 176Lu II: ZE: E
+Lu II; 176Lu II: SE: E
+Lu II; 176Lu II: Hfs: E
+GENINT: 1.13: E}
+```

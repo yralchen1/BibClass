@@ -74,10 +74,12 @@ Note on AT vs TE independence: both require independent justification. AT alone 
 - Hydrogen mass-1 is just `H` (NOT `1H`); use `D` for deuterium, `T` for tritium.
 - Negative ion: trailing dash(es) — `Se-`, `O--`. **The dash is part of the species identity. Never drop it.** `Se` ≠ `Se-`.
 - Multiple species of different elements: separate with `;` — `H I; He II`.
-- Same element, multiple spectra: comma `Al XII,XIII` or range `Al XII-XIII`.
-- Element range: `H-Xe I` = neutral spectra of H through Xe (every element inclusive). NOT `H I-Xe I`.
-- A range MUST cover every element between the endpoints. If gaps exist, list individually.
-- Isoelectronic: `He-Ne He-like` = He-like ions of every element from He to Ne.
+- Same element, multiple spectra: comma `Al XII,XIII` or range `Al XII-XIII`. Same element, several charge ranges: comma-join in ONE token — `W XLV-XLVIII,LXIII-LXVI`, NOT `W XLV-XLVIII; W LXIII-LXVI`.
+- Element range: `H-Xe I` = neutral spectra of H through Xe. NOT `H I-Xe I`.
+- Neutral/element ranges (e.g. `Cr-Fe I`): use a range only if every element between the endpoints is actually studied; a gappy mix of unrelated elements is listed individually.
+- Isoelectronic sequence: `He-Ne He-like` = the He-like ion of each element He→Ne. Combine element + charge range as `Bi H-like-Ne-like` when compact.
+- **Isoelectronic compression (critical — commonly missed):** if the paper reports the SAME quantity, SAME method, along an isoelectronic sequence for MORE THAN 4 elements with values varying smoothly in nuclear charge, write the whole span as `ElementStart-ElementEnd Seq-like` (lightest→heaviest studied element) — even when intermediate ions were merely sampled. Do NOT transcribe the individual sampled ions, and do NOT use a spectroscopic charge range. E.g. a Be-like study over 18≤Z≤92 → `Ar-U Be-like` (NOT the 9 listed ions); Ne-like Ca,Sc,Ti,V,Cr → `Ca-Cr Ne-like` (NOT `Ca XI-Cr XV`).
+- **Exotic atoms** (positronium Ps, muonium Mu, pionic/kaonic/muonic atoms): the EL species keyword uses the corresponding NORMAL atom. For Ps or Mu, emit `H I` — never `Ps` or `Mu` as the species. (Add `GENINT: 1.10` as well.)
 
 ---
 
@@ -183,6 +185,12 @@ H I; C I; Cs I: EL: E
 
 **S-18: IS with mass number in species string.** Paper measures IS of 229Th. WRONG: `229Th I: IS: T`. RIGHT: `Th I: IS: T`. IS species string is base element only.
 
+**S-19: Exotic atom emitted as its own species.** Paper measures a positronium (or muonium) interval. WRONG: `Ps I: W: E` / `Mu: Hfs: T`. RIGHT: `H I: W: E` / `H I: Hfs: T` (plus `GENINT: 1.10`). Ps/Mu map to `H I`.
+
+**S-20: Isoelectronic sequence transcribed as ions or charge range.** Paper computes a Be-like sequence for 9 sampled ions spanning Ar→U (smooth, >4 elements). WRONG: `Ar XV; Kr XXXIII; … U LXXXIX: TE: T` (lists ions) or `Ca XI-Cr XV` (charge range). RIGHT: `Ar-U Be-like: TE: T`. Compress to element endpoints + `Seq-like`.
+
+**S-21: Same-element charge ranges split across tokens.** Paper covers W charge states 45–48 and 63–66. WRONG: `W XLV-XLVIII; W LXIII-LXVI: AT: T`. RIGHT: `W XLV-XLVIII,LXIII-LXVI: AT: T`.
+
 ---
 
 ## INTERNAL REASONING PERMISSION
@@ -191,9 +199,13 @@ You may think through candidate keywords step by step internally — list candid
 
 ---
 
-## CONSERVATIVE PRINCIPLE
+## ASSIGNMENT PRINCIPLE
 
-Cost of an extra keyword > cost of a missing keyword. An extra causes a false positive (users find a paper without the data they want — erodes database trust). A miss causes a false negative (one paper missed in search). When uncertain, OMIT.
+Reproduce the curator's EXACT keyword set. A missing real result and an added speculative one are BOTH failures — do not trade one for the other.
+
+The dominant error in practice is OVER-assignment: adding a subject code because the paper merely *touches* that topic (a QED term inside a big calculation → not QF; a level table with ordinary labels → not ND; an ionization energy quoted from a database → not IP; "we also computed structure" without a level table → not TE). Before emitting EACH code, confirm the paper presents it as a NEW primary result with its own data (a specific table/section you could point to).
+
+Calibration: most papers carry only 1–3 keyword lines per species. Emitting 5+ codes for one species is a strong signal of over-assignment — re-check each against the novelty filter and drop the unsupported ones. But do NOT drop a result the paper clearly reports as new.
 
 ---
 

@@ -1,0 +1,8 @@
+```
+keywords_el={Hg I; Cn I: TE: T
+Hg I; Cn I: IP: T
+Hg I; Cn I: AT: T
+Hg I; Cn I: IS: T
+Hg I; Cn I: SE: T
+GENINT: 1.19: T}
+```

@@ -1,0 +1,12 @@
+```
+keywords_el={Yb I; 168Yb I; 170Yb I; 172Yb I; 174Yb I; 176Yb I: W: E
+Yb I; 168Yb I; 170Yb I; 172Yb I; 174Yb I; 176Yb I: CL: E
+Yb I; 168Yb I; 170Yb I; 172Yb I; 174Yb I; 176Yb I: SE: E
+Yb I; 168Yb I; 170Yb I; 172Yb I; 174Yb I; 176Yb I: ZE: E
+Yb I: IS: E
+Yb I: AT: T
+Yb II: AT: T
+GENINT: 1.13: E
+GENINT: 1.24: E
+GENINT: 1.24: T}
+```

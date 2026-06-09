@@ -1,0 +1,4 @@
+```
+keywords_el={Zn-Mo H-like: IP: O
+Zn XXII-XXIV; Ga XVII-XXV; Ge VI-XXV; As VII-XXVI; Se VIII-XXVII; Br IX-XXVIII; Rb XI-XXIV; Sr XII-XXV; Y XIII-XXVI; Zr VI-XIX; Nb VIII-XXI: IP: O}
+```

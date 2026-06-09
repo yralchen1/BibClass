@@ -243,27 +243,21 @@ def _flatten_content(content) -> str:
 def process_paper(pdf_base64: str, suppl_text: str, llm: ChatGoogleGenerativeAI, system_prompt: str) -> str:
     """Process a paper's native PDF and supplementary text through Gemini to extract keywords_el.
 
-    Message layout is cache-friendly: the PDF is the FIRST content part so it forms an
-    identical request prefix that Gemini's implicit caching can reuse on the second
-    (verification) pass for the same paper. The differing instructions go AFTER the PDF.
-    The prompt is delivered in the user turn (not a system message) so the prefix stays
-    identical across both passes — a differing system message would break the shared prefix.
+    The prompt is delivered as a SystemMessage (measured ~2 perfect-matches better than
+    folding it into the user turn). The PDF is sent in the user turn.
     """
     pdf_data_uri = f"data:application/pdf;base64,{pdf_base64}"
 
-    instruction = (
-        f"{system_prompt}\n\n"
-        "---\n"
-        "Please analyze the attached scientific paper (and any supplementary materials below) "
-        "and extract the keywords_el following the instructions above."
-    )
+    prompt_text = ("Please analyze the attached scientific paper (and any supplementary "
+                   "materials below) and extract the keywords_el.")
     if suppl_text:
-        instruction += f"\n\nHere is the text extracted from the supplementary files:\n{suppl_text}"
+        prompt_text += f"\n\nHere is the text extracted from the supplementary files:\n{suppl_text}"
 
     messages = [
+        SystemMessage(content=system_prompt),
         HumanMessage(content=[
-            {"type": "image_url", "image_url": pdf_data_uri},   # shared, cacheable prefix
-            {"type": "text", "text": instruction},
+            {"type": "image_url", "image_url": pdf_data_uri},
+            {"type": "text", "text": prompt_text},
         ])
     ]
 

@@ -171,3 +171,4 @@ coverage.xml
 *.cover
 .hypothesis/
 .DS_Store
+Testing/

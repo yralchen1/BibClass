@@ -1,0 +1,8 @@
+```
+keywords_el={Ne: W: E
+Ne: CL: E
+20Ne; 22Ne: TE: T
+20Ne; 22Ne: AT: T
+20Ne; 22Ne: QF: T
+Ne: IS: T}
+```

@@ -1,0 +1,6 @@
+```
+keywords_el={C V: IS: E
+He-Ne He-like: IS: T
+He-Ne He-like: AT: T
+He-Ne He-like: QF: T}
+```

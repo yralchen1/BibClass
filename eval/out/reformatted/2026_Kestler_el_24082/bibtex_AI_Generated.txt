@@ -1,0 +1,7 @@
+```
+keywords_el={Sr I; 87Sr I: SE: E
+Sr I; 87Sr I: SE: T
+Sr I; 87Sr I: AT: T
+GENINT: 1.13: E
+GENINT: 1.13: T}
+```
