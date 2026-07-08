@@ -4,16 +4,21 @@ LangChain PDF Processing Script for Atomic Energy Levels Keywords
 Uses Google Gemini to extract keywords_el from scientific papers.
 
 Usage:
-    python process_pdfs_langchain.py                    # Process all papers from the current directory
-    python process_pdfs_langchain.py --single FOLDER    # Process single paper folder
-    python process_pdfs_langchain.py --dry-run          # Show what would be processed
-    python process_pdfs_langchain.py --prompt FILE      # Use a specific system prompt (default: prompts/el.md)
-    python process_pdfs_langchain.py --two-pass         # Add a verification pass that prunes unsupported keywords
+    python process_pdfs_langchain.py                       # all papers in cwd, EL topic
+    python process_pdfs_langchain.py --topics el,tp,lb     # run all three topics per paper
+    python process_pdfs_langchain.py --topics tp           # single topic (e.g. scoring the TP set)
+    python process_pdfs_langchain.py --single FOLDER_OR_PDF
+    python process_pdfs_langchain.py --dry-run             # show what would be processed
+    python process_pdfs_langchain.py --two-pass            # EL verification pass (prune extras)
 
-The system prompt is loaded from a file (default prompts/el.md) so prompt versions
-can be swapped without editing this script. --two-pass runs a second Gemini call
-(prompts/el_verify.md) that re-reads the PDF and removes keywords the paper does not
-support as its own new result.
+Prompts are loaded per topic from prompts/<topic>.md (el.md, tp.md, lb.md) so they can be
+switched without editing this script. Multiple topics loop per paper — a paper needing EL
+keywords usually needs TP and LB too — and all topic blocks are written to one output file.
+
+Input layouts (auto-detected):
+  folder — subfolders with main_article.pdf → output written in place (bibtex_AI_Generated.txt).
+  flat   — a dir of `<author>_<topic>_<id>_<year>.pdf` (+ `..._suppl*` files) → output to
+           --out-dir/<pdf-stem>/bibtex_AI_Generated.txt.
 """
 
 import warnings
@@ -29,6 +34,7 @@ import base64
 import zipfile
 import tarfile
 import io
+import re
 import time
 # import mimetypes
 
@@ -307,13 +313,59 @@ def verify_keywords(pdf_base64: str, candidate_keywords: str, llm: ChatGoogleGen
 #            folders.append(item)
 #    return folders
 
-# Claude's suggestion
-def get_paper_folders(base_dir: Path) -> list[Path]:
-    """Get all paper folders containing main_article.pdf."""
-    folders = sorted(
-        p.parent for p in base_dir.rglob("main_article.pdf")
-    )
-    return folders
+# Topic → default prompt filename (in the prompts/ dir). Each prompt emits keywords_<topic>.
+TOPIC_PROMPTS = {"el": "el.md", "tp": "tp.md", "lb": "lb.md"}
+PROMPTS_DIR = Path(__file__).parent / "prompts"
+
+
+def extract_suppl_from_files(files: list) -> str:
+    """Supplementary text from an explicit list of files (flat test-set layout)."""
+    if not files:
+        return ""
+    combined = "\n\n=== SUPPLEMENTARY MATERIALS ===\n\n"
+    found = False
+    for path in files:
+        if not path.is_file() or path.name.startswith('.'):
+            continue
+        found = True
+        try:
+            with open(path, "rb") as f:
+                combined += process_file_bytes(path.name, f.read())
+        except Exception as e:
+            combined += f"\n[Error reading file {path.name}: {e}]\n"
+    if not found:
+        return ""
+    if len(combined) > 3000000:
+        combined = combined[:3000000] + "\n...[SUPPLEMENTARY DATA TRUNCATED DUE TO SIZE]..."
+    return combined
+
+
+def discover_papers(base_dir: Path, out_dir: Path):
+    """Return (papers, mode). Supports two input layouts:
+
+    folder mode — subfolders each containing main_article.pdf (+ optional suppl/); output
+                  written in place as bibtex_AI_Generated.txt.
+    flat mode   — a directory of `<author>_<topic>_<id>_<year>.pdf` files (+ `..._suppl*` files);
+                  output written to out_dir/<pdf-stem>/bibtex_AI_Generated.txt.
+    """
+    main_pdfs = sorted(base_dir.rglob("main_article.pdf"))
+    if main_pdfs:
+        papers = [dict(name=p.parent.name, pdf=p, suppl_dir=p.parent / "suppl",
+                       suppl_files=[], out=p.parent / "bibtex_AI_Generated.txt")
+                  for p in main_pdfs]
+        return papers, "folder"
+
+    # flat mode
+    pdfs = sorted(p for p in base_dir.glob("*.pdf") if "suppl" not in p.name.lower())
+    all_files = list(base_dir.glob("*"))
+    papers = []
+    for pdf in pdfs:
+        m = re.search(r"_(el|tp|lb)_(\d+)_", pdf.name)
+        pid = m.group(2) if m else pdf.stem
+        suppl = [f for f in all_files if "suppl" in f.name.lower() and f"_{pid}_" in f.name]
+        papers.append(dict(name=pdf.stem, pdf=pdf, suppl_dir=None, suppl_files=suppl,
+                           out=out_dir / pdf.stem / "bibtex_AI_Generated.txt"))
+    return papers, "flat"
 
 
 def main():
@@ -322,21 +374,40 @@ def main():
     parser.add_argument("--single", metavar="FOLDER", help="Process only a single folder")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be processed without running")
     parser.add_argument("--use-vertex", action="store_true", help="Use Vertex AI (requires gcloud auth)")
-    parser.add_argument("--prompt", metavar="FILE", default=str(DEFAULT_PROMPT_PATH),
-                        help=f"System prompt file (default: {DEFAULT_PROMPT_PATH})")
+    parser.add_argument("--topics", default="el",
+                        help="Comma-separated topics to run per paper: el,tp,lb (default: el)")
+    parser.add_argument("--prompt-dir", metavar="DIR", default=str(PROMPTS_DIR),
+                        help=f"Directory holding <topic>.md prompts (default: {PROMPTS_DIR})")
+    parser.add_argument("--prompt", metavar="FILE", default=None,
+                        help="Override the prompt file (only valid with a single --topics topic)")
+    parser.add_argument("--out-dir", metavar="DIR", default=None,
+                        help="Output dir for flat-PDF input (default: alongside, ./ai_out)")
     parser.add_argument("--two-pass", action="store_true",
-                        help="Run a second verification pass that prunes unsupported keywords")
+                        help="Run a second verification pass on the EL topic (prunes unsupported keywords)")
     parser.add_argument("--verify-prompt", metavar="FILE", default=str(DEFAULT_VERIFY_PROMPT_PATH),
                         help=f"Verifier prompt file for --two-pass (default: {DEFAULT_VERIFY_PROMPT_PATH})")
     args = parser.parse_args()
 
-    # Load the system prompt from file (externalized so versions are swappable).
-    system_prompt = load_prompt(Path(args.prompt))
-    print(f"📜 Loaded system prompt: {args.prompt} ({len(system_prompt):,} chars)")
+    topics = [t.strip().lower() for t in args.topics.split(",") if t.strip()]
+    bad = [t for t in topics if t not in TOPIC_PROMPTS]
+    if bad:
+        print(f"❌ Unknown topic(s): {bad}. Valid: {list(TOPIC_PROMPTS)}")
+        sys.exit(1)
+    if args.prompt and len(topics) != 1:
+        print("❌ --prompt override requires exactly one topic in --topics.")
+        sys.exit(1)
+
+    # Load one system prompt per topic (externalized so versions/topics are swappable).
+    prompt_dir = Path(args.prompt_dir)
+    topic_prompts = {}
+    for t in topics:
+        path = Path(args.prompt) if (args.prompt and len(topics) == 1) else prompt_dir / TOPIC_PROMPTS[t]
+        topic_prompts[t] = load_prompt(path)
+        print(f"📜 [{t}] prompt: {path} ({len(topic_prompts[t]):,} chars)")
     verify_prompt = None
     if args.two_pass:
         verify_prompt = load_prompt(Path(args.verify_prompt))
-        print(f"📜 Loaded verifier prompt: {args.verify_prompt} ({len(verify_prompt):,} chars)")
+        print(f"📜 verifier prompt (EL): {args.verify_prompt} ({len(verify_prompt):,} chars)")
 
     # llm = None
     VERTEXAI_PROJECT = "" # Init for error message
@@ -374,91 +445,86 @@ def main():
             temperature=0.0
         )
 
-    # Get folders to process
+    # Discover papers (folder layout or flat-PDF layout)
+    out_dir = Path(args.out_dir) if args.out_dir else (BASE_DIR / "ai_out")
     if args.single:
-        folder_path = BASE_DIR / args.single
-        if not folder_path.exists():
-            print(f"❌ Folder not found: {args.single}")
+        target = BASE_DIR / args.single
+        if not target.exists():
+            print(f"❌ Path not found: {args.single}")
             sys.exit(1)
-        folders = [folder_path]
+        papers, mode = discover_papers(target if target.is_dir() else target.parent, out_dir)
+        if target.is_file():
+            papers = [p for p in papers if p["pdf"] == target]
     else:
-        folders = get_paper_folders(BASE_DIR)
+        papers, mode = discover_papers(BASE_DIR, out_dir)
 
-    print(f"📁 Found {len(folders)} paper(s) to process\n")
+    print(f"📁 Found {len(papers)} paper(s) [{mode} layout] · topics: {topics}\n")
 
     if args.dry_run:
         print("DRY RUN - Would process:")
-        for folder in folders:
-            print(f"  • {folder.name}")
+        for p in papers:
+            print(f"  • {p['name']}  (suppl: {'dir' if p['suppl_dir'] and p['suppl_dir'].exists() else len(p['suppl_files'])}) → {p['out']}")
         sys.exit(0)
 
-    # Process each paper
     success_count = 0
     error_count = 0
 
-    for i, folder in enumerate(folders, 1):
-        pdf_path = folder / "main_article.pdf"
-        output_path = folder / "bibtex_AI_Generated.txt"
-        
-        print(f"[{i}/{len(folders)}] Processing: {folder.name}")
-        
-        # Load PDF as base64 for native upload
+    for i, p in enumerate(papers, 1):
+        print(f"[{i}/{len(papers)}] Processing: {p['name']}")
         print("  📄 Loading PDF for native upload...")
-        pdf_base64 = load_pdf_as_base64(pdf_path)
-        
+        pdf_base64 = load_pdf_as_base64(p["pdf"])
         if not pdf_base64:
             print("  ❌ Failed to read PDF file")
             error_count += 1
             continue
-        
-        pdf_size_mb = len(pdf_base64) * 3 / 4 / (1024 * 1024)  # Approximate original file size
-        print(f"  📝 Loaded PDF (~{pdf_size_mb:.1f} MB)")
-        
-        # Extract Supplementary Materials
-        suppl_dir = folder / "suppl"
-        suppl_text = ""
-        if suppl_dir.exists():
-            print("  📂 Extracting supplementary materials...")
-            suppl_text = extract_supplementary_text(suppl_dir)
-            if suppl_text:
-                print(f"  📝 Added {len(suppl_text):,} characters of supplementary data")
-        
-        # Process with Gemini
-        print("  🤖 Sending native PDF + supplementary data to Gemini...")
+        print(f"  📝 Loaded PDF (~{len(pdf_base64) * 3 / 4 / (1024*1024):.1f} MB)")
+
+        # Supplementary materials (dir in folder mode, file list in flat mode)
+        if p["suppl_dir"] and p["suppl_dir"].exists():
+            suppl_text = extract_supplementary_text(p["suppl_dir"])
+        else:
+            suppl_text = extract_suppl_from_files(p["suppl_files"])
+        if suppl_text:
+            print(f"  📝 Added {len(suppl_text):,} characters of supplementary data")
+
+        # Run each requested topic, collect its keyword block
+        blocks = []
+        failed = False
         try:
-            result = process_paper(pdf_base64, suppl_text, llm, system_prompt)
-            if result.startswith("ERROR:"):
-                raise Exception(result.replace("ERROR: ", ""))
-            if args.two_pass and verify_prompt:
-                print("  🔎 Verification pass (pruning unsupported keywords)...")
-                result = verify_keywords(pdf_base64, result, llm, verify_prompt)
-            if result.startswith("ERROR:"):
-                # Re-raise to be caught by the except block
-                raise Exception(result.replace("ERROR: ", ""))
+            for t in topics:
+                print(f"  🤖 [{t}] querying Gemini...")
+                res = process_paper(pdf_base64, suppl_text, llm, topic_prompts[t])
+                if res.startswith("ERROR:"):
+                    raise Exception(res.replace("ERROR: ", ""))
+                if t == "el" and args.two_pass and verify_prompt:
+                    print("  🔎 [el] verification pass...")
+                    res = verify_keywords(pdf_base64, res, llm, verify_prompt)
+                    if res.startswith("ERROR:"):
+                        raise Exception(res.replace("ERROR: ", ""))
+                blocks.append(res.strip())
         except Exception as e:
             error_str = str(e)
             if args.use_vertex and (
                 "permissiondenied" in error_str.lower().replace(" ", "") or
                 "could not automatically determine credentials" in error_str.lower()
             ):
-                 print("\n  ❌ Vertex AI Error: Authentication or Permission issue.")
-                 print("     This is likely due to missing or incorrect Google Cloud configuration.")
-                 print("\n     TROUBLESHOOTING:")
-                 print("     1. Install the gcloud CLI: https://cloud.google.com/sdk/docs/install")
-                 print("     2. Authenticate by running: `gcloud auth application-default login`")
-                 print(f"     3. If needed, set your quota project: `gcloud auth application-default set-quota-project {VERTEXAI_PROJECT or '<your-gcloud-project>'}`")
-                 print(f"\n     Original Error: {error_str}\n")
+                print("\n  ❌ Vertex AI Error: Authentication or Permission issue.")
+                print("     1. Install gcloud CLI: https://cloud.google.com/sdk/docs/install")
+                print("     2. Authenticate: `gcloud auth application-default login`")
+                print(f"     3. Set quota project: `gcloud auth application-default set-quota-project {VERTEXAI_PROJECT or '<your-gcloud-project>'}`")
+                print(f"\n     Original Error: {error_str}\n")
             else:
                 print(f"  ❌ An unexpected error occurred: {error_str}\n")
+            failed = True
 
+        if failed:
             error_count += 1
             continue
-        
-        # Save output
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(result)
-        
-        print(f"  ✅ Saved to: bibtex_AI_Generated.txt")
+
+        p["out"].parent.mkdir(parents=True, exist_ok=True)
+        with open(p["out"], "w", encoding="utf-8") as f:
+            f.write("\n\n".join(blocks) + "\n")
+        print(f"  ✅ Saved {len(blocks)} topic block(s) → {p['out']}")
         success_count += 1
         print()
 

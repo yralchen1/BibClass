@@ -172,3 +172,6 @@ coverage.xml
 .hypothesis/
 .DS_Store
 Testing/
+# BibClass eval generated outputs
+ai_out/
+eval/out/
