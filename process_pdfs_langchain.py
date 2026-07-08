@@ -355,8 +355,9 @@ def main():
         llm = ChatGoogleGenerativeAI(
             model=VERTEXAI_MODEL,
             project=VERTEXAI_PROJECT,
-            location=VERTEXAI_LOCATION,
-            temperature=0.0
+            location=VERTEXAI_LOCATION,  # "us"
+            temperature=0.0,
+            base_url="https://aiplatform.us.rep.googleapis.com"  # Explicit multi-region URL override
         )
     else:
         # Check API key (only for non-vertex)
