@@ -84,13 +84,23 @@ Goal shift: minimize papers with ZERO correct keywords (every paper findable), r
 Three topics, one prompt each: `prompts/el.md`, `prompts/tp.md`, `prompts/lb.md` (each emits
 `keywords_<topic>={...}`). The pipeline loops topics per paper and writes all blocks to one output.
 
-```bash
-# production: a paper needs all three → run them together, combined output per paper
-python process_pdfs_langchain.py --topics el,tp,lb
+The pipeline processes PDFs found under the **current directory**, so `cd` into the set first
+and call the script by path (let `BIB` = repo root). Needs `.env` with `GOOGLE_API_KEY`.
 
-# eval one topic on its own set (prompts/<topic>.md auto-selected)
-python process_pdfs_langchain.py --topics tp      # run from inside TP_test_set/
-python process_pdfs_langchain.py --topics lb      # run from inside LB_test_set/
+```bash
+BIB=/path/to/BibClass
+
+# eval one topic on its own flat test set (prompts/<topic>.md auto-selected)
+cd "$BIB/Testing/pdf/TP_test_set" && "$BIB/venv/bin/python" "$BIB/process_pdfs_langchain.py" --topics tp
+cd "$BIB/Testing/pdf/LB_test_set" && "$BIB/venv/bin/python" "$BIB/process_pdfs_langchain.py" --topics lb
+cd "$BIB/Testing/pdf/EL_test_set" && "$BIB/venv/bin/python" "$BIB/process_pdfs_langchain.py" --topics el
+# → outputs land in <that set>/ai_out/<pdf-stem>/bibtex_AI_Generated.txt
+
+# production: a real paper needs all three → run them together, one combined output per paper
+cd /dir/of/papers && "$BIB/venv/bin/python" "$BIB/process_pdfs_langchain.py" --topics el,tp,lb
+
+# preview without calling the API
+... --topics tp --dry-run
 ```
 
 **Input layouts (auto-detected):**

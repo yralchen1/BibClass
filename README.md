@@ -1,6 +1,8 @@
 # Benchmarking PDFs — Automated Keyword Extraction for Atomic Spectroscopy
 
-This project automates the extraction of **`keywords_el`** (Atomic Energy Levels & Spectra bibliographic keywords) from scientific papers in PDF format. It uses **Google Gemini** (via LangChain) to read each paper and produce BibTeX-format keyword annotations following the NIST ASD bibliographic database conventions.
+This project automates the extraction of atomic-spectroscopy bibliographic keywords from scientific papers in PDF format, across the **three ASBib2 topics** — **EL** (Energy Levels & Spectral Lines), **TP** (Transition Probabilities), and **LB** (Line Broadening & Shifts). It uses **Google Gemini** (via LangChain) to read each paper and produce BibTeX-format keyword annotations following the NIST ASD bibliographic database conventions.
+
+Prompts are **external, per-topic files** in `prompts/` (`el.md`, `tp.md`, `lb.md`) that can be switched with `--prompt`/`--prompt-dir` and **looped** — a paper needing EL keywords usually needs TP and LB too, so all three run per paper into one combined output. A companion **evaluation suite** in `eval/` scores AI output against human-curated gold and produces metrics + a benchmark figure.
 
 ---
 
@@ -13,10 +15,11 @@ This project automates the extraction of **`keywords_el`** (Atomic Energy Levels
 5. [Setting Up the Environment](#setting-up-the-environment)
 6. [Choosing a Gemini Model](#choosing-a-gemini-model)
 7. [Running the PDF Processing Script](#running-the-pdf-processing-script)
-8. [Understanding the Output](#understanding-the-output)
-9. [Changing the Prompt](#changing-the-prompt)
-10. [Other Scripts](#other-scripts)
-11. [Troubleshooting](#troubleshooting)
+8. [Topics & Prompts (EL / TP / LB)](#topics--prompts-el--tp--lb)
+9. [Understanding the Output](#understanding-the-output)
+10. [Evaluation & Metrics](#evaluation--metrics)
+11. [Other Scripts](#other-scripts)
+12. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -293,6 +296,10 @@ This will:
 4. Save the response as `bibtex_AI_Generated.txt` inside each paper's folder.
 5. Print a progress summary showing successes and errors.
 
+> **By default only the EL topic runs.** To run Transition Probabilities and Line Broadening
+> too (per paper, into one combined output), and for the flat test-set layout, see
+> [Topics & Prompts (EL / TP / LB)](#topics--prompts-el--tp--lb).
+
 **Example terminal output:**
 ```
 🚀 Initializing Google Gemini via AI Studio...
@@ -404,102 +411,66 @@ Each line inside `keywords_el={...}` follows one of these formats:
 
 ---
 
-## Changing the Prompt
+## Topics & Prompts (EL / TP / LB)
 
-The extraction prompt is defined as the `SYSTEM_PROMPT` variable at the top of `process_pdfs_langchain.py` (starting at **line 55**). This is the core instruction that tells Gemini what to extract and how to format the output.
+The extraction prompts are **external files** in `prompts/` — one per topic. Editing a prompt no longer means editing Python.
 
-### How to Modify the Prompt
+| File | Topic | Output field |
+|---|---|---|
+| `prompts/el.md` | Energy Levels & Spectral Lines | `keywords_el` |
+| `prompts/tp.md` | Transition Probabilities | `keywords_tp` |
+| `prompts/lb.md` | Line Broadening & Shifts | `keywords_lb` |
+| `prompts/el_fewshot.md` | EL variant with grounded worked examples (best EL run to date) | `keywords_el` |
+| `prompts/el_recall.md` | EL variant tuned to minimise "zero-match" papers (anti-empty) | `keywords_el` |
 
-1. **Open the script** in your editor:
+### Selecting topics
+`--topics` chooses which topics run per paper (comma-separated, default `el`). Each topic's prompt is loaded from `--prompt-dir` (default `prompts/`) as `<topic>.md`; all topic blocks are written to one output file.
 
-   ```bash
-   open process_pdfs_langchain.py
-   ```
-
-2. **Find the `SYSTEM_PROMPT` variable** — it starts at line 55 with a triple-quoted string:
-
-   ```python
-   SYSTEM_PROMPT = """**Role:** You are an expert atomic physicist and bibliographer. Your sole task is to extract and format `keywords_el`, `keywords_tp`, and `keywords_lb` from the attached PDF and its supplementary files (if any).
-   ...
-   """
-   ```
-
-3. **Edit the prompt text** between the triple quotes (`"""`). The prompt is organized into these sections:
-
-   | Section | What It Controls |
-   |---|---|
-   | **Role & Output Format** | Tells Gemini what role to play and the exact output format |
-   | **Critical Rules** | Core extraction rules (be conservative, one method per line, etc.) |
-   | **Real Examples** | Worked examples showing correct keyword formatting |
-   | **SPECS** | Full specification document for the keyword system |
-
-4. **Save the file** — the next time you run `process_pdfs_langchain.py`, it will use your updated prompt.
-
-### Common Prompt Modifications
-
-#### Add a New Subject Code
-
-If you need to add a new keyword category, add it to the **Subject Codes** list in the prompt:
-
-```
-# Add after the existing codes:
-# - NEW = New Code Description
+```bash
+python process_pdfs_langchain.py --topics el,tp,lb   # all three per paper (production)
+python process_pdfs_langchain.py --topics tp         # a single topic
 ```
 
-And add it to the SPECS table section as well.
-
-#### Change the Output Format
-
-If you want JSON output instead of BibTeX format, modify the **Output** section:
-
-```python
-# Change from:
-# **Output:** Output ONLY the keywords_el field in exact BibTeX format.
-
-# To something like:
-# **Output:** Output a JSON object with a single key "keywords_el" containing an array of keyword strings.
+### Swapping a prompt version
+For a single topic, point at any prompt file:
+```bash
+python process_pdfs_langchain.py --topics el --prompt prompts/el_fewshot.md
 ```
 
-> **⚠️ Warning:** If you change the output format, you may also need to update the `process_paper()` function to handle the new format correctly.
+### Editing a prompt
+Open `prompts/<topic>.md` and edit — plain markdown, no code changes. Each prompt is structured: output contract → novelty filter → format laws → subject/method/mechanism codes → species-string conventions → GENINT → worked examples. Keep the `keywords_<topic>={...}` output contract intact.
 
-#### Adjust the Extraction Strictness
+### Input layouts (auto-detected)
+- **folder** — subfolders each with `main_article.pdf` (+ optional `suppl/`) → output written in place as `bibtex_AI_Generated.txt`.
+- **flat** — a directory of `<author>_<topic>_<id>_<year>.pdf` files (+ `..._suppl*`, matched by id) → output to `--out-dir/<pdf-stem>/bibtex_AI_Generated.txt` (default `./ai_out/`). This is how `Testing/pdf/{EL,TP,LB}_test_set/` are laid out.
 
-The prompt currently says "Be CONSERVATIVE". To make it more or less strict:
+### EL two-pass (optional)
+`--two-pass` adds a verification pass on the EL topic that prunes unsupported keywords (`prompts/el_verify.md`). It over-pruned in benchmarking; the deterministic reformatter (`eval/reformat_keywords.py`) is preferred.
 
-```python
-# More aggressive (may produce false positives):
-# 1. **Be THOROUGH** - Assign keywords for data that is explicitly or implicitly present in the paper.
+---
 
-# More conservative (may miss valid keywords):
-# 1. **Be EXTREMELY CONSERVATIVE** - Only assign keywords when you are 100% certain the data is explicitly reported in numerical tables.
+## Evaluation & Metrics
+
+The `eval/` suite scores AI output against human-curated gold (`test_set_bibtex.txt`) — pure Python, no API needed.
+
+| Script | Purpose |
+|---|---|
+| `eval/score_eval.py` | Paper-level scoring: perfect-match, zero-match, extras (notation-normalized) |
+| `eval/keyword_quality.py` | Atomized per-keyword quality (element-ion × code × type); penalized + recall variants |
+| `eval/keyword_prf.py` | Decomposed Precision/Recall/F1 at species / +code / +type levels (recommended metric) |
+| `eval/reformat_keywords.py` | Deterministic notation normalizer (isoelectronic compression, range-merge, exotic→H I) |
+| `eval/make_plots.py` | 4-panel benchmark overview figure |
+| `eval/METRICS.md` | Written metrics summary |
+| `eval/README.md` | Full eval + per-topic run protocol (held-out examples, stop conditions) |
+
+```bash
+python eval/keyword_prf.py --ai-dir <output-dir> --exclude <held-out-ids>
+python eval/make_plots.py  --ai-dir <output-dir> --out Testing/benchmark_overview.png
 ```
 
-#### Add More Examples
+Current EL benchmark (best run, 95 papers): species-level F1 ≈ 85%, dropping ~15 pts once the subject code must also match (over-assignment is the dominant error); method type is nearly solved. Details in `eval/METRICS.md`.
 
-Adding more examples improves Gemini's accuracy. Add them in the **REAL EXAMPLES** section:
-
-```python
-# Paper about isotope shift measurements:
-# keywords_el={Ca I; Ca II: IS: E
-# 41Ca I; 43Ca I; 45Ca I: Hfs: E}
-```
-
-### Where the Prompt Is Used
-
-The prompt flows through the code as follows:
-
-```
-SYSTEM_PROMPT (line 55)
-    ↓
-process_paper() function
-    ↓
-SystemMessage(content=SYSTEM_PROMPT)  →  sent to Gemini as the system instruction
-HumanMessage(content=[text + PDF])    →  the paper PDF is sent natively as the user message
-    ↓
-Gemini returns the keywords string
-    ↓
-Saved to bibtex_AI_Generated.txt
-```
+**TP / LB status:** prompts + generation are ready; scoring awaits their gold `test_set_bibtex.txt`.
 
 ---
 
@@ -634,13 +605,18 @@ cp .env.example .env
 # Edit .env with your API key and/or Vertex AI settings
 
 # Run (AI Studio mode — default):
-python process_pdfs_langchain.py              # Process all papers
-python process_pdfs_langchain.py --single X   # Process folder X only
-python process_pdfs_langchain.py --dry-run    # Preview only
+python process_pdfs_langchain.py                  # all papers, EL topic
+python process_pdfs_langchain.py --topics el,tp,lb # all three topics per paper
+python process_pdfs_langchain.py --topics tp      # single topic (e.g. the TP set)
+python process_pdfs_langchain.py --single X       # process folder/PDF X only
+python process_pdfs_langchain.py --dry-run        # preview only
 
 # Run (Vertex AI mode):
 python process_pdfs_langchain.py --use-vertex
-python process_pdfs_langchain.py --use-vertex --single X
+
+# Evaluate AI output against gold (pure Python, no API):
+python eval/keyword_prf.py --ai-dir <output-dir>
+python eval/make_plots.py  --ai-dir <output-dir> --out Testing/benchmark_overview.png
 ```
 
 **Windows (Command Prompt):**
