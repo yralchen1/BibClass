@@ -348,7 +348,11 @@ def discover_papers(base_dir: Path, out_dir: Path):
     flat mode   — a directory of `<author>_<topic>_<id>_<year>.pdf` files (+ `..._suppl*` files);
                   output written to out_dir/<pdf-stem>/bibtex_AI_Generated.txt.
     """
-    main_pdfs = sorted(base_dir.rglob("main_article.pdf"))
+    # Never treat scratch / review / output / vcs dirs as paper inputs.
+    ignore = {"ai_out", "zero_match_review", "tmp", ".git", "venv", ".venv",
+              "__pycache__", "node_modules", "eval"}
+    main_pdfs = sorted(p for p in base_dir.rglob("main_article.pdf")
+                       if not any(part in ignore for part in p.parts))
     if main_pdfs:
         papers = [dict(name=p.parent.name, pdf=p, suppl_dir=p.parent / "suppl",
                        suppl_files=[], out=p.parent / "bibtex_AI_Generated.txt")
