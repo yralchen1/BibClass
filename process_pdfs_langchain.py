@@ -428,7 +428,14 @@ def main():
             project=VERTEXAI_PROJECT,
             location=VERTEXAI_LOCATION,
             temperature=0.0
-        )
+        ) if VERTEXAI_LOCATION != 'us' else \
+            ChatGoogleGenerativeAI(
+                model=VERTEXAI_MODEL,
+                project=VERTEXAI_PROJECT,
+                location=VERTEXAI_LOCATION,
+                temperature=0.0,
+                base_url="https://aiplatform.us.rep.googleapis.com"  # Explicit multi-region URL override
+            )
     else:
         # Check API key (only for non-vertex)
         if not GOOGLE_API_KEY:
@@ -533,7 +540,7 @@ def main():
     print("Summary:")
     print(f"  ✅ Successful: {success_count}")
     print(f"  ❌ Errors: {error_count}")
-    print(f"  📁 Total: {len(folders)}")
+    print(f"  📁 Total: {len(papers)}")
 
     time1 = time.time()
     print(f"Execution time: {round(time1-time0):d} seconds")
