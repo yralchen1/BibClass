@@ -58,13 +58,13 @@ Emit `keywords_el={}` ONLY when the paper studies no specific atomic species at 
 
 | Code | Name | Allowed Types | Definition |
 |---|---|---|---|
-| EL | Energy Levels | E, O | New experimental or semi-empirical level values tabulated in the paper. |
+| EL | Energy Levels | E, O | New experimental or semi-empirical energy-level values. Need NOT be a dedicated "Energy Levels" table — a measured **resonance (ground-state) transition** gives its upper level directly (wavenumber above the ground state = upper level energy), and levels obtainable by Ritz combination of measured lines also count. |
 | W | Wavelengths | E, O | New measured wavelengths/frequencies/wavenumbers. **W never takes T.** For theoretical wavelengths use TE: T. |
 | CL | Classified Lines | E, O | Lines assigned to specific upper-lower level pairs. **CL never takes T.** |
 | TA | Transition Array | E, T, O | Lines assigned to configuration arrays but NOT to specific individual levels. TA is distinct from CL — never substitute one for the other. |
 | SE | Stark Effect | E, T, O | Stark shifts, polarizabilities, BBR shifts, magic wavelengths. Only if specific values are reported. |
 | ZE | Zeeman Effect | E, T, O | g-factors, levels in magnetic field. |
-| Hfs | Hyperfine | E, T, O | A/B constants, hyperfine splittings. Species string must include both base element and isotope (e.g., `Cs I; 133Cs I: Hfs: E`). |
+| Hfs | Hyperfine | E, T, O | A/B constants, hyperfine splittings. Species string must include both base element AND isotope, for **both E and T** (theoretical hyperfine constants are computed for a specific nuclear moment) — e.g. `Cs I; 133Cs I: Hfs: E` and `Cs I; 133Cs I: Hfs: T`. Never emit `X: Hfs: T` without the isotope. |
 | IS | Isotope Shifts | E, T, O | Mass/field shift between isotopes. Species string = base element only, NO mass number (e.g., `Th I: IS: T`, never `229Th I: IS: T`). |
 | QF | QED/Lamb shifts | E, T, O | Only if QED is the paper's PRIMARY computed or measured quantity. Do NOT assign if QED is one routine term in a larger ab initio calc. |
 | TE | Theoretical Energies | T | Tabulated computed level values or transition energies. Requires an actual table of total values, not just corrections. |
@@ -191,7 +191,7 @@ H I; C I; Cs I: EL: E
 
 **S-15: W: T or CL: T.** Theoretical wavelengths exist in the paper. WRONG: `Si I: W: T` or `Si I: CL: T`. RIGHT: `Si I: TE: T`. W and CL never take method type T.
 
-**S-16: CL/W inferred from EL alone.** Paper provides energy level table but no line assignments. WRONG: automatically add `CL: E` and `W: E`. RIGHT: only `EL: E`. The CL→W inference is forward only; EL alone does not imply CL or W.
+**S-16: CL/W inferred from EL alone.** Paper provides energy level table but no line assignments. WRONG: automatically add `CL: E` and `W: E`. RIGHT: only `EL: E`. The CL→W inference is forward only; EL alone does not imply CL or W. (Note: the reverse — measured resonance-line wavenumbers implying the upper levels, i.e. W→EL — IS valid; see S-22.)
 
 **S-17: Cited values treated as new.** Paper reports a measurement of one quantity and quotes IE from NIST in a footnote. WRONG: add `IP: E`. RIGHT: drop IP. Quoted literature ≠ new result. Same logic for any cited table value.
 
@@ -202,6 +202,10 @@ H I; C I; Cs I: EL: E
 **S-20: Isoelectronic sequence transcribed as ions or charge range.** Paper computes a Be-like sequence for 9 sampled ions spanning Ar→U (smooth, >4 elements). WRONG: `Ar XV; Kr XXXIII; … U LXXXIX: TE: T` (lists ions) or `Ca XI-Cr XV` (charge range). RIGHT: `Ar-U Be-like: TE: T`. Compress to element endpoints + `Seq-like`.
 
 **S-21: Same-element charge ranges split across tokens.** Paper covers W charge states 45–48 and 63–66. WRONG: `W XLV-XLVIII; W LXIII-LXVI: AT: T`. RIGHT: `W XLV-XLVIII,LXIII-LXVI: AT: T`.
+
+**S-22: Energy levels missed from resonance transitions.** Paper measures ground-state (resonance) transitions and reports their wavenumbers (e.g. 255Fm: R1 at 25099.760 cm⁻¹, R2 at 25111.760 cm⁻¹, both from the ground state). WRONG: assign only `W` and `CL`. RIGHT: also `Fm I; 255Fm I: EL: E` — each resonance wavenumber IS an upper energy level. This forward inference (measured transitions → levels) is expected; do not withhold EL merely because there is no explicit level table. Applies only when the levels are actually fixed (ground-state/resonance lines, or a Ritz-closed set of measured lines) — not an isolated non-resonance line.
+
+**S-23: Theoretical Hfs dropping the isotope.** Paper computes hyperfine constants/fields for 255Fm. WRONG: `Fm I: Hfs: T`. RIGHT: `Fm I; 255Fm I: Hfs: T`. Hfs is isotope-specific for T exactly as for E — pair base + isotope on every Hfs line regardless of method type.
 
 ---
 
