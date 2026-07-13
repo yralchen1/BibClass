@@ -431,14 +431,16 @@ def main():
             model=VERTEXAI_MODEL,
             project=VERTEXAI_PROJECT,
             location=VERTEXAI_LOCATION,
-            temperature=0.0
+            temperature=0.0,
+            thinking_budget=32768
         ) if VERTEXAI_LOCATION != 'us' else \
             ChatGoogleGenerativeAI(
                 model=VERTEXAI_MODEL,
                 project=VERTEXAI_PROJECT,
                 location=VERTEXAI_LOCATION,
                 temperature=0.0,
-                base_url="https://aiplatform.us.rep.googleapis.com"  # Explicit multi-region URL override
+                base_url="https://aiplatform.us.rep.googleapis.com",  # Explicit multi-region URL override
+                thinking_level="high"
             )
     else:
         # Check API key (only for non-vertex)
