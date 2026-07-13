@@ -67,7 +67,7 @@ Emit `keywords_el={}` ONLY when the paper studies no specific atomic species at 
 | Hfs | Hyperfine | E, T, O | A/B constants, hyperfine splittings. Species string must include both base element AND isotope, for **both E and T** (theoretical hyperfine constants are computed for a specific nuclear moment) — e.g. `Cs I; 133Cs I: Hfs: E` and `Cs I; 133Cs I: Hfs: T`. Never emit `X: Hfs: T` without the isotope. |
 | IS | Isotope Shifts | E, T, O | Mass/field shift between isotopes. Species string = base element only, NO mass number (e.g., `Th I: IS: T`, never `229Th I: IS: T`). |
 | QF | QED/Lamb shifts | E, T, O | Only if QED is the paper's PRIMARY computed or measured quantity. Do NOT assign if QED is one routine term in a larger ab initio calc. |
-| TE | Theoretical Energies | T | Tabulated computed level values or transition energies. Requires an actual table of total values, not just corrections. |
+| TE | Theoretical Energies | T | Tabulated level/transition energies from a genuine ab-initio / first-principles calculation. Requires an actual table of total values, not just corrections. **NOT** for semiempirical extrapolations (quantum-defect / Rydberg methods: SCUNC, Least-Bound-Electron, Modified Orbital Atomic Theory, Ritz) — those levels go under `EL: O`. |
 | AT | Ab Initio | T | Calculations using Hartree-Fock, Dirac-Fock, MCDF, MCDHF, CI, or CI+MBPT methods. NOT for model potential, DFT-only, RPA, ECP. |
 | PT | Parametric Theory | T | Slater-Condon parameter fitting. |
 | SF | Series Formulae | E, T, O | Quantum defects, Ritz series fits, series limits. |
@@ -206,6 +206,8 @@ H I; C I; Cs I: EL: E
 **S-22: Energy levels missed from resonance transitions.** Paper measures ground-state (resonance) transitions and reports their wavenumbers (e.g. 255Fm: R1 at 25099.760 cm⁻¹, R2 at 25111.760 cm⁻¹, both from the ground state). WRONG: assign only `W` and `CL`. RIGHT: also `Fm I; 255Fm I: EL: E` — each resonance wavenumber IS an upper energy level. This forward inference (measured transitions → levels) is expected; do not withhold EL merely because there is no explicit level table. Applies only when the levels are actually fixed (ground-state/resonance lines, or a Ritz-closed set of measured lines) — not an isolated non-resonance line.
 
 **S-23: Theoretical Hfs dropping the isotope.** Paper computes hyperfine constants/fields for 255Fm. WRONG: `Fm I: Hfs: T`. RIGHT: `Fm I; 255Fm I: Hfs: T`. Hfs is isotope-specific for T exactly as for E — pair base + isotope on every Hfs line regardless of method type.
+
+**S-24: Semiempirical Rydberg extrapolation mislabeled as theory.** The method extends experimentally-known levels along a Rydberg series — SCUNC (Screening Constant by Unit Nuclear Charge), Least-Bound-Electron theory, Modified Orbital Atomic Theory, or quantum-defect / Ritz extrapolation. These are **semiempirical, not theory**. Example: SCUNC computes high-n Sr Rydberg resonance energies. WRONG: `Sr I: TE: T` and `Sr I: SF: T`. RIGHT: `Sr I: EL: O` and `Sr I: SF: O`. Rule: any method that extrapolates or fits from experimental levels takes method type **O** (never **T**), and the level values so obtained go under **EL: O**, not **TE: T** (TE is theory-only, reserved for genuine ab-initio calculations).
 
 ---
 
