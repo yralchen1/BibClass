@@ -62,7 +62,7 @@ Perturber codes (element/molecule symbol): Ar, Ba, Br2, C2H2, C2H6, C3H8, C4H10,
 - Neutral/positive: `ElementSymbol RomanNumeral`. **Spectrum number = ionic charge + 1** (neutral = I); convert charge-labelled ions, watch off-by-one.
 - `;` separates elements; same element multiple spectra: comma `Al XII,XIII` or range `Al XII-XIII`.
 - Element range `Cr-Fe I` = every element Cr→Fe (only if all studied).
-- **Isoelectronic compression:** same quantity/method along a sequence for >4 elements varying smoothly with Z → `ElementStart-ElementEnd Seq-like`; do not list sampled ions individually.
+- **Isoelectronic compression:** same quantity/method along a sequence for >4 elements varying smoothly with Z → `ElementStart-ElementEnd Seq-like`; do not list sampled ions individually. Endpoints are bare element symbols and never carry Roman numerals (`C-Ar Be-like`, NOT `C III-Ar XV`); the label is exactly `[Element]-like` — never `seq`/`sequence`.
 - **Exotic atoms** (Ps, Mu): use `H I`; add `GENINT: 1.10` (rare in LB).
 
 ---

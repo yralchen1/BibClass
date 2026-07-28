@@ -89,7 +89,7 @@ Note on AT vs TE independence: both require independent justification. AT alone 
 - Same element, multiple spectra: comma `Al XII,XIII` or range `Al XII-XIII`. Same element, several charge ranges: comma-join in ONE token — `W XLV-XLVIII,LXIII-LXVI`, NOT `W XLV-XLVIII; W LXIII-LXVI`.
 - Element range: `H-Xe I` = neutral spectra of H through Xe. NOT `H I-Xe I`.
 - Neutral/element ranges (e.g. `Cr-Fe I`): use a range only if every element between the endpoints is actually studied; a gappy mix of unrelated elements is listed individually.
-- Isoelectronic sequence: `He-Ne He-like` = the He-like ion of each element He→Ne. Combine element + charge range as `Bi H-like-Ne-like` when compact.
+- Isoelectronic sequence: `He-Ne He-like` = the He-like ion of each element He→Ne. **Endpoints are bare element symbols and never carry Roman numerals** (`C-Ar Be-like`, NOT `C III-Ar XV`); the label is exactly `[Element]-like` — the vague forms `seq`, `sequence`, `Be sequence` are prohibited. Combine element + charge range as `Bi H-like-Ne-like` when compact.
 - **Isoelectronic compression (critical — commonly missed):** if the paper reports the SAME quantity, SAME method, along an isoelectronic sequence for MORE THAN 4 elements with values varying smoothly in nuclear charge, write the whole span as `ElementStart-ElementEnd Seq-like` (lightest→heaviest studied element) — even when intermediate ions were merely sampled. Do NOT transcribe the individual sampled ions, and do NOT use a spectroscopic charge range. E.g. a Be-like study over 18≤Z≤92 → `Ar-U Be-like` (NOT the 9 listed ions); Ne-like Ca,Sc,Ti,V,Cr → `Ca-Cr Ne-like` (NOT `Ca XI-Cr XV`).
 - **Exotic atoms** (positronium Ps, muonium Mu, pionic/kaonic/muonic atoms): the EL species keyword uses the corresponding NORMAL atom. For Ps or Mu, emit `H I` — never `Ps` or `Mu` as the species. (Add `GENINT: 1.10` as well.)
 
@@ -208,6 +208,8 @@ H I; C I; Cs I: EL: E
 **S-23: Theoretical Hfs dropping the isotope.** Paper computes hyperfine constants/fields for 255Fm. WRONG: `Fm I: Hfs: T`. RIGHT: `Fm I; 255Fm I: Hfs: T`. Hfs is isotope-specific for T exactly as for E — pair base + isotope on every Hfs line regardless of method type.
 
 **S-24: Semiempirical Rydberg extrapolation mislabeled as theory.** The method extends experimentally-known levels along a Rydberg series — SCUNC (Screening Constant by Unit Nuclear Charge), Least-Bound-Electron theory, Modified Orbital Atomic Theory, or quantum-defect / Ritz extrapolation. These are **semiempirical, not theory**. Example: SCUNC computes high-n Sr Rydberg resonance energies. WRONG: `Sr I: TE: T` and `Sr I: SF: T`. RIGHT: `Sr I: EL: O` and `Sr I: SF: O`. Rule: any method that extrapolates or fits from experimental levels takes method type **O** (never **T**), and the level values so obtained go under **EL: O**, not **TE: T** (TE is theory-only, reserved for genuine ab-initio calculations).
+
+**S-25: Isoelectronic sequence written with charge numerals or a “seq” label.** Paper covers the Be-like sequence from carbon through argon (whose members are C III, N IV, … Ar XV). WRONG: `C III - Ar XV Be seq` — three faults at once: the endpoints carry Roman numerals, the dash is padded with spaces, and `seq` is not a valid label. RIGHT: `C-Ar Be-like`. The `[Element]-like` label already fixes the charge of every member of the sequence, so the endpoints must be bare element symbols; write the range with a plain unspaced dash, and never use `seq`/`sequence` in place of `-like`.
 
 ---
 

@@ -67,7 +67,7 @@ Self-test per candidate: "Does the paper deliver a NEW/improved radiative rate (
 - Neutral/positive: `ElementSymbol RomanNumeral` — `C IV`, `Fe XXVI`. **Spectrum number = ionic charge + 1** (neutral = I; Fe²⁵⁺ → Fe XXVI). Convert charge-labelled ions; watch off-by-one.
 - `;` separates different elements: `Na I; K I`. Same element, several spectra: comma `Al XII,XIII` or range `Al XII-XIII`; several charge ranges comma-joined in one token `W XLV-XLVIII,LXIII-LXVI`.
 - Element range `Cr-Fe I` = every element Cr→Fe (use only if all are studied).
-- **Isoelectronic compression:** same quantity/method along a sequence for >4 elements varying smoothly with Z → `ElementStart-ElementEnd Seq-like` (endpoints), e.g. `He-Kr He-like`; do NOT list the sampled ions individually.
+- **Isoelectronic compression:** same quantity/method along a sequence for >4 elements varying smoothly with Z → `ElementStart-ElementEnd Seq-like` (endpoints), e.g. `He-Kr He-like`; do NOT list the sampled ions individually. Endpoints are bare element symbols and never carry Roman numerals (`C-Ar Be-like`, NOT `C III-Ar XV`); the label is exactly `[Element]-like` — never `seq`/`sequence`.
 - **Exotic atoms** (Ps, Mu, …): use the corresponding normal atom `H I` (never `Ps`/`Mu`); add `GENINT: 1.10`.
 - **Isotopes — TP-specific:** TP data are rarely accurate enough to resolve isotopes. Use the plain spectrum (e.g. `He I`, NOT `4He I`) unless the paper confirms isotope-resolved precision.
 
