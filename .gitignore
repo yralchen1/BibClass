@@ -175,3 +175,5 @@ Testing/
 # BibClass eval generated outputs
 ai_out/
 eval/out/
+Paper.tex
+/figures
