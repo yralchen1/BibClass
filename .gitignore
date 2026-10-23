@@ -186,3 +186,6 @@ Paper.out
 Paper.run.xml
 Paper.synctex.gz
 /Testing
+eval/keyword_prf.py
+eval/keyword_quality.py
+eval/keyword_prf.py
