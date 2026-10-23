@@ -177,3 +177,12 @@ ai_out/
 eval/out/
 Paper.tex
 /figures
+/eval
+Paper.aux
+Paper.bcf
+Paper.fls
+Paper.fdb_latexmk
+Paper.out
+Paper.run.xml
+Paper.synctex.gz
+/Testing
